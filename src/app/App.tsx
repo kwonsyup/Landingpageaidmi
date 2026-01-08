@@ -13,27 +13,21 @@ export default function App() {
           <nav>
             <ul>
               <li className="nav-item has-dropdown">
-                <a href="/solutions">Who we're for</a>
+                <a href="#who-its-for">Who we're for</a>
                 <div className="nav-dropdown">
                   <div className="nav-dropdown-columns">
                     <div className="nav-dropdown-column">
                       <h4>By Role</h4>
-                      <a href="#psychiatrists" className="nav-dropdown-link">Psychiatrists & Nurse Practitioners</a>
-                      <a href="#psychologists" className="nav-dropdown-link">Psychologists</a>
-                      <a href="#therapists" className="nav-dropdown-link">Therapists & Counselors</a>
-                      <a href="#all-specialties" className="nav-dropdown-link">All Specialties</a>
-                    </div>
-                    <div className="nav-dropdown-column">
-                      <h4>By Organization</h4>
-                      <a href="#solo" className="nav-dropdown-link">Solo Private Practice</a>
-                      <a href="#group" className="nav-dropdown-link">Group Practices</a>
-                      <a href="#enterprise" className="nav-dropdown-link">Clinics & Networks</a>
+                      <a href="#who-its-for" className="nav-dropdown-link">Psychiatrists & Nurse Practitioners</a>
+                      <a href="#who-its-for" className="nav-dropdown-link">Psychologists</a>
+                      <a href="#who-its-for" className="nav-dropdown-link">Therapists & Counselors</a>
+                      <a href="#who-its-for" className="nav-dropdown-link">All Specialties</a>
                     </div>
                   </div>
                 </div>
               </li>
               <li className="nav-item has-dropdown">
-                <a href="/product">Product</a>
+                <a href="#features">Product</a>
                 <div className="nav-dropdown">
                   <div className="nav-dropdown-columns">
                     <div className="nav-dropdown-column">
@@ -44,49 +38,26 @@ export default function App() {
                     </div>
                     <div className="nav-dropdown-column">
                       <h4>Integrations</h4>
-                      <a href="/integrations" className="nav-dropdown-link">Electronic Health Record (EHR)</a>
-                      <a href="/integrations#telehealth" className="nav-dropdown-link">Telehealth</a>
+                      <a href="#features" className="nav-dropdown-link">Electronic Health Record (EHR)</a>
+                      <a href="#features" className="nav-dropdown-link">Telehealth</a>
                     </div>
                   </div>
                 </div>
               </li>
               <li className="nav-item">
-                <a href="/pricing">Pricing</a>
-              </li>
-              <li className="nav-item has-dropdown">
-                <a href="/resources">Clinical Library</a>
-                <div className="nav-dropdown">
-                  <div className="nav-dropdown-columns three-col">
-                    <div className="nav-dropdown-column">
-                      <h4>Discover</h4>
-                      <a href="/blog" className="nav-dropdown-link">Practice Growth Blog</a>
-                      <a href="/templates" className="nav-dropdown-link">
-                        Free Documentation Templates
-                        <span style={{ display: "inline-block", background: "var(--salmon)", color: "var(--dark-navy)", fontSize: "10px", fontWeight: "700", padding: "2px 6px", borderRadius: "4px", marginLeft: "6px", textTransform: "uppercase" }}>Free</span>
-                      </a>
-                    </div>
-                    <div className="nav-dropdown-column">
-                      <h4>Popular Resources</h4>
-                      <a href="/templates/superbill" className="nav-dropdown-link">Superbill Template</a>
-                      <a href="/templates/soap-note" className="nav-dropdown-link">SOAP Note Template</a>
-                      <a href="/templates/treatment-plan" className="nav-dropdown-link">Treatment Plan Template</a>
-                    </div>
-                    <div className="nav-dropdown-column">
-                      <h4>Support</h4>
-                      <a href="/support" className="nav-dropdown-link">Contact Us</a>
-                      <a href="/careers" className="nav-dropdown-link">Careers</a>
-                    </div>
-                  </div>
-                </div>
+                <a href="#pricing">Pricing</a>
               </li>
               <li className="nav-item">
-                <a href="/security">Security</a>
+                <a href="#faq">Resources</a>
+              </li>
+              <li className="nav-item">
+                <a href="#security">Security</a>
               </li>
             </ul>
           </nav>
           <div className="header-cta">
             <a href="https://app.aidmi.com/login" className="nav-signin">Sign In</a>
-            <a href="#" className="btn btn-primary contact-trigger">Try AidMi Free</a>
+            <a href="#" className="btn btn-primary contact-trigger">Get AidMi Free</a>
             <button className="mobile-menu-toggle" aria-label="Toggle mobile menu">
               <div className="hamburger">
                 <span></span>
@@ -102,13 +73,10 @@ export default function App() {
       <div className="mobile-menu">
         <div className="mobile-menu-section">
           <h4>Who we're for</h4>
-          <a href="#psychiatrists">Psychiatrists & Nurse Practitioners</a>
-          <a href="#psychologists">Psychologists</a>
-          <a href="#therapists">Therapists & Counselors</a>
-          <a href="#all-specialties">All Specialties</a>
-          <a href="#solo">Solo Private Practice</a>
-          <a href="#group">Group Practices</a>
-          <a href="#enterprise">Clinics & Networks</a>
+          <a href="#who-its-for">Psychiatrists & Nurse Practitioners</a>
+          <a href="#who-its-for">Psychologists</a>
+          <a href="#who-its-for">Therapists & Counselors</a>
+          <a href="#who-its-for">All Specialties</a>
         </div>
         <div className="mobile-menu-section">
           <h4>Product</h4>
@@ -116,28 +84,15 @@ export default function App() {
           <a href="#features">Aimé Q&A</a>
           <a href="#features">Evidence-Backed Notes</a>
           <a href="#pricing">Pricing</a>
-          <a href="/integrations">EHR Integrations</a>
+          <a href="#features">EHR Integrations</a>
         </div>
         <div className="mobile-menu-section">
-          <h4>Clinical Library</h4>
-          <a href="/blog">Practice Growth Blog</a>
-          <a href="/templates">
-            Free Documentation Templates
-            <span style={{ display: "inline-block", background: "var(--salmon)", color: "var(--dark-navy)", fontSize: "10px", fontWeight: "700", padding: "2px 6px", borderRadius: "4px", marginLeft: "6px", textTransform: "uppercase" }}>Free</span>
-          </a>
-          <a href="/templates/superbill">Superbill Template</a>
-          <a href="/templates/soap-note">SOAP Note Template</a>
-          <a href="/templates/treatment-plan">Treatment Plan Template</a>
-          <a href="/support">Contact Us</a>
-          <a href="/careers">Careers</a>
-        </div>
-        <div className="mobile-menu-section">
-          <a href="/pricing">Pricing</a>
-          <a href="/security">Security & HIPAA</a>
+          <a href="#faq">Resources</a>
+          <a href="#security">Security & HIPAA</a>
         </div>
         <div className="mobile-menu-cta">
           <a href="https://app.aidmi.com/login" className="btn btn-secondary btn-large">Sign In</a>
-          <a href="#" className="btn btn-primary btn-large contact-trigger">Try AidMi Free</a>
+          <a href="#" className="btn btn-primary btn-large contact-trigger">Get AidMi Free</a>
         </div>
       </div>
 
@@ -171,8 +126,8 @@ export default function App() {
         <div className="container">
           <div className="hero-layout">
             <div className="hero-content">
-              <h1>The AI That <em style={{ fontStyle: "italic" }}>Briefs</em> You Before Your Client Walks In.</h1>
-              <p className="hero-subhead">AidMi builds longitudinal context for every client — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.</p>
+              <h1>The AI That <em style={{ fontStyle: "italic" }}>Briefs</em> You Before Your Patient Walks In.</h1>
+              <p className="hero-subhead">AidMi builds longitudinal context for every patient — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.</p>
               <p className="hero-ehr-note">Works alongside your existing EHR.</p>
               
               <div className="hero-buttons">
@@ -198,7 +153,7 @@ export default function App() {
                 <div className="product-demo-placeholder" style={{ height: "400px", flexDirection: "column", gap: "12px" }}>
                   {"[Today's Brief UI Preview]"}
                   <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "400px", textAlign: "center" }}>
-                    💡 Show a clean &quot;Today&apos;s Brief&quot; card with client name, key changes, and action items
+                    💡 Show a clean &quot;Today&apos;s Brief&quot; card with patient name, key changes, and action items
                   </small>
                 </div>
               </div>
@@ -253,7 +208,7 @@ export default function App() {
               </p>
               
               <p className="problem-solution">
-                AidMi is different. It synthesizes your client&apos;s history into a brief you can scan in 30 seconds. It answers questions across months of sessions — with citations. <strong>Longitudinal context for every client.</strong>
+                AidMi is different. It synthesizes your patient&apos;s history into a brief you can scan in 30 seconds. It answers questions across months of sessions — with citations. <strong>Longitudinal context for every patient.</strong>
               </p>
             </div>
           </div>
@@ -295,7 +250,7 @@ export default function App() {
               <h3 className="value-prop-title">Aimé</h3>
               <p className="value-prop-tagline">Ask anything. Get answers with proof.</p>
               <p className="value-prop-description">
-                &quot;When did we first discuss the insomnia?&quot; &quot;What medications have we tried?&quot; Aimé searches across every session and returns answers with citations. Like a research assistant for every client.
+                &quot;When did we first discuss the insomnia?&quot; &quot;What medications have we tried?&quot; Aimé searches across every session and returns answers with citations. Like a research assistant for every patient.
               </p>
             </div>
 
@@ -317,7 +272,7 @@ export default function App() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="use-cases">
+      <section id="who-its-for" className="use-cases">
         <div className="container">
           <div className="section-header">
             <h2>Built for How <em>You</em> Practice</h2>
@@ -409,7 +364,7 @@ export default function App() {
                   <span className="pricing-amount">$0</span>
                   <span className="pricing-period">/forever</span>
                 </div>
-                <p className="pricing-tagline">We charge for speed and context, not for seeing clclients.</p>
+                <p className="pricing-tagline">We charge for speed and context, not for seeing patients.</p>
               </div>
               
               <ul className="pricing-features">
@@ -483,7 +438,7 @@ export default function App() {
       </section>
 
       {/* Security Section */}
-      <section className="security">
+      <section id="security" className="security">
         <div className="container">
           <div className="security-content">
             <div className="security-header">
@@ -492,7 +447,7 @@ export default function App() {
                   <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z"/>
                 </svg>
               </div>
-              <h2>Your clients&apos; data, protected.</h2>
+              <h2>Your patients' data, protected.</h2>
               <p className="security-intro">AidMi is built for behavioral health — where privacy isn&apos;t optional.</p>
             </div>
 
@@ -577,7 +532,7 @@ export default function App() {
               <div className="step-item" data-step="context">
                 <div className="step-number">3</div>
                 <h3 className="step-title">Context Builds</h3>
-                <p className="step-description">Each signed note updates your client&apos;s profile. Today&apos;s Brief evolves. Aimé gets smarter. Your clinical intelligence compounds.</p>
+                <p className="step-description">Each signed note updates your patient&apos;s profile. Today&apos;s Brief evolves. Aimé gets smarter. Your clinical intelligence compounds.</p>
               </div>
             </div>
 
@@ -602,7 +557,7 @@ export default function App() {
 
               <div className="visual-content" data-visual="context">
                 <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
-                  [Client Profile Growth]
+                  [Patient Profile Growth]
                   <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
                     💡 Timeline showing sessions compounding into longitudinal intelligence
                   </small>
@@ -614,7 +569,7 @@ export default function App() {
       </section>
 
       {/* FAQ */}
-      <section className="faq">
+      <section id="faq" className="faq">
         <div className="container">
           <div className="section-header">
             <h2>Questions? We've got answers.</h2>
@@ -623,24 +578,24 @@ export default function App() {
           <div className="faq-list">
             {/* Question 1 */}
             <div className="faq-item">
-              <button className="faq-question" aria-expanded="false">
+              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
                 <span>Is the Free plan really unlimited?</span>
                 <span className="faq-icon">+</span>
               </button>
-              <div className="faq-answer">
+              <div className="faq-answer" id="faq-answer-1">
                 <div className="faq-answer-content">
-                  Yes. Unlimited sessions and unlimited notes. We charge for speed and advanced continuity features (full longitudinal history, unlimited Aimé queries) — not per client or per session.
+                  Yes. Unlimited sessions and unlimited notes. We charge for speed and advanced continuity features (full longitudinal history, unlimited Aimé queries) — not per patient or per session.
                 </div>
               </div>
             </div>
 
             {/* Question 2 */}
             <div className="faq-item">
-              <button className="faq-question" aria-expanded="false">
+              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
                 <span>What happens to my recordings?</span>
                 <span className="faq-icon">+</span>
               </button>
-              <div className="faq-answer">
+              <div className="faq-answer" id="faq-answer-2">
                 <div className="faq-answer-content">
                   Audio is deleted immediately after transcription. We never store recordings. Transcripts are retained to power citations, Today&apos;s Brief, and Aimé — but you can configure retention settings (auto-delete after signing, after X days, etc.).
                 </div>
@@ -649,11 +604,11 @@ export default function App() {
 
             {/* Question 3 */}
             <div className="faq-item">
-              <button className="faq-question" aria-expanded="false">
+              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
                 <span>Does AidMi work with my current EHR?</span>
                 <span className="faq-icon">+</span>
               </button>
-              <div className="faq-answer">
+              <div className="faq-answer" id="faq-answer-3">
                 <div className="faq-answer-content">
                   Yes. AidMi works alongside SimplePractice, TherapyNotes, Valant, and other EHRs. One-button to paste your signed note into your existing system, or use it standalone.
                 </div>
@@ -662,11 +617,11 @@ export default function App() {
 
             {/* Question 4 */}
             <div className="faq-item">
-              <button className="faq-question" aria-expanded="false">
+              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
                 <span>Is it HIPAA compliant?</span>
                 <span className="faq-icon">+</span>
               </button>
-              <div className="faq-answer">
+              <div className="faq-answer" id="faq-answer-4">
                 <div className="faq-answer-content">
                   Yes. AidMi is HIPAA compliant with a BAA included on all plans — including Free. Data is encrypted in transit and at rest.
                 </div>
@@ -675,24 +630,24 @@ export default function App() {
 
             {/* Question 5 */}
             <div className="faq-item">
-              <button className="faq-question" aria-expanded="false">
-                <span>Do you train your AI on my client data?</span>
+              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                <span>Do you train your AI on my patient data?</span>
                 <span className="faq-icon">+</span>
               </button>
-              <div className="faq-answer">
+              <div className="faq-answer" id="faq-answer-5">
                 <div className="faq-answer-content">
-                  No. Your client data is siloed, stored securely, and only used to power your clinical intelligence — Today&apos;s Brief, Aimé, and citations.
+                  No. Your patient data is siloed, stored securely, and only used to power your clinical intelligence — Today&apos;s Brief, Aimé, and citations.
                 </div>
               </div>
             </div>
 
             {/* Question 6 */}
             <div className="faq-item">
-              <button className="faq-question" aria-expanded="false">
+              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
                 <span>How accurate are the AI notes?</span>
                 <span className="faq-icon">+</span>
               </button>
-              <div className="faq-answer">
+              <div className="faq-answer" id="faq-answer-6">
                 <div className="faq-answer-content">
                   Every claim in your note links to the source in the transcript. Click to verify. If evidence is missing, we flag it as &quot;Needs confirmation.&quot; You review and sign — nothing goes into the chart without your approval.
                 </div>
@@ -805,7 +760,7 @@ export default function App() {
               </a>
               <a href="https://twitter.com/aidmi" className="social-icon" aria-label="Twitter/X">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
             </div>
@@ -814,20 +769,21 @@ export default function App() {
       </footer>
 
       {/* Video Modal */}
-      <div className="video-modal" id="videoModal">
+      <div className="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
         <div className="video-modal-content">
+          <h2 id="videoModalTitle" className="sr-only">AidMi Product Demo</h2>
           <button className="video-modal-close" aria-label="Close video">×</button>
           <div className="video-placeholder">[Video Player: 90-second Product Demo]</div>
         </div>
       </div>
 
       {/* Contact Modal */}
-      <div className="contact-modal" id="contactModal">
+      <div className="contact-modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
         <div className="contact-modal-content">
           <button className="contact-modal-close" aria-label="Close form">×</button>
           <div className="contact-modal-header">
-            <h3>Secure Your Spot in the AidMi Pilot</h3>
-            <p>We are currently onboarding a limited number of practices for our next cohort. Tell us about your workflow to see if you qualify for early access.</p>
+            <h3 id="contactModalTitle">Get Started with AidMi Free</h3>
+            <p>Create your free account. No credit card required. Start documenting with confidence today.</p>
           </div>
           <div className="contact-modal-body">
             <form id="contactForm" className="contact-form">
@@ -869,7 +825,7 @@ export default function App() {
                 <label htmlFor="message">Tell Us About Your Workflow (Optional)</label>
                 <textarea id="message" name="message" placeholder="What are your biggest documentation challenges? What EHR do you use?"></textarea>
               </div>
-              <button type="submit" className="contact-submit-btn">Request Access</button>
+              <button type="submit" className="contact-submit-btn">Create Free Account</button>
             </form>
           </div>
         </div>
