@@ -1351,11 +1351,10 @@ export default function App() {
               {/* Option Cards */}
               <div className="getstarted-options">
                 {/* Option 1: Start Free */}
-                <a href="https://app.aidmi.ai/" className="getstarted-option-card">
+                <a href="https://app.aidmi.ai/" className="getstarted-option-card choice-card-primary">
                   <div className="option-illustration option-illustration-start">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.05-4.05c.47-.47 1.15-.68 1.81-.55 1.82.36 3.79-1.1 3.79-2.95 0-.1.01-.2.02-.3.12-.92 1.12-1.29 1.79-.64l4.24 4.24c.65.66.28 1.66-.64 1.79-.11.01-.21.02-.31.02-1.85 0-3.31 1.97-2.95 3.79.13.66-.08 1.34-.55 1.81L9.2 17.9l-1.55-3.62c.31-.13 3.61-1.53 5.89-3.57C15.99 8.15 17.61 6 17.61 6s-8.65 1.77-8.42 0.35z"/>
-                      <path d="M3.85 19.5c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5c0-1.93-2.91-6.5-3.5-6.5s-3.5 4.57-3.5 6.5z"/>
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="choice-icon">
+                      <path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/>
                     </svg>
                   </div>
                   <div className="option-content">

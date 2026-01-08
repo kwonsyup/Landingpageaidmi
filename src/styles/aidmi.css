@@ -711,6 +711,19 @@ nav a:focus {
   color: var(--dark-navy);
 }
 
+/* Primary choice card - subtle emphasis */
+.choice-card-primary,
+.getstarted-option-card:first-child {
+  border: 2px solid rgba(0, 64, 140, 0.15);
+  background: rgba(0, 64, 140, 0.02);
+}
+
+.choice-card-primary:hover,
+.getstarted-option-card:first-child:hover {
+  border-color: var(--dark-navy);
+  background: rgba(0, 64, 140, 0.04);
+}
+
 /* Illustration */
 .option-illustration {
   width: 64px;
@@ -823,14 +836,16 @@ nav a:focus {
 
 .getstarted-footer-link a {
   color: var(--dark-navy);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 64, 140, 0.3);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .getstarted-footer-link a:hover {
   color: #00509e;
-  text-decoration: underline;
+  text-decoration-color: var(--dark-navy);
 }
 
 /* Login View Styles */
@@ -1234,10 +1249,10 @@ nav a:focus {
 /* Levitation Animation */
 @keyframes float-hero {
   0%, 100% { 
-    transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg) translateY(0); 
+    transform: perspective(2500px) rotateY(-5deg) rotateX(3deg) rotateZ(-1deg) translateY(0); 
   }
   50% { 
-    transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg) translateY(-10px); 
+    transform: perspective(2500px) rotateY(-5deg) rotateX(3deg) rotateZ(-1deg) translateY(-12px); 
   }
 }
 
@@ -1251,7 +1266,7 @@ nav a:focus {
   position: relative;
   max-width: 520px;
   width: 100%;
-  perspective: 1200px;
+  perspective: 2500px;
 }
 
 .hero-mockup-image {
@@ -1259,18 +1274,18 @@ nav a:focus {
   height: auto;
   border-radius: 16px;
   box-shadow: 
-    -20px 20px 60px -10px rgba(0, 40, 85, 0.2),
+    -15px 20px 40px -5px rgba(0, 40, 85, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.6) inset;
-  transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg);
+  transform: perspective(2500px) rotateY(-5deg) rotateX(3deg) rotateZ(-1deg);
   animation: float-hero 6s ease-in-out infinite;
-  transition: box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hero-mockup-image:hover {
   animation-play-state: paused;
-  transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg) translateY(-8px);
+  transform: perspective(2500px) rotateY(0deg) rotateX(0deg) scale(1.02) translateY(-5px);
   box-shadow: 
-    -25px 25px 70px -12px rgba(0, 40, 85, 0.25),
+    0 25px 50px -8px rgba(0, 40, 85, 0.2),
     0 0 0 1px rgba(255, 255, 255, 0.7) inset;
 }
 
@@ -1278,20 +1293,24 @@ nav a:focus {
 @media (max-width: 1024px) {
   @keyframes float-hero {
     0%, 100% { 
-      transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg) translateY(0); 
+      transform: perspective(2500px) rotateY(-4deg) rotateX(2deg) rotateZ(-0.5deg) translateY(0); 
     }
     50% { 
-      transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg) translateY(-8px); 
+      transform: perspective(2500px) rotateY(-4deg) rotateX(2deg) rotateZ(-0.5deg) translateY(-10px); 
     }
   }
   
+  .hero-mockup-wrapper {
+    perspective: 2500px;
+  }
+  
   .hero-mockup-image {
-    transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg);
+    transform: perspective(2500px) rotateY(-4deg) rotateX(2deg) rotateZ(-0.5deg);
   }
   
   .hero-mockup-image:hover {
     animation-play-state: paused;
-    transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) rotateZ(-0.25deg) translateY(-6px);
+    transform: perspective(2500px) rotateY(0deg) rotateX(0deg) scale(1.02) translateY(-4px);
   }
   
   .integration-strip {
@@ -1308,26 +1327,27 @@ nav a:focus {
 @media (max-width: 768px) {
   @keyframes float-hero {
     0%, 100% { 
-      transform: perspective(1200px) rotateY(0deg) rotateX(2deg) translateY(0); 
+      transform: perspective(2500px) rotateY(0deg) rotateX(1.5deg) translateY(0); 
     }
     50% { 
-      transform: perspective(1200px) rotateY(0deg) rotateX(2deg) translateY(-6px); 
+      transform: perspective(2500px) rotateY(0deg) rotateX(1.5deg) translateY(-8px); 
     }
   }
   
   .hero-mockup-wrapper {
     max-width: 100%;
     margin: 0 auto;
+    perspective: 2500px;
   }
   
   .hero-mockup-image {
-    transform: perspective(1200px) rotateY(0deg) rotateX(2deg);
+    transform: perspective(2500px) rotateY(0deg) rotateX(1.5deg);
     border-radius: 12px;
   }
   
   .hero-mockup-image:hover {
     animation-play-state: paused;
-    transform: perspective(1200px) rotateY(0deg) rotateX(1deg) translateY(-4px);
+    transform: perspective(2500px) rotateY(0deg) rotateX(0deg) scale(1.02) translateY(-4px);
   }
   
   .hero-glow {
