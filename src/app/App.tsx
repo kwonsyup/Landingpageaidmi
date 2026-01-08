@@ -40,7 +40,7 @@ export default function App() {
                       <h4>Core Features</h4>
                       <a href="#precharting" className="nav-dropdown-link">Morning Briefs</a>
                       <a href="#ambient" className="nav-dropdown-link">Ambient Scribe</a>
-                      <a href="#pebble" className="nav-dropdown-link">Pebble Patient App</a>
+                      <a href="#pebble" className="nav-dropdown-link">Pebble Client App</a>
                       <a href="#practice-health" className="nav-dropdown-link">Practice Health</a>
                       <a href="#features" className="nav-dropdown-link">See All Features</a>
                     </div>
@@ -116,7 +116,7 @@ export default function App() {
           <h4>Product</h4>
           <a href="#precharting">Morning Briefs</a>
           <a href="#ambient">Ambient Scribe</a>
-          <a href="#pebble">Pebble Patient App</a>
+          <a href="#pebble">Pebble Client App</a>
           <a href="#practice-health">Practice Health</a>
           <a href="#features">See All Features</a>
           <a href="/integrations">EHR Integrations</a>
@@ -174,17 +174,17 @@ export default function App() {
         <div className="container">
           <div className="hero-layout">
             <div className="hero-content">
-              <h1>The AI That <em style={{ fontStyle: "italic" }}>Briefs</em> You Before The Patient Walks In.</h1>
-              <p className="hero-subhead">Walk into session with a clear game plan. Walk out with notes done in 2 minutes. And finally see your caseload, risk, and revenue in one place.</p>
-              <p className="hero-ehr-note">Universally compatible overlay - works alongside Epic, SimplePractice, TherapyNotes or your favorite EHR.</p>
+              <h1>The AI That <em style={{ fontStyle: "italic" }}>Briefs</em> You Before Your Client Walks In.</h1>
+              <p className="hero-subhead">AidMi builds longitudinal context for every client — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.</p>
+              <p className="hero-ehr-note">Works alongside your existing EHR.</p>
               
               <div className="hero-buttons">
-                <a href="#" className="btn btn-primary btn-large contact-trigger">Try AidMi Free</a>
+                <a href="#" className="btn btn-primary btn-large contact-trigger">Get AidMi Free</a>
                 <button className="btn btn-secondary btn-large video-trigger">
                   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "18px", height: "18px", marginRight: "8px" }}>
                     <path d="M8 5V19L19 12L8 5Z" />
                   </svg>
-                  See Your Morning Brief
+                  Watch a 1-minute demo
                 </button>
               </div>
               
@@ -199,9 +199,9 @@ export default function App() {
             <div className="hero-visual">
               <div className="floating-ui">
                 <div className="product-demo-placeholder" style={{ height: "400px", flexDirection: "column", gap: "12px" }}>
-                  [Patient Morning Brief UI Mockup]
+                  {"[Today's Brief UI Preview]"}
                   <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "400px", textAlign: "center" }}>
-                    💡 Insert screenshot/mockup of the Patient Morning Brief interface showing patient list with alerts, PHQ-9 scores, and risk flags
+                    💡 Show a clean &quot;Today&apos;s Brief&quot; card with client name, key changes, and action items
                   </small>
                 </div>
               </div>
@@ -212,7 +212,7 @@ export default function App() {
 
       {/* Trust Strip (Marquee) */}
       <section className="trust-strip">
-        <div className="trust-label">Co-designed with clinicians from</div>
+        <div className="trust-label">Co-designed with US behavioral health clinicians from:</div>
         <div className="marquee">
           <div className="marquee-content">
             <div className="partner-logo">Meta</div>
@@ -268,7 +268,7 @@ export default function App() {
                 </div>
                 <div className="product-demo-placeholder">[Product Demo: Daily Triage Dashboard]
                   <br /><small style={{ display: "block", marginTop: "12px", fontSize: "12px", opacity: "0.7" }}>
-                    💡 Replace with mockup showing prioritized patient list with alerts, PHQ-9 scores, and risk flags
+                    💡 Replace with mockup showing prioritized client list with alerts, PHQ-9 scores, and risk flags
                   </small>
                 </div>
               </div>
@@ -281,7 +281,7 @@ export default function App() {
                     </svg>
                   </div>
                   <h3 className="bento-title">Relationship Card</h3>
-                  <p className="bento-description">Never forget a detail. A sticky note that reminds you: "Patient's dog (Buster) had surgery. Ask for update."</p>
+                  <p className="bento-description">Never forget a detail. A sticky note that reminds you: &quot;Client&apos;s dog (Buster) had surgery. Ask for update.&quot;</p>
                 </div>
               </div>
 
@@ -293,7 +293,7 @@ export default function App() {
                     </svg>
                   </div>
                   <h3 className="bento-title">Safety Strip</h3>
-                  <p className="bento-description">Immediate visibility on high-risk patients with links to their Stanley-Brown Safety Plans.</p>
+                  <p className="bento-description">Immediate visibility on high-risk clients with links to their Stanley-Brown Safety Plans.</p>
                 </div>
               </div>
             </div>
@@ -354,17 +354,17 @@ export default function App() {
                     </svg>
                   </div>
                   <h3 className="bento-title">Continuous Care Bridge</h3>
-                  <p className="bento-description">Pebble is a patient companion that bridges the gap between visits, turning insights into daily habits without you needing to act as a reminder service.<br /><br /><strong>Plus, it grows your practice:</strong> Pebble is open to the public for self-care, and we funnel high-intent users directly to you when they are ready for professional help.</p>
+                  <p className="bento-description">Pebble is a client companion that bridges the gap between visits, turning insights into daily habits without you needing to act as a reminder service.<br /><br /><strong>Plus, it grows your practice:</strong> Pebble is open to the public for self-care, and we funnel high-intent users directly to you when they are ready for professional help.</p>
                   <div className="async-note">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" />
                     </svg>
-                    <span><strong>Zero-Dependency:</strong> AidMi works perfectly with or without patient usage. Use Pebble only for patients who want it.</span>
+                    <span><strong>Zero-Dependency:</strong> AidMi works perfectly with or without client usage. Use Pebble only for clients who want it.</span>
                   </div>
                 </div>
                 <div className="product-demo-placeholder">[Product Demo: Continuous Care Interface]
                   <br /><small style={{ display: "block", marginTop: "12px", fontSize: "12px", opacity: "0.7" }}>
-                    💡 Replace with mockup showing patient app interface with care bridge features
+                    💡 Replace with mockup showing client app interface with care bridge features
                   </small>
                 </div>
               </div>
@@ -389,7 +389,7 @@ export default function App() {
                     </svg>
                   </div>
                   <h3 className="bento-title">The Dot Calendar</h3>
-                  <p className="bento-description">Zero-friction mood logging. Patients tap a color dot in 5 seconds. No long forms to ignore.</p>
+                  <p className="bento-description">Zero-friction mood logging. Clients tap a color dot in 5 seconds. No long forms to ignore.</p>
                 </div>
               </div>
             </div>
@@ -470,7 +470,7 @@ export default function App() {
                     <li>✓ <strong>Side-Effect Scanner:</strong> AI highlights reported side effects automatically.</li>
                     <li>✓ <strong>Dose vs. symptoms at a glance</strong> – See PHQ-9 and meds plotted together over time before you walk into the room.</li>
                     <li>✓ <strong>1-click "No change" visits</strong> – Carry forward MSE, risk, and plan safely when today really was stable.</li>
-                    <li>✓ <strong>Caseload clarity</strong> – See how full you are before you squeeze in "just one more" patient.</li>
+                    <li>✓ <strong>Caseload clarity</strong> – See how full you are before you squeeze in &quot;just one more&quot; client.</li>
                   </ul>
                 </div>
                 <div className="segment-card-visual">
@@ -555,13 +555,13 @@ export default function App() {
               <div className="step-item active" data-step="prep">
                 <div className="step-number">1</div>
                 <h3 className="step-title">Before: The Morning Brief</h3>
-                <p className="step-description">AidMi processes overnight patient data—Pebble check-ins, PHQ-9 shifts, and risk alerts—to hand you a prioritized 'Watch List' before your 9 AM.</p>
+                <p className="step-description">AidMi processes overnight client data—Pebble check-ins, PHQ-9 shifts, and risk alerts—to hand you a prioritized &apos;Watch List&apos; before your 9 AM.</p>
               </div>
 
               <div className="step-item" data-step="listen">
                 <div className="step-number">2</div>
                 <h3 className="step-title">During: 2-Minute Notes, Your Way</h3>
-                <p className="step-description">We capture the data, so you focus on the patient's affect. AidMi filters out the noise and translates the session into structured, insurance-ready clinical prose (MSE, Risk, Plan) in real-time. Sign off in 2 minutes before your next session.</p>
+                <p className="step-description">We capture the data, so you focus on the client&apos;s affect. AidMi filters out the noise and translates the session into structured, insurance-ready clinical prose (MSE, Risk, Plan) in real-time. Sign off in 2 minutes before your next session.</p>
               </div>
 
               <div className="step-item" data-step="sign">
@@ -576,7 +576,7 @@ export default function App() {
                 <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
                   [Morning Triage Dashboard]
                   <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 Show patient list with RED WARNING TRIANGLE icons next to high-acuity patients. Example: "Sarah M. ⚠️ Risk Flag: Medication non-adherence 3 days" and "James K. ⚠️ PHQ-9 increased +6 points"
+                    💡 Show client list with RED WARNING TRIANGLE icons next to high-acuity clients. Example: &quot;Sarah M. ⚠️ Risk Flag: Medication non-adherence 3 days&quot; and &quot;James K. ⚠️ PHQ-9 increased +6 points&quot;
                   </small>
                 </div>
               </div>
@@ -585,7 +585,7 @@ export default function App() {
                 <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
                   [Translation Layer Visualization]
                   <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 Show SPLIT VIEW: Left side = Raw text bubble: "I haven't slept in 3 days and I'm hearing buzzing." | Right side = Structured text: "Patient reports varying degrees of insomnia and auditory hallucinations."
+                    💡 Show SPLIT VIEW: Left side = Raw text bubble: &quot;I haven&apos;t slept in 3 days and I&apos;m hearing buzzing.&quot; | Right side = Structured text: &quot;Client reports varying degrees of insomnia and auditory hallucinations.&quot;
                   </small>
                 </div>
               </div>
@@ -607,7 +607,7 @@ export default function App() {
       <section className="testimonials">
         <div className="container">
           <div className="section-header">
-            <h2>Loved by Clinicians & Patients</h2>
+            <h2>Loved by Clinicians &amp; Clients</h2>
           </div>
 
           <div className="testimonials-scroll">
@@ -626,7 +626,7 @@ export default function App() {
                   <div className="testimonial-role">Psychiatrist, Private Practice, San Francisco, CA</div>
                 </div>
               </div>
-              <p className="testimonial-quote">"Honestly, I move fast. Last week, a patient mumbled a side effect I completely missed because I was looking at their chart. AidMi flagged it in the summary. It's not just about speed; it's the anxiety relief of having a second set of eyes on my work."</p>
+              <p className="testimonial-quote">&quot;Honestly, I move fast. Last week, a client mumbled a side effect I completely missed because I was looking at their chart. AidMi flagged it in the summary. It&apos;s not just about speed; it&apos;s the anxiety relief of having a second set of eyes on my work.&quot;</p>
             </div>
 
             <div className="testimonial-card">
@@ -677,7 +677,7 @@ export default function App() {
                     <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
                   </div>
                   <div className="testimonial-author">Jessica M.</div>
-                  <div className="testimonial-role">Patient, San Diego, CA</div>
+                  <div className="testimonial-role">Client, San Diego, CA</div>
                 </div>
               </div>
               <p className="testimonial-quote">"It used to be click-clack-click on the keyboard while I was crying. It felt so cold. Now, Dr. Lee just sits there and looks at me. I didn't realize how much the typing hurt our connection until it stopped."</p>
@@ -751,12 +751,12 @@ export default function App() {
 
             <div className="faq-item">
               <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
-                <span>If patients track their mood in Pebble, am I liable if I don't see a suicide flag?</span>
+                <span>If clients track their mood in Pebble, am I liable if I don&apos;t see a suicide flag?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer" id="faq-answer-2">
                 <div className="faq-answer-content">
-                  No. Pebble is designed as a clinical insight tool, not a crisis monitoring service. During onboarding, patients explicitly acknowledge that data is reviewed only during scheduled appointments. Crucially, if a patient logs a high-risk entry (e.g., high suicidality score), the app automatically intervenes by directing them to immediate crisis resources (988, Crisis Text Line) and displaying their safety plan. This ensures patients get immediate help while protecting your license and your boundaries outside of office hours.
+                  No. Pebble is designed as a clinical insight tool, not a crisis monitoring service. During onboarding, clients explicitly acknowledge that data is reviewed only during scheduled appointments. Crucially, if a client logs a high-risk entry (e.g., high suicidality score), the app automatically intervenes by directing them to immediate crisis resources (988, Crisis Text Line) and displaying their safety plan. This ensures clients get immediate help while protecting your license and your boundaries outside of office hours.
                 </div>
               </div>
             </div>
@@ -768,7 +768,7 @@ export default function App() {
               </button>
               <div className="faq-answer" id="faq-answer-3">
                 <div className="faq-answer-content">
-                  We are a "Zero-Retention" platform. Once the note is generated and exported to your EHR, the audio is permanently scrubbed from our servers. Your patients' privacy is our highest priority, and we never hold recordings longer than necessary to complete documentation.
+                  We are a &quot;Zero-Retention&quot; platform. Once the note is generated and exported to your EHR, the audio is permanently scrubbed from our servers. Your clients&apos; privacy is our highest priority, and we never hold recordings longer than necessary to complete documentation.
                 </div>
               </div>
             </div>
@@ -827,12 +827,12 @@ export default function App() {
 
             <div className="faq-item">
               <button className="faq-question">
-                <span>Is the Pebble patient app required?</span>
+                <span>Is the Pebble client app required?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div className="faq-answer-content">
-                  No, Pebble is completely optional. Many clinicians use only the ambient documentation feature. However, clinicians who offer Pebble to patients report significantly better session prep and improved treatment outcomes due to continuous data between sessions.
+                  No, Pebble is completely optional. Many clinicians use only the ambient documentation feature. However, clinicians who offer Pebble to clients report significantly better session prep and improved treatment outcomes due to continuous data between sessions.
                 </div>
               </div>
             </div>
@@ -844,7 +844,7 @@ export default function App() {
               </button>
               <div className="faq-answer">
                 <div className="faq-answer-content">
-                  We offer simple per-clinician pricing starting at $99/month. This includes unlimited documentation, morning briefs, and EHR integrations. The Pebble patient app is available as an add-on for practices that want between-session tracking. No contracts, cancel anytime.
+                  We offer simple per-clinician pricing starting at $99/month. This includes unlimited documentation, morning briefs, and EHR integrations. The Pebble client app is available as an add-on for practices that want between-session tracking. No contracts, cancel anytime.
                 </div>
               </div>
             </div>
@@ -923,7 +923,7 @@ export default function App() {
               <ul>
                 <li><a href="#ambient">Ambient Scribe</a></li>
                 <li><a href="#precharting">Morning Briefs</a></li>
-                <li><a href="#pebble">Pebble Patient App</a></li>
+                <li><a href="#pebble">Pebble Client App</a></li>
                 <li><a href="#practice-health">Practice Health</a></li>
                 <li><a href="#features">See All Features</a></li>
                 <li><a href="/integrations">Electronic Health Record (EHR)</a></li>
