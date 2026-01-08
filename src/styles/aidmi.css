@@ -739,19 +739,19 @@ nav a:focus {
 }
 
 .option-illustration-start {
-  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  background: linear-gradient(135deg, rgba(150, 173, 214, 0.15), rgba(150, 173, 214, 0.25));
 }
 
 .option-illustration-start svg {
-  fill: #1d4ed8;
+  fill: var(--pale-blue);
 }
 
 .option-illustration-demo {
-  background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+  background: linear-gradient(135deg, rgba(249, 184, 175, 0.15), rgba(249, 184, 175, 0.25));
 }
 
 .option-illustration-demo svg {
-  fill: #7c3aed;
+  fill: var(--salmon);
 }
 
 /* Content */
@@ -875,74 +875,75 @@ nav a:focus {
   pointer-events: none;
 }
 
-/* ==================== HERO - CLINICAL MESH BACKGROUND ==================== */
-.hero-mesh {
+/* ==================== HERO - SOFT OPTICAL GLOW ==================== */
+/* Large, diffuse radial gradients create depth without geometric artifacts */
+
+.hero-glow {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 1px 1px, rgba(0, 64, 140, 0.08) 1px, transparent 0);
-  background-size: 32px 32px;
+  border-radius: 50%;
+  filter: blur(80px);
   z-index: 0;
-  opacity: 0.6;
+  pointer-events: none;
+  animation: glow-pulse 12s ease-in-out infinite;
 }
 
-/* Flowing gradient lines - implies data flow */
-.hero-gradient-line {
-  position: absolute;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0, 64, 140, 0.15) 20%, 
-    rgba(150, 173, 214, 0.3) 50%, 
-    rgba(0, 64, 140, 0.15) 80%, 
-    transparent 100%
-  );
-  z-index: 0;
-  animation: line-flow 8s ease-in-out infinite;
+/* Primary glow - upper right (focus area) */
+.hero-glow-1 {
+  top: -10%;
+  right: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(150, 173, 214, 0.25) 0%, transparent 70%);
+  animation-delay: 0s;
 }
 
-.hero-gradient-line-1 {
-  top: 30%;
-  left: -10%;
-  right: -10%;
-  transform: rotate(-3deg);
-}
-
-.hero-gradient-line-2 {
-  top: 70%;
-  left: -10%;
-  right: -10%;
-  transform: rotate(2deg);
+/* Secondary glow - center left (balance) */
+.hero-glow-2 {
+  top: 40%;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 64, 140, 0.15) 0%, transparent 70%);
   animation-delay: -4s;
-  opacity: 0.7;
 }
 
-@keyframes line-flow {
+/* Tertiary glow - lower center (depth) */
+.hero-glow-3 {
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(150, 173, 214, 0.12) 0%, transparent 70%);
+  animation-delay: -8s;
+}
+
+/* Subtle breathing animation */
+@keyframes glow-pulse {
   0%, 100% {
-    opacity: 0.3;
-    transform: translateX(-2%) rotate(-3deg);
+    opacity: 0.8;
+    transform: scale(1) translateX(-50%);
   }
   50% {
-    opacity: 0.6;
-    transform: translateX(2%) rotate(-3deg);
+    opacity: 1;
+    transform: scale(1.05) translateX(-50%);
   }
 }
 
-.hero-gradient-line-2 {
-  animation-name: line-flow-2;
+/* Override transform for non-centered glows */
+.hero-glow-1,
+.hero-glow-2 {
+  animation-name: glow-pulse-static;
 }
 
-@keyframes line-flow-2 {
+@keyframes glow-pulse-static {
   0%, 100% {
-    opacity: 0.2;
-    transform: translateX(2%) rotate(2deg);
+    opacity: 0.8;
+    transform: scale(1);
   }
   50% {
-    opacity: 0.5;
-    transform: translateX(-2%) rotate(2deg);
+    opacity: 1;
+    transform: scale(1.05);
   }
 }
 
@@ -1030,95 +1031,84 @@ nav a:focus {
   perspective: 1000px;
 }
 
-.mockup-3d-container {
+/* Hero Mockup - Product Screenshot */
+.hero-mockup-wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
+  max-width: 520px;
+  width: 100%;
+  perspective: 1000px;
 }
 
-.mockup-3d-wrapper {
-  position: relative;
-  transform-style: preserve-3d;
-  transform: rotateY(-8deg) rotateX(4deg);
-  transition: transform 0.4s ease;
-}
-
-.mockup-3d-wrapper:hover {
-  transform: rotateY(-4deg) rotateX(2deg);
-}
-
-.mockup-3d-wrapper .mockup-frame {
-  background: var(--pure-white);
+.hero-mockup-image {
+  width: 100%;
+  height: auto;
   border-radius: 16px;
   box-shadow: 
-    0 4px 6px rgba(0, 64, 140, 0.05),
-    0 20px 40px rgba(0, 64, 140, 0.1),
-    0 40px 80px rgba(0, 64, 140, 0.08),
-    -20px 20px 40px rgba(0, 64, 140, 0.06);
-  overflow: hidden;
-  width: 100%;
-  max-width: 480px;  /* Increased from 400px */
-  min-width: 420px;  /* Added minimum width */
-  border: 1px solid rgba(0, 64, 140, 0.08);
-  transform: translateZ(20px);
+    0 25px 50px -12px rgba(0, 64, 140, 0.25),
+    0 12px 24px -8px rgba(0, 64, 140, 0.15);
+  transform: perspective(1000px) rotateY(-8deg) rotateX(4deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Reflection/ground shadow for 3D effect */
-.mockup-reflection {
-  position: absolute;
-  bottom: -40px;
-  left: 10%;
-  right: 10%;
-  height: 60px;
-  background: linear-gradient(180deg, 
-    rgba(0, 64, 140, 0.08) 0%, 
-    transparent 100%
-  );
-  border-radius: 50%;
-  filter: blur(20px);
-  transform: rotateX(60deg) translateZ(-20px);
-  opacity: 0.6;
+.hero-mockup-image:hover {
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(-8px);
+  box-shadow: 
+    0 35px 60px -15px rgba(0, 64, 140, 0.3),
+    0 20px 40px -10px rgba(0, 64, 140, 0.2);
 }
 
-/* Responsive - reduce 3D effect on mobile */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-  .mockup-3d-wrapper {
-    transform: rotateY(-4deg) rotateX(2deg);
+  .hero-mockup-image {
+    transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
   }
   
-  .mockup-3d-wrapper:hover {
-    transform: rotateY(-2deg) rotateX(1deg);
-  }
-  
-  .mockup-3d-wrapper .mockup-frame {
-    max-width: 420px;
-    min-width: auto;
+  .hero-mockup-image:hover {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(1deg) translateY(-4px);
   }
 }
 
 @media (max-width: 768px) {
-  .mockup-3d-wrapper {
-    transform: none;
-  }
-  
-  .mockup-3d-wrapper:hover {
-    transform: translateY(-4px);
-  }
-  
-  .mockup-3d-wrapper .mockup-frame {
+  .hero-mockup-wrapper {
     max-width: 100%;
+    margin: 0 auto;
   }
   
-  .brief-preview {
-    padding: 14px 16px;
+  .hero-mockup-image {
+    transform: perspective(1000px) rotateY(0deg) rotateX(2deg);
+    border-radius: 12px;
   }
   
-  .mockup-reflection {
-    display: none;
+  .hero-mockup-image:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(1deg) translateY(-4px);
   }
   
-  .hero-gradient-line {
-    display: none;
+  .hero-glow {
+    filter: blur(60px);
+  }
+  
+  .hero-glow-1 {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .hero-glow-2 {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .hero-glow-3 {
+    width: 450px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-mockup-image {
+    border-radius: 8px;
+    box-shadow: 
+      0 15px 30px -8px rgba(0, 64, 140, 0.2),
+      0 8px 16px -4px rgba(0, 64, 140, 0.1);
   }
 }
 
@@ -1244,93 +1234,7 @@ nav a:focus {
   letter-spacing: -0.3px;
 }
 
-/* ==================== MOCKUP FRAMES ==================== */
-.mockup-frame {
-  background: var(--pure-white);
-  border-radius: 12px;
-  box-shadow: 
-    0 4px 6px rgba(0, 64, 140, 0.05),
-    0 20px 40px rgba(0, 64, 140, 0.1);
-  overflow: hidden;
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-.mockup-header {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  padding: 10px 14px;  /* Reduced from 12px 16px */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid rgba(0, 64, 140, 0.06);
-}
-
-.mockup-dots {
-  display: flex;
-  gap: 6px;
-}
-
-.mockup-dots span {
-  width: 8px;  /* Reduced from 10px */
-  height: 8px;
-  border-radius: 50%;
-  background: #e2e8f0;
-}
-
-.mockup-dots span:first-child { background: #fca5a5; }
-.mockup-dots span:nth-child(2) { background: #fcd34d; }
-.mockup-dots span:last-child { background: #86efac; }
-
-.mockup-title {
-  font-size: 11px;  /* Reduced from 12px */
-  font-weight: 600;
-  color: var(--text-light);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.mockup-body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-height: 280px;
-}
-
-.mockup-skeleton {
-  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
-  background-size: 200% 100%;
-  animation: skeleton-shimmer 1.5s ease-in-out infinite;
-  border-radius: 6px;
-}
-
-.mockup-skeleton-title {
-  height: 24px;
-  width: 60%;
-}
-
-.mockup-skeleton-text {
-  height: 14px;
-  width: 100%;
-}
-
-.mockup-skeleton-text.short {
-  width: 75%;
-}
-
-.mockup-skeleton-card {
-  height: 80px;
-  width: 100%;
-  margin-top: 8px;
-}
-
-@keyframes skeleton-shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-/* ==================== BRIEF PREVIEW (Hero Mockup) ==================== */
+/* ==================== BRIEF PREVIEW (Bento Grid) ==================== */
 .brief-preview {
   padding: 16px 20px;  /* Reduced from 20px */
   min-height: auto;

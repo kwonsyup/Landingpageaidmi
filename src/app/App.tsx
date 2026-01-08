@@ -1,5 +1,6 @@
 import '../styles/aidmi.css';
 import useLandingInteractions from './hooks/useLandingInteractions';
+import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
 
 export default function App() {
   useLandingInteractions();
@@ -98,9 +99,9 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-mesh"></div>
-        <div className="hero-gradient-line hero-gradient-line-1"></div>
-        <div className="hero-gradient-line hero-gradient-line-2"></div>
+        <div className="hero-glow hero-glow-1"></div>
+        <div className="hero-glow hero-glow-2"></div>
+        <div className="hero-glow hero-glow-3"></div>
         
         <div className="container">
           <div className="hero-layout">
@@ -131,90 +132,12 @@ export default function App() {
             </div>
 
             <div className="hero-visual">
-              <div className="mockup-3d-container">
-                <div className="mockup-3d-wrapper">
-                  <div className="mockup-frame">
-                    <div className="mockup-header">
-                      <div className="mockup-dots">
-                        <span></span><span></span><span></span>
-                      </div>
-                      <span className="mockup-title">Today&apos;s Brief — 9:30 AM</span>
-                    </div>
-                    <div className="mockup-body brief-preview">
-                      <div className="brief-preview-header">
-                        <span className="brief-patient-name">Sarah M.</span>
-                        <span className="brief-meta">Session #14 · Last seen Oct 3</span>
-                      </div>
-                      
-                      {/* Risk Status - Critical for BH */}
-                      <div className="brief-risk-banner">
-                        <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                        <span>No SI/HI reported · Last assessed Oct 3</span>
-                      </div>
-                      
-                      {/* Clinical Measures */}
-                      <div className="brief-preview-section">
-                        <div className="brief-preview-label">
-                          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
-                            <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/>
-                          </svg>
-                          Measures
-                        </div>
-                        <div className="brief-measures-row">
-                          <div className="brief-measure">
-                            <span className="measure-label">PHQ-9</span>
-                            <span className="measure-value measure-improving">12 → 8</span>
-                          </div>
-                          <div className="brief-measure">
-                            <span className="measure-label">GAD-7</span>
-                            <span className="measure-value measure-stable">10</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Medication */}
-                      <div className="brief-preview-section">
-                        <div className="brief-preview-label">
-                          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/>
-                          </svg>
-                          Medications
-                        </div>
-                        <p className="brief-preview-item">
-                          <span className="med-change-badge">↑</span>
-                          Lexapro 10mg → 15mg <span className="brief-citation">(Oct 3)</span>
-                        </p>
-                        <p className="brief-preview-item brief-item-muted">
-                          Reports taking as prescribed
-                        </p>
-                      </div>
-                      
-                      {/* Follow Up */}
-                      <div className="brief-preview-section">
-                        <div className="brief-preview-label">
-                          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
-                            <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                          </svg>
-                          Follow up
-                        </div>
-                        <p className="brief-preview-item">Review sleep hygiene homework</p>
-                        <p className="brief-preview-item">Check in: job interview stress</p>
-                      </div>
-                      
-                      <div className="brief-preview-footer">
-                        <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '12px', height: '12px', opacity: 0.5 }}>
-                          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                        <span>Generated by AidMi</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Reflection/shadow for 3D depth */}
-                  <div className="mockup-reflection"></div>
-                </div>
+              <div className="hero-mockup-wrapper">
+                <img 
+                  src={heroMockup} 
+                  alt="AidMi Today's Brief showing patient status with PHQ-9, GAD-7 scores, recent stressors, symptom patterns, and rapport anchors"
+                  className="hero-mockup-image"
+                />
               </div>
               
               {/* Integration Strip */}
@@ -1408,7 +1331,8 @@ export default function App() {
             <a href="https://app.aidmi.ai/" className="getstarted-option-card">
               <div className="option-illustration option-illustration-start">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+                  <path d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.05-4.05c.47-.47 1.15-.68 1.81-.55 1.82.36 3.79-1.1 3.79-2.95 0-.1.01-.2.02-.3.12-.92 1.12-1.29 1.79-.64l4.24 4.24c.65.66.28 1.66-.64 1.79-.11.01-.21.02-.31.02-1.85 0-3.31 1.97-2.95 3.79.13.66-.08 1.34-.55 1.81L9.2 17.9l-1.55-3.62c.31-.13 3.61-1.53 5.89-3.57C15.99 8.15 17.61 6 17.61 6s-8.65 1.77-8.42 0.35z"/>
+                  <path d="M3.85 19.5c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5c0-1.93-2.91-6.5-3.5-6.5s-3.5 4.57-3.5 6.5z"/>
                 </svg>
               </div>
               <div className="option-content">
@@ -1424,7 +1348,7 @@ export default function App() {
             <a href="https://calendly.com/aidmi/demo" className="getstarted-option-card" target="_blank" rel="noopener noreferrer">
               <div className="option-illustration option-illustration-demo">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                 </svg>
               </div>
               <div className="option-content">
@@ -1447,7 +1371,7 @@ export default function App() {
             </span>
             <span>
               <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z"/>
+                <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
               </svg>
               No Credit Card
             </span>
