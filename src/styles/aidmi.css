@@ -675,6 +675,7 @@ nav a:focus {
   font-weight: 700;
   color: var(--dark-navy);
   text-align: center;
+  margin-top: 24px;
   margin-bottom: 28px;
 }
 
@@ -928,7 +929,7 @@ nav a:focus {
   gap: 16px;
   color: #94a3b8;
   font-size: 13px;
-  margin: 24px 0;
+  margin: 32px 0;
 }
 
 .login-separator::before,
@@ -1008,6 +1009,11 @@ nav a:focus {
 .sso-icon {
   width: 20px;
   height: 20px;
+}
+
+/* Login View Footer Spacing */
+.login-social + .getstarted-footer-link {
+  margin-top: 32px;
 }
 
 /* Responsive */
@@ -1249,10 +1255,10 @@ nav a:focus {
 /* Levitation Animation */
 @keyframes float-hero {
   0%, 100% { 
-    transform: perspective(2500px) rotateY(-5deg) rotateX(3deg) rotateZ(-1deg) translateY(0); 
+    transform: perspective(2500px) rotateY(-8deg) rotateX(2deg) rotateZ(-1deg) translateY(0); 
   }
   50% { 
-    transform: perspective(2500px) rotateY(-5deg) rotateX(3deg) rotateZ(-1deg) translateY(-12px); 
+    transform: perspective(2500px) rotateY(-8deg) rotateX(2deg) rotateZ(-1deg) translateY(-12px); 
   }
 }
 
@@ -1276,7 +1282,7 @@ nav a:focus {
   box-shadow: 
     -15px 20px 40px -5px rgba(0, 40, 85, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.6) inset;
-  transform: perspective(2500px) rotateY(-5deg) rotateX(3deg) rotateZ(-1deg);
+  transform: perspective(2500px) rotateY(-8deg) rotateX(2deg) rotateZ(-1deg);
   animation: float-hero 6s ease-in-out infinite;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -1981,17 +1987,32 @@ nav a:focus {
   max-width: 1100px;
   margin: 0 auto;
   align-items: start;
+  position: relative;
+}
+
+/* Transformation arrow between cards */
+.before-after-card::before {
+  content: '→';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: 300;
+  color: rgba(0, 64, 140, 0.15);
+  z-index: 10;
+  pointer-events: none;
 }
 
 /* BEFORE Column (Problem) - Chaotic, Receding */
 .before-column {
-  background: #f8f9fa;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
   padding: 48px 40px;
   position: relative;
   border-radius: 12px;
   transform: scale(0.96) perspective(500px) rotateY(2deg);
   transition: all 0.4s ease;
-  border: 1px dashed #d1d5db;
+  border: 1px solid #e2e8f0;
 }
 
 /* Noise/grain overlay for "messy" feel */
@@ -2009,19 +2030,20 @@ nav a:focus {
   z-index: 0;
 }
 
-/* Scattered "paper" decoration */
+/* Scattered sticky note decorations - yellow post-it */
 .before-column::after {
   content: '';
   position: absolute;
   top: -8px;
-  right: -8px;
-  width: 60px;
+  right: 40px;
+  width: 40px;
   height: 40px;
-  background: #f1f3f5;
-  border: 1px solid #e5e7eb;
-  border-radius: 4px;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 2px;
   transform: rotate(12deg);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  opacity: 0.7;
   z-index: -1;
 }
 
@@ -2061,8 +2083,9 @@ nav a:focus {
   height: 200%;
   background: radial-gradient(
     ellipse at 30% 20%,
-    rgba(150, 173, 214, 0.15) 0%,
-    transparent 50%
+    rgba(0, 64, 140, 0.08) 0%,
+    rgba(150, 173, 214, 0.04) 30%,
+    transparent 60%
   );
   pointer-events: none;
   z-index: 0;
@@ -2112,20 +2135,21 @@ nav a:focus {
 }
 
 .before-column .column-label {
-  background: #f1f3f5;
-  color: #6b7280;
-  border: 1px solid #d1d5db;
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
 }
 
 .before-column .column-label .label-icon {
-  fill: #9ca3af;
+  fill: #dc2626;
 }
 
 .after-column .column-label {
-  background: linear-gradient(135deg, rgba(0, 64, 140, 0.1), rgba(0, 64, 140, 0.05));
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
   color: var(--dark-navy);
-  border: 1px solid rgba(0, 64, 140, 0.2);
+  border: 1px solid #bfdbfe;
   box-shadow: 0 2px 4px rgba(0, 64, 140, 0.08);
+  font-weight: 700;
 }
 
 .after-column .column-label .label-icon {
@@ -2150,6 +2174,10 @@ nav a:focus {
   color: #475569;
 }
 
+.after-column .column-title {
+  color: var(--dark-navy);
+}
+
 /* Problem List (Red icons) */
 .problem-list {
   list-style: none;
@@ -2171,8 +2199,8 @@ nav a:focus {
   height: 24px;
   flex-shrink: 0;
   margin-top: 2px;
-  fill: #cbd5e1;
-  opacity: 1;
+  fill: #94a3b8;
+  opacity: 0.8;
 }
 
 .problem-list li div {
@@ -2245,6 +2273,11 @@ nav a:focus {
   .before-after-card {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+  
+  /* Hide transformation arrow on mobile */
+  .before-after-card::before {
+    display: none;
   }
   
   /* On mobile, stack with Solution first */
