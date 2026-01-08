@@ -63,7 +63,7 @@ export default function App() {
                       <h4>Core Features</h4>
                       <a href="#features" className="nav-dropdown-link">Today&apos;s Brief</a>
                       <a href="#features" className="nav-dropdown-link">Aimé Q&A</a>
-                      <a href="#features" className="nav-dropdown-link">Evidence-Backed Notes</a>
+                      <a href="#features" className="nav-dropdown-link">Ambient Documentation</a>
                     </div>
                     <div className="nav-dropdown-column">
                       <h4>Integrations</h4>
@@ -111,7 +111,7 @@ export default function App() {
           <h4>Product</h4>
           <a href="#features">Today&apos;s Brief</a>
           <a href="#features">Aimé Q&A</a>
-          <a href="#features">Evidence-Backed Notes</a>
+          <a href="#features">Ambient Documentation</a>
           <a href="#pricing">Pricing</a>
           <a href="#features">EHR Integrations</a>
         </div>
@@ -137,7 +137,7 @@ export default function App() {
               <h1>The AI That <em>Briefs</em> You Before Your Patient Walks In.</h1>
               
               <p className="hero-subhead">
-                Know every patient's story before they walk in. AidMi reads your notes and builds a brief for each session — what changed, what to follow up on, what matters today.
+                Know every patient's story before you meet. AidMi bridges the gap between sessions and builds a brief — what changed, what to follow up on, what matters today.
               </p>
               
               <div className="hero-buttons">
@@ -271,7 +271,7 @@ export default function App() {
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
                   </svg>
                   <div>
-                    <strong>Walking in unprepared, relying on memory</strong>
+                    <strong>Starting sessions unprepared, relying on memory</strong>
                     <span>Patients notice when you forget what mattered to them</span>
                   </div>
                 </li>
@@ -322,7 +322,7 @@ export default function App() {
                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                   </svg>
                   <div>
-                    <strong>Walk in confident with longitudinal context</strong>
+                    <strong>Start every session confident with longitudinal context</strong>
                     <span>Every patient gets the attention they deserve, every time.</span>
                   </div>
                 </li>
@@ -338,7 +338,7 @@ export default function App() {
           <div className="section-header">
             <h2>Your AI Clinical Resident</h2>
             <p className="section-subhead">
-              Save 2 hours of chart prep every day. HIPAA-compliant, always.
+              Months of context, surfaced in seconds.
             </p>
           </div>
 
@@ -353,7 +353,7 @@ export default function App() {
                 </div>
                 <div className="bento-card-titles">
                   <h3>Today&apos;s Brief</h3>
-                  <p className="bento-tagline">Walk into every session prepared.</p>
+                  <p className="bento-tagline">Always know what matters.</p>
                 </div>
               </div>
               
@@ -404,30 +404,68 @@ export default function App() {
               </div>
             </div>
 
-            {/* EVIDENCE-BACKED NOTES - Standard Card */}
+            {/* AMBIENT DOCUMENTATION - Standard Card (combines Scribe + Evidence-Backed Notes) */}
             <div className="bento-card bento-card-standard">
               <div className="bento-card-header">
-                <div className="bento-icon bento-icon-notes">
+                <div className="bento-icon bento-icon-documentation">
                   <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" opacity="0.6"/>
                   </svg>
                 </div>
                 <div className="bento-card-titles">
-                  <h3>Evidence-Backed Notes</h3>
-                  <p className="bento-tagline">Defend every claim.</p>
+                  <h3>Ambient Documentation</h3>
+                  <p className="bento-tagline">From conversation to cited note — hands-free.</p>
                 </div>
               </div>
               
-              <div className="bento-citation-preview">
-                <div className="citation-example">
-                  <p className="citation-text">
+              <div className="bento-documentation-preview">
+                {/* Transcript snippet */}
+                <div className="documentation-transcript">
+                  <div className="doc-transcript-line">
+                    <span className="doc-speaker">Clinician:</span>
+                    <span className="doc-text">How have you been sleeping?</span>
+                  </div>
+                  <div className="doc-transcript-line">
+                    <span className="doc-speaker">Patient:</span>
+                    <span className="doc-text">Better since we adjusted the medication...</span>
+                  </div>
+                </div>
+                
+                {/* Transition indicator */}
+                <div className="documentation-transition">
+                  <svg className="transition-arrow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 10l5 5 5-5z"/>
+                  </svg>
+                  <span>Auto-generating note...</span>
+                </div>
+                
+                {/* Output note with citation */}
+                <div className="documentation-output">
+                  <p className="output-text">
                     &quot;Patient reports <span className="citation-highlight">improved sleep quality</span> since medication adjustment.&quot;
                   </p>
-                  <div className="citation-proof">
+                  <div className="citation-trust">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                     <span>Every claim links to the source transcript</span>
+                  </div>
+                </div>
+                
+                {/* Footer badges */}
+                <div className="documentation-badges">
+                  <div className="doc-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                    </svg>
+                    <span>Real-time transcription</span>
+                  </div>
+                  <div className="doc-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                    </svg>
+                    <span>No audio stored</span>
                   </div>
                 </div>
               </div>
@@ -1215,7 +1253,7 @@ export default function App() {
               <ul>
                 <li><a href="#features">Today&apos;s Brief</a></li>
                 <li><a href="#features">Aimé Q&A</a></li>
-                <li><a href="#features">Evidence-Backed Notes</a></li>
+                <li><a href="#features">Ambient Documentation</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="/integrations">EHR Integrations</a></li>
               </ul>
