@@ -1378,9 +1378,7 @@ nav a:focus {
 
 /* ==================== INTEGRATION STRIP (Ghost-like Sidebar) ==================== */
 .integration-strip {
-  margin-top: 48px; /* More separation from HIPAA text */
-  padding-top: 24px;
-  border-top: 1px solid rgba(0, 64, 140, 0.1);
+  margin-top: 56px; /* Whitespace acts as separator - cleaner, more modern */
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -3190,8 +3188,14 @@ nav a:focus {
 
 /* === TODAY'S BRIEF PREVIEW === */
 .bento-card-wide .bento-brief-preview {
-  padding: 0;
+  padding: 20px;
   margin-top: 8px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 
+    0 2px 8px rgba(0, 64, 140, 0.06),
+    0 8px 24px rgba(0, 64, 140, 0.08);
+  border: 1px solid rgba(0, 64, 140, 0.06);
 }
 
 .bento-screenshot {
@@ -3202,6 +3206,194 @@ nav a:focus {
     0 2px 8px rgba(0, 64, 140, 0.06),
     0 8px 24px rgba(0, 64, 140, 0.08);
   border: 1px solid rgba(0, 64, 140, 0.06);
+}
+
+/* Clinical sections */
+.brief-section {
+  margin-bottom: 20px;
+}
+
+.brief-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.brief-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.brief-section-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin: 0;
+}
+
+.section-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-blue {
+  background: #3B82F6;
+}
+
+.dot-orange {
+  background: #F97316;
+}
+
+.dot-purple {
+  background: #A855F7;
+}
+
+.dot-green {
+  background: #10B981;
+}
+
+.brief-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 8px 0;
+}
+
+.brief-section p:last-child {
+  margin-bottom: 0;
+}
+
+.inline-citation {
+  background: rgba(59, 130, 246, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+/* Divider */
+.brief-divider {
+  border-top: 1px solid #E5E7EB;
+  margin: 24px 0 16px 0;
+}
+
+/* Rapport & Friends Grid */
+.brief-rapport-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.brief-rapport-section {
+  background: #F3F4F6;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.rapport-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.rapport-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rapport-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.rapport-icon-pink {
+  background: #FCE7F3;
+  color: #EC4899;
+}
+
+.rapport-icon-green {
+  background: #D1FAE5;
+  color: #10B981;
+}
+
+.rapport-title h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin: 0 0 2px 0;
+}
+
+.rapport-timestamp {
+  font-size: 11px;
+  color: #94A3B8;
+}
+
+.rapport-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rapport-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.rapport-emoji {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.rapport-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.citation-num {
+  color: #3B82F6;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.rapport-friend-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark-navy);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.rapport-friend-detail {
+  font-size: 12px;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+.support-badge {
+  background: #D1FAE5;
+  color: #059669;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 /* === AIMÉ CHAT PREVIEW === */
@@ -3633,6 +3825,16 @@ nav a:focus {
   
   .patient-summary {
     font-size: 12px;
+  }
+  
+  /* Stack rapport grid on mobile */
+  .brief-rapport-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .bento-card-wide .bento-brief-preview {
+    padding: 16px;
   }
 }
 

@@ -4,6 +4,8 @@ import useLandingInteractions from './hooks/useLandingInteractions';
 import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
 import aidmiLogo from 'figma:asset/914aef0a7ba2e5e4040bf62e5cf27aa2b5b35101.png';
 import todaysBriefScreenshot from 'figma:asset/9002df476557e2afda7088fca33f9da86e2e1f62.png';
+import aimeScreenshot from 'figma:asset/80c0e6820539c27aa0b083552ab101943b46f550.png';
+import scribeScreenshot from 'figma:asset/09a6457aabf0b021c48f85c966219fa39c66e3a3.png';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
@@ -63,7 +65,7 @@ export default function App() {
                       <h4>Core Features</h4>
                       <a href="#features" className="nav-dropdown-link">Today&apos;s Brief</a>
                       <a href="#features" className="nav-dropdown-link">Aimé Q&A</a>
-                      <a href="#features" className="nav-dropdown-link">Ambient Documentation</a>
+                      <a href="#features" className="nav-dropdown-link">Evidence-Backed Scribe</a>
                     </div>
                     <div className="nav-dropdown-column">
                       <h4>Integrations</h4>
@@ -111,7 +113,7 @@ export default function App() {
           <h4>Product</h4>
           <a href="#features">Today&apos;s Brief</a>
           <a href="#features">Aimé Q&A</a>
-          <a href="#features">Ambient Documentation</a>
+          <a href="#features">Evidence-Backed Scribe</a>
           <a href="#pricing">Pricing</a>
           <a href="#features">EHR Integrations</a>
         </div>
@@ -358,11 +360,110 @@ export default function App() {
               </div>
               
               <div className="bento-brief-preview">
-                <img 
-                  src={todaysBriefScreenshot} 
-                  alt="Today's Brief showing patient status, symptom patterns, rapport anchors, and social support network"
-                  className="bento-screenshot"
-                />
+                {/* Clinical sections */}
+                <div className="brief-section">
+                  <div className="brief-section-header">
+                    <span className="section-dot dot-blue"></span>
+                    <h4>Current Status</h4>
+                  </div>
+                  <p>Patient showing significant improvement in anxiety symptoms, with <span className="inline-citation">GAD-7 score declining from 12 to 5</span>.</p>
+                  <p>Mood stable with <span className="inline-citation">PHQ-9: 4</span> (down from 6), patient reports enjoying activities again.</p>
+                </div>
+
+                <div className="brief-section">
+                  <div className="brief-section-header">
+                    <span className="section-dot dot-orange"></span>
+                    <h4>Recent Stressors</h4>
+                  </div>
+                  <p>Work demands remain high as <span className="inline-citation">senior product manager at tech startup</span> with typical 50-60 hour weeks.</p>
+                  <p>Tight deadlines and always-on culture identified as <span className="inline-citation">primary triggers</span>, though patient managing better with coping strategies.</p>
+                </div>
+
+                <div className="brief-section">
+                  <div className="brief-section-header">
+                    <span className="section-dot dot-purple"></span>
+                    <h4>Symptom Patterns</h4>
+                  </div>
+                  <p>Sleep quality significantly improved - now <span className="inline-citation">6-7 hours most nights</span> (up from 4-5 hours), using pre-bed routine and screen avoidance.</p>
+                  <p>Workplace stress tracking shows <span className="inline-citation">steady decline from 8/10 to 4/10</span> over two weeks.</p>
+                </div>
+
+                <div className="brief-section">
+                  <div className="brief-section-header">
+                    <span className="section-dot dot-green"></span>
+                    <h4>What's Helping</h4>
+                  </div>
+                  <p><span className="inline-citation">Progressive muscle relaxation practiced daily</span>, described as 'game-changer' for anxiety management.</p>
+                  <p>Consistent exercise routine maintained including gym, running, and new yoga practice. <span className="inline-citation">Psychiatric evaluation scheduled at Stanford Behavioral Health</span>.</p>
+                </div>
+
+                {/* Divider */}
+                <div className="brief-divider"></div>
+
+                {/* Rapport & Friends - Side by side gray zones */}
+                <div className="brief-rapport-grid">
+                  <div className="brief-rapport-section">
+                    <div className="rapport-header">
+                      <div className="rapport-icon rapport-icon-pink">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                      </div>
+                      <div className="rapport-title">
+                        <h5>Rapport Anchor</h5>
+                        <span className="rapport-timestamp">Last updated 5 min ago</span>
+                      </div>
+                    </div>
+                    <ul className="rapport-list">
+                      <li>
+                        <span className="rapport-emoji">🏀</span>
+                        <div>
+                          <div className="rapport-text">Enjoys basketball league games on Tuesday evenings<sup className="citation-num">1</sup></div>
+                        </div>
+                      </li>
+                      <li>
+                        <span className="rapport-emoji">🧘</span>
+                        <div>
+                          <div className="rapport-text">Practices yoga at lunchtime to manage work stress<sup className="citation-num">2</sup></div>
+                        </div>
+                      </li>
+                      <li>
+                        <span className="rapport-emoji">👋</span>
+                        <div>
+                          <div className="rapport-text">Sister Emma visiting for holidays<sup className="citation-num">3</sup></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="brief-rapport-section">
+                    <div className="rapport-header">
+                      <div className="rapport-icon rapport-icon-green">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                      </div>
+                      <div className="rapport-title">
+                        <h5>Friends</h5>
+                        <span className="rapport-timestamp">Last updated 5 min ago</span>
+                      </div>
+                    </div>
+                    <ul className="rapport-list">
+                      <li>
+                        <div>
+                          <div className="rapport-friend-name">College friend (Mike) <span className="support-badge">Supportive</span></div>
+                          <div className="rapport-friend-detail">Monthly dinners, consistent support system</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <div className="rapport-friend-name">Gym buddy (Alex) <span className="support-badge">Supportive</span></div>
+                          <div className="rapport-friend-detail">Regular workouts together - positive outlet</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -384,23 +485,11 @@ export default function App() {
               </div>
               
               <div className="bento-chat-preview">
-                <div className="chat-message chat-message-user">
-                  <span>When did we start the Lexapro?</span>
-                </div>
-                <div className="chat-message chat-message-aime">
-                  <div className="aime-avatar">A</div>
-                  <div className="chat-message-content">
-                    <p>Lexapro 10mg was started on <strong>September 5, 2024</strong> (Session #8).</p>
-                    <p>Patient reported &quot;feeling ready to try medication&quot; after 2 months of therapy.</p>
-                    <span className="chat-citation">View source →</span>
-                  </div>
-                </div>
-                <div className="chat-input-preview">
-                  <span>Ask about this patient...</span>
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                  </svg>
-                </div>
+                <img 
+                  src={aimeScreenshot} 
+                  alt="Aimé AI assistant showing medication history with cited responses"
+                  className="bento-screenshot"
+                />
               </div>
             </div>
 
@@ -414,60 +503,17 @@ export default function App() {
                   </svg>
                 </div>
                 <div className="bento-card-titles">
-                  <h3>Ambient Documentation</h3>
-                  <p className="bento-tagline">From conversation to cited note — hands-free.</p>
+                  <h3>Evidence-Backed Scribe</h3>
+                  <p className="bento-tagline">Every claim linked to the source.</p>
                 </div>
               </div>
               
               <div className="bento-documentation-preview">
-                {/* Transcript snippet */}
-                <div className="documentation-transcript">
-                  <div className="doc-transcript-line">
-                    <span className="doc-speaker">Clinician:</span>
-                    <span className="doc-text">How have you been sleeping?</span>
-                  </div>
-                  <div className="doc-transcript-line">
-                    <span className="doc-speaker">Patient:</span>
-                    <span className="doc-text">Better since we adjusted the medication...</span>
-                  </div>
-                </div>
-                
-                {/* Transition indicator */}
-                <div className="documentation-transition">
-                  <svg className="transition-arrow" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7 10l5 5 5-5z"/>
-                  </svg>
-                  <span>Auto-generating note...</span>
-                </div>
-                
-                {/* Output note with citation */}
-                <div className="documentation-output">
-                  <p className="output-text">
-                    &quot;Patient reports <span className="citation-highlight">improved sleep quality</span> since medication adjustment.&quot;
-                  </p>
-                  <div className="citation-trust">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    <span>Every claim links to the source transcript</span>
-                  </div>
-                </div>
-                
-                {/* Footer badges */}
-                <div className="documentation-badges">
-                  <div className="doc-badge">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-                    </svg>
-                    <span>Real-time transcription</span>
-                  </div>
-                  <div className="doc-badge">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-                    </svg>
-                    <span>No audio stored</span>
-                  </div>
-                </div>
+                <img 
+                  src={scribeScreenshot} 
+                  alt="Evidence-backed clinical note with citation linking to source transcript"
+                  className="bento-screenshot"
+                />
               </div>
             </div>
           </div>
@@ -1253,7 +1299,7 @@ export default function App() {
               <ul>
                 <li><a href="#features">Today&apos;s Brief</a></li>
                 <li><a href="#features">Aimé Q&A</a></li>
-                <li><a href="#features">Ambient Documentation</a></li>
+                <li><a href="#features">Evidence-Backed Scribe</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="/integrations">EHR Integrations</a></li>
               </ul>
