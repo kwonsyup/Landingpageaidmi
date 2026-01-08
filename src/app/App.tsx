@@ -409,7 +409,7 @@ export default function App() {
                   <span className="pricing-amount">$0</span>
                   <span className="pricing-period">/forever</span>
                 </div>
-                <p className="pricing-tagline">We charge for speed and context, not for seeing patients.</p>
+                <p className="pricing-tagline">We charge for speed and context, not for seeing clclients.</p>
               </div>
               
               <ul className="pricing-features">
@@ -608,89 +608,6 @@ export default function App() {
                   </small>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof (Testimonial Carousel) */}
-      <section className="testimonials">
-        <div className="container">
-          <div className="section-header">
-            <h2>Loved by Clinicians &amp; Clients</h2>
-          </div>
-
-          <div className="testimonials-scroll">
-            <div className="testimonial-card">
-              <div className="testimonial-header">
-                <div className="testimonial-avatar">SK</div>
-                <div className="testimonial-meta">
-                  <div className="testimonial-stars">
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                  </div>
-                  <div className="testimonial-author">Dr. Sarah K. ✓</div>
-                  <div className="testimonial-role">Psychiatrist, Private Practice, San Francisco, CA</div>
-                </div>
-              </div>
-              <p className="testimonial-quote">&quot;Honestly, I move fast. Last week, a client mumbled a side effect I completely missed because I was looking at their chart. AidMi flagged it in the summary. It&apos;s not just about speed; it&apos;s the anxiety relief of having a second set of eyes on my work.&quot;</p>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-header">
-                <div className="testimonial-avatar">MR</div>
-                <div className="testimonial-meta">
-                  <div className="testimonial-stars">
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                  </div>
-                  <div className="testimonial-author">Dr. Michael R. ✓</div>
-                  <div className="testimonial-role">Clinical Psychologist, Santa Monica, CA</div>
-                </div>
-              </div>
-              <p className="testimonial-quote">"My Sundays used to be for writing reports. My kids would be playing outside, and I'd be stuck inside staring at WAIS scores. AidMi drafts the 'Findings' section so well that I actually got my weekend back. It gave me my Sundays back."</p>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-header">
-                <div className="testimonial-avatar">DL</div>
-                <div className="testimonial-meta">
-                  <div className="testimonial-stars">
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                  </div>
-                  <div className="testimonial-author">David L., LCSW ✓</div>
-                  <div className="testimonial-role">Trauma Therapist, Berkeley, CA</div>
-                </div>
-              </div>
-              <p className="testimonial-quote">"I was the biggest skeptic. I thought, 'No robot can understand trauma.' Then it picked up on a client's sarcasm that even I barely caught. It captured the tone, not just the words. I was humbled. It actually gets it."</p>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-header">
-                <div className="testimonial-avatar">JM</div>
-                <div className="testimonial-meta">
-                  <div className="testimonial-stars">
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-                  </div>
-                  <div className="testimonial-author">Jessica M.</div>
-                  <div className="testimonial-role">Client, San Diego, CA</div>
-                </div>
-              </div>
-              <p className="testimonial-quote">"It used to be click-clack-click on the keyboard while I was crying. It felt so cold. Now, Dr. Lee just sits there and looks at me. I didn't realize how much the typing hurt our connection until it stopped."</p>
             </div>
           </div>
         </div>
