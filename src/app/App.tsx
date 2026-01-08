@@ -443,22 +443,38 @@ export default function App() {
                     </div>
                     <div className="social-dynamics-grid">
                       <div className="dynamics-item">
-                        <div className="dynamics-icon dynamics-icon-blue">🏠</div>
+                        <div className="dynamics-icon dynamics-icon-blue">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                          </svg>
+                        </div>
                         <div className="dynamics-label">Family</div>
                         <div className="dynamics-status status-supportive">Supportive · 4</div>
                       </div>
                       <div className="dynamics-item">
-                        <div className="dynamics-icon dynamics-icon-green">💼</div>
+                        <div className="dynamics-icon dynamics-icon-green">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 6h-3V4c0-1.11-.89-2-2-2H9c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zM9 4h6v2H9V4zm11 16H4V8h16v12z"/>
+                          </svg>
+                        </div>
                         <div className="dynamics-label">Work</div>
                         <div className="dynamics-status status-stressful">Stressful · 4</div>
                       </div>
                       <div className="dynamics-item">
-                        <div className="dynamics-icon dynamics-icon-pink">👥</div>
+                        <div className="dynamics-icon dynamics-icon-gray">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                          </svg>
+                        </div>
                         <div className="dynamics-label">Social</div>
                         <div className="dynamics-status status-neutral">Neutral · 2</div>
                       </div>
                       <div className="dynamics-item">
-                        <div className="dynamics-icon dynamics-icon-rose">💕</div>
+                        <div className="dynamics-icon dynamics-icon-rose">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                          </svg>
+                        </div>
                         <div className="dynamics-label">Romantic</div>
                         <div className="dynamics-status status-supportive">Supportive · 1</div>
                       </div>
@@ -557,7 +573,7 @@ export default function App() {
                 <div className="scribe-note">
                   <h4 className="scribe-section-title">Assessment</h4>
                   <p className="scribe-text">
-                    Client continues to demonstrate steady progress in managing generalized anxiety disorder and mild depression. Medication regimen appears effective with no reported adverse effects<span className="scribe-citation-trigger">⁸</span>. Client is actively engaging in therapeutic interventions...
+                    Client continues to demonstrate steady progress in managing generalized anxiety disorder and mild depression. Medication regimen appears effective with <span className="scribe-cited-text">no reported adverse effects<span className="scribe-citation-trigger">⁸</span></span>. Client is actively engaging in therapeutic interventions...
                   </p>
                   
                   <h4 className="scribe-section-title">Plan</h4>
