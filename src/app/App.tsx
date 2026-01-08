@@ -362,86 +362,322 @@ export default function App() {
           <div className="section-header">
             <h2>World&apos;s Best Clinical Resident</h2>
             <p className="section-subhead">
-              An assistant who reads every note, tracks every trend, and preps your chart before you walk in the room. That&apos;s AidMi.
+              An assistant who reads every note, tracks every trend, and preps your chart before you walk in the room.
             </p>
           </div>
 
-          <div className="value-props-grid">
-            {/* Card 1: Today's Brief */}
-            <div className="value-prop-card">
-              <div className="value-prop-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z"/>
-                </svg>
+          <div className="bento-grid">
+            {/* TODAY'S BRIEF - Wide Card (spans 2 columns) */}
+            <div className="bento-card bento-card-wide">
+              <div className="bento-card-header">
+                <div className="bento-icon bento-icon-brief">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                  </svg>
+                </div>
+                <div className="bento-card-titles">
+                  <h3>Today&apos;s Brief</h3>
+                  <p className="bento-tagline">Walk into every session prepared.</p>
+                </div>
               </div>
-              <h3 className="value-prop-title">Today&apos;s Brief</h3>
-              <p className="value-prop-tagline">Walk into every session prepared.</p>
-              <p className="value-prop-description">
-                Before each appointment, AidMi generates a brief: what changed since last visit, symptom trends, medication updates, open threads to revisit. Scan it in 30 seconds. Walk in ready.
-              </p>
+              
+              <div className="bento-brief-preview">
+                <div className="brief-preview-bar">
+                  <span className="brief-time">9:00 AM</span>
+                  <span className="brief-patient">Sarah M. — Session #14</span>
+                </div>
+                <ul className="brief-updates-list">
+                  <li>
+                    <span className="update-badge update-badge-change">Changed</span>
+                    <span>Lexapro increased 10mg → 15mg on Oct 3</span>
+                  </li>
+                  <li>
+                    <span className="update-badge update-badge-trend">Trending</span>
+                    <span>Sleep improving: 5 wakings → 2 per night</span>
+                  </li>
+                  <li>
+                    <span className="update-badge update-badge-followup">Follow up</span>
+                    <span>Job interview anxiety — mentioned Google interview</span>
+                  </li>
+                </ul>
+                <div className="brief-preview-footer">
+                  <span>3 more patients today</span>
+                  <span className="brief-ready-badge">✓ Briefs ready</span>
+                </div>
+              </div>
             </div>
 
-            {/* Card 2: Aimé */}
-            <div className="value-prop-card">
-              <div className="value-prop-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"/>
-                </svg>
+            {/* AIMÉ - Tall Card (spans 2 rows) */}
+            <div className="bento-card bento-card-tall">
+              <div className="bento-card-header">
+                <div className="bento-icon bento-icon-aime">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm1.61-9.96c-2.06-.3-3.88.97-4.43 2.79-.18.58.26 1.17.87 1.17h.2c.41 0 .74-.29.88-.67.32-.89 1.27-1.5 2.3-1.28.95.2 1.65 1.13 1.57 2.1-.1 1.34-1.62 1.63-2.45 2.88 0 .01-.01.01-.01.02-.01.02-.02.03-.03.05-.09.15-.18.32-.25.5-.01.03-.03.05-.04.08-.01.02-.01.04-.02.07-.12.34-.2.75-.2 1.25h2c0-.42.11-.77.28-1.07.02-.03.03-.06.05-.09.08-.14.18-.27.28-.39.01-.01.02-.03.03-.04.1-.12.21-.23.33-.34.96-.91 2.26-1.65 1.99-3.56-.24-1.74-1.61-3.21-3.35-3.47z"/>
+                  </svg>
+                </div>
+                <div className="bento-card-titles">
+                  <h3>Aimé</h3>
+                  <p className="bento-tagline">Ask anything. Get answers with proof.</p>
+                </div>
               </div>
-              <h3 className="value-prop-title">Aimé</h3>
-              <p className="value-prop-tagline">Ask anything. Get answers with proof.</p>
-              <p className="value-prop-description">
-                &quot;When did we first discuss the insomnia?&quot; &quot;What medications have we tried?&quot; Aimé searches across every session and returns answers with citations. Like a research assistant for every patient.
-              </p>
+              
+              <div className="bento-chat-preview">
+                <div className="chat-message chat-message-user">
+                  <span>When did we start the Lexapro?</span>
+                </div>
+                <div className="chat-message chat-message-aime">
+                  <div className="aime-avatar">A</div>
+                  <div className="chat-message-content">
+                    <p>Lexapro 10mg was started on <strong>September 5, 2024</strong> (Session #8).</p>
+                    <p>Patient reported &quot;feeling ready to try medication&quot; after 2 months of therapy.</p>
+                    <a href="#" className="chat-citation">View source →</a>
+                  </div>
+                </div>
+                <div className="chat-input-preview">
+                  <span>Ask about this patient...</span>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                  </svg>
+                </div>
+              </div>
             </div>
 
-            {/* Card 3: Evidence-Backed Notes */}
-            <div className="value-prop-card">
-              <div className="value-prop-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"/>
-                </svg>
+            {/* EVIDENCE-BACKED NOTES - Standard Card */}
+            <div className="bento-card bento-card-standard">
+              <div className="bento-card-header">
+                <div className="bento-icon bento-icon-notes">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <div className="bento-card-titles">
+                  <h3>Evidence-Backed Notes</h3>
+                  <p className="bento-tagline">Documentation you can defend.</p>
+                </div>
               </div>
-              <h3 className="value-prop-title">Evidence-Backed Notes</h3>
-              <p className="value-prop-tagline">Documentation you can defend.</p>
-              <p className="value-prop-description">
-                Every claim in your note links directly to the source. Click to verify. If evidence is missing, we flag it. No second-guessing. Sign with confidence.
-              </p>
+              
+              <div className="bento-citation-preview">
+                <div className="citation-example">
+                  <p className="citation-text">
+                    &quot;Patient reports <span className="citation-highlight" data-tooltip="Session #12, Oct 3">improved sleep quality</span> since medication adjustment.&quot;
+                  </p>
+                  <div className="citation-proof">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    <span>Click any claim to verify source</span>
+                  </div>
+                </div>
+                <div className="citation-stats">
+                  <div className="citation-stat">
+                    <span className="stat-number">100%</span>
+                    <span className="stat-label">Claims cited</span>
+                  </div>
+                  <div className="citation-stat">
+                    <span className="stat-number">0</span>
+                    <span className="stat-label">Unsupported</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Use Cases Section - Persona Toggle */}
       <section id="who-its-for" className="use-cases fade-in-section">
         <div className="container">
           <div className="section-header">
             <h2>Built for How <em>You</em> Practice</h2>
+            <p className="section-subhead">Click your role to see how AidMi fits your workflow.</p>
           </div>
 
-          <div className="use-cases-grid">
-            {/* Psychiatrists */}
-            <div className="use-case-block">
-              <h3>For Psychiatrists</h3>
-              <p>
-                High-volume, short sessions. You need to know what changed and what to refill — fast. Today&apos;s Brief gives you the snapshot. Aimé answers the edge cases. Finish documentation in the 2 minutes between appointments, not after hours.
-              </p>
+          <div className="persona-toggle-container">
+            {/* Segmented Control / Tabs */}
+            <div className="persona-tabs" role="tablist">
+              <button 
+                className="persona-tab active" 
+                role="tab" 
+                aria-selected="true"
+                data-persona="psychiatrist"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/>
+                </svg>
+                <span>Psychiatrists</span>
+              </button>
+              <button 
+                className="persona-tab" 
+                role="tab" 
+                aria-selected="false"
+                data-persona="psychologist"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span>Psychologists</span>
+              </button>
+              <button 
+                className="persona-tab" 
+                role="tab" 
+                aria-selected="false"
+                data-persona="therapist"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                </svg>
+                <span>Therapists</span>
+              </button>
             </div>
 
-            {/* Psychologists */}
-            <div className="use-case-block">
-              <h3>For Psychologists</h3>
-              <p>
-                Deep therapeutic work that spans months. Track treatment progress without re-reading every note. Let AidMi remember the threads so you can stay present in the room.
-              </p>
-            </div>
+            {/* Persona Content Panels */}
+            <div className="persona-panels">
+              {/* Psychiatrist Panel */}
+              <div className="persona-panel active" data-panel="psychiatrist" role="tabpanel">
+                <div className="persona-panel-content">
+                  <div className="persona-header">
+                    <span className="persona-emoji">🩺</span>
+                    <h3>Speed is everything.</h3>
+                  </div>
+                  <p className="persona-intro">
+                    15-minute med checks. Back-to-back patients. You need the critical info instantly — what changed, what to refill, what to flag.
+                  </p>
+                  <ul className="persona-benefits">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Medication timeline at a glance</span>
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Today&apos;s Brief ready in 30 seconds</span>
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Finish notes before your next patient</span>
+                    </li>
+                  </ul>
+                  <blockquote className="persona-quote">
+                    &quot;I document between appointments now, not after hours.&quot;
+                    <cite>— Psychiatrist, San Francisco</cite>
+                  </blockquote>
+                </div>
+                <div className="persona-visual">
+                  <div className="persona-mockup">
+                    <div className="mockup-badge">Today&apos;s Brief</div>
+                    <div className="mockup-med-list">
+                      <div className="med-item">
+                        <span className="med-name">Lexapro 15mg</span>
+                        <span className="med-status med-status-current">Current</span>
+                      </div>
+                      <div className="med-item">
+                        <span className="med-name">Wellbutrin 150mg</span>
+                        <span className="med-status med-status-new">+New</span>
+                      </div>
+                      <div className="med-item">
+                        <span className="med-name">Trazodone 50mg</span>
+                        <span className="med-status med-status-discontinued">Stopped</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            {/* Therapists */}
-            <div className="use-case-block">
-              <h3>For Therapists</h3>
-              <p>
-                Rapport is everything. AidMi captures the details that build connection — the sister&apos;s name, the job interview, the vacation that helped. Start every session exactly where you left off.
-              </p>
+              {/* Psychologist Panel */}
+              <div className="persona-panel" data-panel="psychologist" role="tabpanel">
+                <div className="persona-panel-content">
+                  <div className="persona-header">
+                    <span className="persona-emoji">🧠</span>
+                    <h3>Deep work. Long arcs.</h3>
+                  </div>
+                  <p className="persona-intro">
+                    Therapy that spans months. Treatment goals that evolve. You need to track progress without re-reading every note.
+                  </p>
+                  <ul className="persona-benefits">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Track symptom trends across sessions</span>
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Ask Aimé about treatment history</span>
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Stay present — let AidMi remember</span>
+                    </li>
+                  </ul>
+                  <blockquote className="persona-quote">
+                    &quot;I can finally see the full treatment arc without digging through notes.&quot;
+                    <cite>— Clinical Psychologist, Palo Alto</cite>
+                  </blockquote>
+                </div>
+                <div className="persona-visual">
+                  <div className="persona-mockup">
+                    <div className="mockup-badge">Aimé Q&amp;A</div>
+                    <div className="mockup-trend">
+                      <span className="trend-label">PHQ-9 Score</span>
+                      <div className="trend-chart">
+                        <div className="trend-point" style={{ height: '80%' }}></div>
+                        <div className="trend-point" style={{ height: '65%' }}></div>
+                        <div className="trend-point" style={{ height: '50%' }}></div>
+                        <div className="trend-point" style={{ height: '35%' }}></div>
+                        <div className="trend-point" style={{ height: '25%' }}></div>
+                      </div>
+                      <span className="trend-insight">↓ Improving over 5 sessions</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Therapist Panel */}
+              <div className="persona-panel" data-panel="therapist" role="tabpanel">
+                <div className="persona-panel-content">
+                  <div className="persona-header">
+                    <span className="persona-emoji">💬</span>
+                    <h3>Rapport is everything.</h3>
+                  </div>
+                  <p className="persona-intro">
+                    The details build connection — the sister&apos;s name, the job interview, the vacation that helped. You need to remember what matters to them.
+                  </p>
+                  <ul className="persona-benefits">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Personal details surfaced automatically</span>
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Pick up exactly where you left off</span>
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                      <span>Never forget what mattered to them</span>
+                    </li>
+                  </ul>
+                  <blockquote className="persona-quote">
+                    &quot;My clients feel heard because I actually remember their lives.&quot;
+                    <cite>— LMFT, Mountain View</cite>
+                  </blockquote>
+                </div>
+                <div className="persona-visual">
+                  <div className="persona-mockup">
+                    <div className="mockup-badge">Memory</div>
+                    <div className="mockup-memory-list">
+                      <div className="memory-item">
+                        <span className="memory-icon">👨‍👩‍👧</span>
+                        <span>Sister &quot;Maria&quot; — close relationship</span>
+                      </div>
+                      <div className="memory-item">
+                        <span className="memory-icon">💼</span>
+                        <span>Google interview on Nov 15</span>
+                      </div>
+                      <div className="memory-item">
+                        <span className="memory-icon">🏖️</span>
+                        <span>Hawaii trip helped with stress</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -452,47 +688,78 @@ export default function App() {
         <div className="container">
           <div className="section-header">
             <h2>Clinicians who practice with confidence.</h2>
+            <p className="section-subhead">Trusted by licensed professionals across behavioral health.</p>
           </div>
 
           <div className="testimonials-grid">
-            {/* Testimonial 1 */}
+            {/* Testimonial 1 - Psychologist */}
             <div className="testimonial-card">
               <blockquote className="testimonial-quote">
                 &quot;I used to spend 10 minutes before each session digging through old notes. Now I glance at Today&apos;s Brief and I&apos;m ready.&quot;
               </blockquote>
               <div className="testimonial-footer">
-                <div className="testimonial-avatar">P</div>
+                <div className="license-badge license-badge-psyd">
+                  <span className="license-abbrev">PsyD</span>
+                </div>
                 <cite className="testimonial-attribution">
-                  <span className="testimonial-role">Psychologist</span>
-                  <span className="testimonial-location">Palo Alto, CA</span>
+                  <span className="testimonial-role">Licensed Clinical Psychologist</span>
+                  <span className="testimonial-meta">
+                    <span className="testimonial-location">Palo Alto, CA</span>
+                    <span className="verified-badge">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </span>
                 </cite>
               </div>
             </div>
 
-            {/* Testimonial 2 */}
+            {/* Testimonial 2 - Psychiatrist */}
             <div className="testimonial-card">
               <blockquote className="testimonial-quote">
                 &quot;Aimé is the feature I didn&apos;t know I needed. I asked &apos;when did we start the Lexapro?&apos; and got the answer with the exact session cited. Took 2 seconds.&quot;
               </blockquote>
               <div className="testimonial-footer">
-                <div className="testimonial-avatar">M</div>
+                <div className="license-badge license-badge-md">
+                  <span className="license-abbrev">MD</span>
+                </div>
                 <cite className="testimonial-attribution">
-                  <span className="testimonial-role">Psychiatrist</span>
-                  <span className="testimonial-location">San Francisco, CA</span>
+                  <span className="testimonial-role">Board-Certified Psychiatrist</span>
+                  <span className="testimonial-meta">
+                    <span className="testimonial-location">San Francisco, CA</span>
+                    <span className="verified-badge">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </span>
                 </cite>
               </div>
             </div>
 
-            {/* Testimonial 3 */}
+            {/* Testimonial 3 - Therapist */}
             <div className="testimonial-card">
               <blockquote className="testimonial-quote">
                 &quot;I finally trust my AI notes. One click shows the supporting source. That&apos;s the difference.&quot;
               </blockquote>
               <div className="testimonial-footer">
-                <div className="testimonial-avatar">T</div>
+                <div className="license-badge license-badge-lmft">
+                  <span className="license-abbrev">LMFT</span>
+                </div>
                 <cite className="testimonial-attribution">
-                  <span className="testimonial-role">LMFT</span>
-                  <span className="testimonial-location">Mountain View, CA</span>
+                  <span className="testimonial-role">Licensed Marriage & Family Therapist</span>
+                  <span className="testimonial-meta">
+                    <span className="testimonial-location">Mountain View, CA</span>
+                    <span className="verified-badge">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </span>
                 </cite>
               </div>
             </div>
@@ -505,7 +772,24 @@ export default function App() {
         <div className="container">
           <div className="section-header">
             <h2>Unlimited telehealth + AI notes on every plan.</h2>
-            <p className="section-subhead">Built for behavioral health.</p>
+            <p className="section-subhead">Built for behavioral health. HIPAA compliant from day one.</p>
+          </div>
+
+          {/* Billing Toggle */}
+          <div className="billing-toggle">
+            <span className="billing-option" data-billing="monthly">Monthly</span>
+            <button 
+              className="toggle-switch" 
+              role="switch" 
+              aria-checked="true"
+              data-state="annual"
+            >
+              <span className="toggle-knob"></span>
+            </button>
+            <span className="billing-option billing-option-active" data-billing="annual">
+              Annual
+              <span className="save-badge">Save 20%</span>
+            </span>
           </div>
 
           <div className="pricing-grid">

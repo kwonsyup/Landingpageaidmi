@@ -1,0 +1,372 @@
+/* ==================== USE CASES - PERSONA TOGGLE ==================== */
+.use-cases {
+  padding: var(--section-padding) 0;
+  background: var(--pure-white);
+}
+
+.use-cases .section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.use-cases .section-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--dark-navy);
+  margin-bottom: 12px;
+}
+
+.use-cases .section-header h2 em {
+  font-style: italic;
+}
+
+.use-cases .section-subhead {
+  font-size: 16px;
+  color: var(--text-gray);
+}
+
+.persona-toggle-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Segmented Control Tabs ===== */
+.persona-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.persona-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.persona-tab svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  opacity: 0.6;
+}
+
+.persona-tab:hover {
+  color: var(--dark-navy);
+}
+
+.persona-tab:hover svg {
+  opacity: 0.8;
+}
+
+.persona-tab.active {
+  background: var(--pure-white);
+  color: var(--dark-navy);
+  box-shadow: 0 2px 8px rgba(0, 64, 140, 0.1);
+}
+
+.persona-tab.active svg {
+  opacity: 1;
+}
+
+/* ===== Panel Container ===== */
+.persona-panels {
+  position: relative;
+}
+
+.persona-panel {
+  display: none;
+  background: var(--off-white);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(0, 64, 140, 0.08);
+}
+
+.persona-panel.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Panel Content ===== */
+.persona-panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.persona-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.persona-emoji {
+  font-size: 32px;
+}
+
+.persona-header h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin: 0;
+}
+
+.persona-intro {
+  font-size: 16px;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.persona-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.persona-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.persona-benefits svg {
+  width: 20px;
+  height: 20px;
+  fill: #059669;
+  flex-shrink: 0;
+}
+
+.persona-quote {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-gray);
+  padding: 16px 20px;
+  background: var(--pure-white);
+  border-left: 3px solid var(--pale-blue);
+  border-radius: 0 8px 8px 0;
+  margin: 8px 0 0 0;
+}
+
+.persona-quote cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* ===== Panel Visual / Mockup ===== */
+.persona-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.persona-mockup {
+  background: var(--pure-white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 
+    0 4px 6px rgba(0, 64, 140, 0.04),
+    0 12px 24px rgba(0, 64, 140, 0.08);
+  width: 100%;
+  max-width: 320px;
+}
+
+.mockup-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-light);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Psychiatrist Mockup - Med List */
+.mockup-med-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.med-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.med-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.med-status {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.med-status-current {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.med-status-new {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.med-status-discontinued {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Psychologist Mockup - Trend Chart */
+.mockup-trend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trend-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.trend-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 80px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.trend-point {
+  flex: 1;
+  background: linear-gradient(180deg, #3b82f6, #1d4ed8);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.trend-insight {
+  font-size: 13px;
+  color: #059669;
+  font-weight: 500;
+}
+
+/* Therapist Mockup - Memory List */
+.mockup-memory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.memory-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.memory-icon {
+  font-size: 18px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .use-cases {
+    padding: 80px 0;
+  }
+  
+  .persona-tabs {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .persona-tab {
+    justify-content: center;
+  }
+  
+  .persona-panel.active {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 28px;
+  }
+  
+  .persona-header h3 {
+    font-size: 24px;
+  }
+  
+  .persona-visual {
+    order: -1;
+  }
+  
+  .persona-mockup {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .persona-panel.active {
+    padding: 20px;
+  }
+  
+  .persona-emoji {
+    font-size: 28px;
+  }
+  
+  .persona-header h3 {
+    font-size: 22px;
+  }
+}

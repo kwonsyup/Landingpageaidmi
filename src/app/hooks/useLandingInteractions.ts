@@ -283,6 +283,71 @@ export default function useLandingInteractions() {
       );
     });
 
+    // Persona Toggle Tabs
+    const personaTabs = document.querySelectorAll<HTMLElement>('.persona-tab');
+    const personaPanels = document.querySelectorAll<HTMLElement>('.persona-panel');
+
+    personaTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const persona = tab.getAttribute('data-persona');
+        
+        // Update tabs
+        personaTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        
+        // Update panels
+        personaPanels.forEach(panel => {
+          panel.classList.remove('active');
+          if (panel.getAttribute('data-panel') === persona) {
+            panel.classList.add('active');
+          }
+        });
+      }, { signal });
+    });
+
+    // Billing Toggle
+    const billingToggle = document.querySelector<HTMLElement>('.toggle-switch');
+    const billingOptions = document.querySelectorAll<HTMLElement>('.billing-option');
+    const priceAmount = document.querySelector<HTMLElement>('.pricing-card-pro .pricing-amount');
+    const billingDetail = document.querySelector<HTMLElement>('.billing-detail');
+    const billingSavings = document.querySelector<HTMLElement>('.billing-savings');
+
+    if (billingToggle) {
+      billingToggle.addEventListener('click', () => {
+        const currentState = billingToggle.getAttribute('data-state');
+        const newState = currentState === 'annual' ? 'monthly' : 'annual';
+        
+        billingToggle.setAttribute('data-state', newState);
+        billingToggle.setAttribute('aria-checked', newState === 'annual' ? 'true' : 'false');
+        
+        // Update billing option active states
+        billingOptions.forEach(opt => {
+          opt.classList.remove('billing-option-active');
+          if (opt.getAttribute('data-billing') === newState) {
+            opt.classList.add('billing-option-active');
+          }
+        });
+        
+        // Update price display
+        if (priceAmount) {
+          const price = priceAmount.getAttribute(`data-${newState}`);
+          priceAmount.textContent = `$${price}`;
+        }
+        
+        // Update billing details
+        if (billingDetail) {
+          billingDetail.textContent = billingDetail.getAttribute(`data-${newState}`) || '';
+        }
+        if (billingSavings) {
+          billingSavings.textContent = billingSavings.getAttribute(`data-${newState}`) || '';
+        }
+      }, { signal });
+    }
+
     // Scroll-triggered fade-in for sections
     const observer = new IntersectionObserver(
       (entries) => {
