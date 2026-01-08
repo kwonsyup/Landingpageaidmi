@@ -2,7 +2,7 @@ import '../styles/aidmi.css';
 import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
 import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
-import aidmiLogo from 'figma:asset/06630e6d0f3cdbeb4d97043d9c269f80ec260d53.png';
+import aidmiLogo from 'figma:asset/914aef0a7ba2e5e4040bf62e5cf27aa2b5b35101.png';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
