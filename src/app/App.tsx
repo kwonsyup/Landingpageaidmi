@@ -107,7 +107,7 @@ export default function App() {
               <h1>The AI That <em>Briefs</em> You Before Your Patient Walks In.</h1>
               
               <p className="hero-subhead">
-                AidMi builds longitudinal context for every patient — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.
+                Know every patient's story before they walk in. AidMi reads your notes and builds a brief for each session — what changed, what to follow up on, what matters today.
               </p>
               
               <div className="hero-buttons">
@@ -267,9 +267,10 @@ export default function App() {
               
               <ul className="problem-list">
                 <li>
+                  {/* Clock icon - time pressure */}
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="12" cy="12" r="10" opacity="0.2"/>
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                   </svg>
                   <div>
                     <strong>Skimming old notes 5 minutes before the patient walks in</strong>
@@ -277,9 +278,10 @@ export default function App() {
                   </div>
                 </li>
                 <li>
+                  {/* Search icon - can't find */}
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="12" cy="12" r="10" opacity="0.2"/>
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                   </svg>
                   <div>
                     <strong>No quick way to find critical context</strong>
@@ -287,9 +289,10 @@ export default function App() {
                   </div>
                 </li>
                 <li>
+                  {/* Question mark icon - uncertainty */}
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="12" cy="12" r="10" opacity="0.2"/>
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
                   </svg>
                   <div>
                     <strong>Walking in unprepared, relying on memory</strong>
@@ -312,9 +315,10 @@ export default function App() {
               
               <ul className="solution-list">
                 <li>
+                  {/* Document/Brief icon - Today's Brief */}
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="12" cy="12" r="10" opacity="0.15"/>
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                   </svg>
                   <div>
                     <strong>Today's Brief auto-generated before each session</strong>
@@ -322,9 +326,13 @@ export default function App() {
                   </div>
                 </li>
                 <li>
+                  {/* Chat/AI icon - Aimé */}
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="12" cy="12" r="10" opacity="0.15"/>
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                    <circle cx="8" cy="10" r="1.5"/>
+                    <circle cx="12" cy="10" r="1.5"/>
+                    <circle cx="16" cy="10" r="1.5"/>
                   </svg>
                   <div>
                     <strong>Aimé answers questions across months of sessions</strong>
@@ -332,9 +340,10 @@ export default function App() {
                   </div>
                 </li>
                 <li>
+                  {/* Shield/confidence icon */}
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="12" cy="12" r="10" opacity="0.15"/>
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                   </svg>
                   <div>
                     <strong>Walk in confident with longitudinal context</strong>
