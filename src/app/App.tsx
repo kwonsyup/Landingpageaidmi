@@ -1,9 +1,33 @@
 import '../styles/aidmi.css';
+import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
 import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
 
 export default function App() {
+  const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
+  
   useLandingInteractions();
+  
+  // Reset modal view when modal closes
+  useEffect(() => {
+    const contactModal = document.getElementById('contactModal');
+    if (!contactModal) return;
+    
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          const isActive = contactModal.classList.contains('active');
+          if (!isActive) {
+            setModalView('onboarding');
+          }
+        }
+      });
+    });
+    
+    observer.observe(contactModal, { attributes: true });
+    
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -139,26 +163,26 @@ export default function App() {
                   className="hero-mockup-image"
                 />
               </div>
-              
-              {/* Integration Strip */}
-              <div className="integration-strip">
-                <span className="integration-label">Works alongside your EHR</span>
-                <div className="integration-logos">
-                  <div className="integration-logo-text logo-simplepractice">
-                    <span>Simple</span><span className="logo-bold">Practice</span>
-                  </div>
-                  <div className="integration-logo-text logo-therapynotes">
-                    <span>Therapy</span><span className="logo-bold">Notes</span>
-                  </div>
-                  <div className="integration-logo-text logo-valant">
-                    Valant
-                  </div>
-                  <div className="integration-logo-text logo-theranest">
-                    <span>Thera</span><span className="logo-bold">Nest</span>
-                  </div>
-                  <div className="integration-logo-text logo-icanotes">
-                    <span>ICA</span><span className="logo-bold">Notes</span>
-                  </div>
+            </div>
+            
+            {/* Integration Strip - MOVED OUTSIDE hero-visual */}
+            <div className="integration-strip">
+              <span className="integration-label">Works alongside your EHR</span>
+              <div className="integration-logos">
+                <div className="integration-logo-text logo-simplepractice">
+                  <span>Simple</span><span className="logo-bold">Practice</span>
+                </div>
+                <div className="integration-logo-text logo-therapynotes">
+                  <span>Therapy</span><span className="logo-bold">Notes</span>
+                </div>
+                <div className="integration-logo-text logo-valant">
+                  Valant
+                </div>
+                <div className="integration-logo-text logo-theranest">
+                  <span>Thera</span><span className="logo-bold">Nest</span>
+                </div>
+                <div className="integration-logo-text logo-icanotes">
+                  <span>ICA</span><span className="logo-bold">Notes</span>
                 </div>
               </div>
             </div>
@@ -1312,70 +1336,123 @@ export default function App() {
             </svg>
           </button>
           
-          {/* Login link */}
-          <a href="https://app.aidmi.ai/login" className="getstarted-login-link">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-            Log in
-          </a>
-          
-          {/* Logo */}
-          <div className="getstarted-logo">AidMi</div>
-          
-          <h2 id="getStartedModalTitle" className="getstarted-title">Let&apos;s get you started</h2>
-          
-          {/* Option Cards */}
-          <div className="getstarted-options">
-            {/* Option 1: Start Free */}
-            <a href="https://app.aidmi.ai/" className="getstarted-option-card">
-              <div className="option-illustration option-illustration-start">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.05-4.05c.47-.47 1.15-.68 1.81-.55 1.82.36 3.79-1.1 3.79-2.95 0-.1.01-.2.02-.3.12-.92 1.12-1.29 1.79-.64l4.24 4.24c.65.66.28 1.66-.64 1.79-.11.01-.21.02-.31.02-1.85 0-3.31 1.97-2.95 3.79.13.66-.08 1.34-.55 1.81L9.2 17.9l-1.55-3.62c.31-.13 3.61-1.53 5.89-3.57C15.99 8.15 17.61 6 17.61 6s-8.65 1.77-8.42 0.35z"/>
-                  <path d="M3.85 19.5c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5c0-1.93-2.91-6.5-3.5-6.5s-3.5 4.57-3.5 6.5z"/>
-                </svg>
+          {modalView === 'onboarding' ? (
+            <>
+              {/* Logo */}
+              <div className="getstarted-logo">AidMi</div>
+              
+              <h2 id="getStartedModalTitle" className="getstarted-title">Let&apos;s get you started</h2>
+              
+              {/* Option Cards */}
+              <div className="getstarted-options">
+                {/* Option 1: Start Free */}
+                <a href="https://app.aidmi.ai/" className="getstarted-option-card">
+                  <div className="option-illustration option-illustration-start">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.05-4.05c.47-.47 1.15-.68 1.81-.55 1.82.36 3.79-1.1 3.79-2.95 0-.1.01-.2.02-.3.12-.92 1.12-1.29 1.79-.64l4.24 4.24c.65.66.28 1.66-.64 1.79-.11.01-.21.02-.31.02-1.85 0-3.31 1.97-2.95 3.79.13.66-.08 1.34-.55 1.81L9.2 17.9l-1.55-3.62c.31-.13 3.61-1.53 5.89-3.57C15.99 8.15 17.61 6 17.61 6s-8.65 1.77-8.42 0.35z"/>
+                      <path d="M3.85 19.5c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5c0-1.93-2.91-6.5-3.5-6.5s-3.5 4.57-3.5 6.5z"/>
+                    </svg>
+                  </div>
+                  <div className="option-content">
+                    <h3>Start Free Now</h3>
+                    <p>Create your account and begin immediately</p>
+                  </div>
+                  <svg className="option-arrow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                  </svg>
+                </a>
+                
+                {/* Option 2: Book Demo */}
+                <a href="https://calendly.com/aidmi/demo" className="getstarted-option-card" target="_blank" rel="noopener noreferrer">
+                  <div className="option-illustration option-illustration-demo">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                  </div>
+                  <div className="option-content">
+                    <h3>Book a Demo</h3>
+                    <p>See AidMi in action with a quick walkthrough</p>
+                  </div>
+                  <svg className="option-arrow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                  </svg>
+                </a>
               </div>
-              <div className="option-content">
-                <h3>Start Free Now</h3>
-                <p>Create your account and begin immediately</p>
+              
+              {/* Trust Footer */}
+              <div className="getstarted-trust">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                  </svg>
+                  HIPAA Compliant
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                  </svg>
+                  No Credit Card
+                </span>
               </div>
-              <svg className="option-arrow" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-              </svg>
-            </a>
-            
-            {/* Option 2: Book Demo */}
-            <a href="https://calendly.com/aidmi/demo" className="getstarted-option-card" target="_blank" rel="noopener noreferrer">
-              <div className="option-illustration option-illustration-demo">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                </svg>
+              
+              {/* Login Link */}
+              <div className="getstarted-footer-link">
+                Already have an account? <a href="#" onClick={(e) => { e.preventDefault(); setModalView('login'); }}>Log in</a>
               </div>
-              <div className="option-content">
-                <h3>Book a Demo</h3>
-                <p>See AidMi in action with a quick walkthrough</p>
+            </>
+          ) : (
+            <>
+              {/* Logo */}
+              <div className="getstarted-logo">AidMi</div>
+              
+              <h3 className="getstarted-title">Welcome back</h3>
+              <p className="modal-simple-subhead">To clinical clarity.</p>
+              
+              {/* Login Form */}
+              <div className="login-form">
+                <label htmlFor="loginEmail" className="login-label">Email</label>
+                <input 
+                  type="email" 
+                  id="loginEmail" 
+                  className="login-input" 
+                  placeholder="you@example.com"
+                />
+                <button className="btn-primary btn-full">Sign in with email</button>
               </div>
-              <svg className="option-arrow" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-              </svg>
-            </a>
-          </div>
-          
-          {/* Trust Footer */}
-          <div className="getstarted-trust">
-            <span>
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-              </svg>
-              HIPAA Compliant
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
-              </svg>
-              No Credit Card
-            </span>
-          </div>
+              
+              {/* Separator */}
+              <div className="login-separator">
+                <span>or</span>
+              </div>
+              
+              {/* Social Login Options */}
+              <div className="login-social">
+                <button className="btn-social">
+                  <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  Continue with Google
+                </button>
+                <button className="btn-social">
+                  <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="#F25022" d="M1 1h10v10H1z"/>
+                    <path fill="#00A4EF" d="M13 1h10v10H13z"/>
+                    <path fill="#7FBA00" d="M1 13h10v10H1z"/>
+                    <path fill="#FFB900" d="M13 13h10v10H13z"/>
+                  </svg>
+                  Continue with Microsoft
+                </button>
+              </div>
+              
+              {/* Footer Link */}
+              <div className="getstarted-footer-link">
+                No account? <a href="#" onClick={(e) => { e.preventDefault(); setModalView('onboarding'); }}>Create one</a>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
