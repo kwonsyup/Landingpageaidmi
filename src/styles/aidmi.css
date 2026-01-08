@@ -1007,13 +1007,85 @@ nav a:focus {
   color: var(--dark-navy);
 }
 
+/* Text-based logo treatment */
+.integration-logo-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: -0.3px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.integration-logo-text:hover {
+  color: #64748b;
+}
+
+.integration-logo-text .logo-bold {
+  font-weight: 700;
+}
+
+/* SimplePractice - Clean, professional */
+.logo-simplepractice {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+.logo-simplepractice span:first-child {
+  font-weight: 400;
+}
+
+/* TherapyNotes - Similar treatment */
+.logo-therapynotes {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+}
+
+/* Alma - Lowercase, modern */
+.logo-alma {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: lowercase;
+}
+
+/* Headway - Bold, friendly */
+.logo-headway {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  text-transform: lowercase;
+}
+
+/* Valant - Professional, clinical */
+.logo-valant {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* +More button */
+.integration-logo-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
 .integration-logo-more .more-icon {
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: #94a3b8;
   border: 1.5px dashed #cbd5e1;
@@ -1021,9 +1093,19 @@ nav a:focus {
   transition: all 0.2s ease;
 }
 
+.integration-logo-more span:last-child {
+  font-size: 10px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
 .integration-logo-more:hover .more-icon {
   color: var(--dark-navy);
   border-color: var(--dark-navy);
+}
+
+.integration-logo-more:hover span:last-child {
+  color: var(--dark-navy);
 }
 
 /* ==================== MOCKUP FRAMES ==================== */
@@ -1110,6 +1192,152 @@ nav a:focus {
 @keyframes skeleton-shimmer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
+}
+
+/* ==================== BRIEF PREVIEW (Hero Mockup) ==================== */
+.brief-preview {
+  padding: 20px;
+  min-height: auto;
+  gap: 16px;
+}
+
+.brief-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 64, 140, 0.08);
+  margin-bottom: 4px;
+}
+
+.brief-patient-name {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.brief-meta {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.brief-preview-section {
+  padding: 12px 0;
+}
+
+.brief-preview-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--dark-navy);
+  margin-bottom: 8px;
+}
+
+.brief-preview-label svg {
+  fill: var(--dark-navy);
+}
+
+.brief-preview-item {
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin: 0 0 6px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.brief-preview-item::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  background: var(--pale-blue);
+  border-radius: 50%;
+}
+
+.brief-preview-item:last-child {
+  margin-bottom: 0;
+}
+
+.brief-citation {
+  color: var(--text-light);
+  font-size: 12px;
+}
+
+.brief-preview-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 64, 140, 0.06);
+  margin-top: 8px;
+}
+
+.brief-preview-footer span {
+  font-size: 10px;
+  color: var(--text-light);
+  letter-spacing: 0.3px;
+}
+
+.brief-preview-footer svg {
+  fill: var(--dark-navy);
+}
+
+/* ==================== HERO SOCIAL PROOF ==================== */
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.avatar-cluster {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  border: 2px solid var(--off-white);
+  margin-left: -8px;
+  position: relative;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+/* Stacking order for overlapping avatars */
+.avatar:nth-child(1) { z-index: 5; }
+.avatar:nth-child(2) { z-index: 4; }
+.avatar:nth-child(3) { z-index: 3; }
+.avatar:nth-child(4) { z-index: 2; }
+.avatar:nth-child(5) { z-index: 1; }
+
+.social-proof-text {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.social-proof-text strong {
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 .glassmorphism-card {
@@ -3297,5 +3525,206 @@ footer {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Hero Section - Mobile */
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .hero-layout {
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-visual {
+    max-width: 100%;
+  }
+
+  .mockup-frame {
+    max-width: 100%;
+  }
+
+  .brief-preview {
+    padding: 16px;
+  }
+
+  .brief-preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .integration-logos {
+    max-width: 100%;
+    gap: 16px 20px;
+    flex-wrap: wrap;
+  }
+
+  .integration-logo-text {
+    font-size: 12px;
+  }
+
+  /* Hide some avatars on very small screens */
+  .avatar:nth-child(4),
+  .avatar:nth-child(5) {
+    display: none;
+  }
+
+  .social-proof-text {
+    font-size: 13px;
+  }
+}
+
+/* ==================== MOBILE RESPONSIVE — ADDITIONAL BREAKPOINTS ==================== */
+
+@media (max-width: 1024px) {
+  /* Hero Layout - Stack on tablet */
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    max-width: 100%;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-social-proof {
+    justify-content: center;
+  }
+  
+  .hero-trust-text {
+    justify-content: center;
+  }
+  
+  .hero-visual {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Integration strip - wrap on tablet */
+  .integration-logos {
+    flex-wrap: wrap;
+    gap: 20px 28px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    padding: 120px 0 80px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+    margin-bottom: 16px;
+  }
+  
+  .hero-subhead {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  
+  .hero-social-proof {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .avatar-cluster {
+    justify-content: center;
+  }
+  
+  /* Trust Strip */
+  .trust-strip {
+    padding: 40px 0;
+  }
+  
+  .trust-label {
+    font-size: 11px;
+    margin-bottom: 24px;
+  }
+  
+  .marquee {
+    gap: 40px;
+  }
+  
+  .marquee-content {
+    gap: 40px;
+  }
+  
+  .partner-logo {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  
+  /* Value Props Section */
+  .value-props {
+    padding: 80px 0;
+  }
+  
+  .value-props-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .value-prop-card {
+    padding: 32px 24px;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section-header h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  .section-subhead {
+    font-size: 16px;
+  }
+}
+
+/* Ensure touch targets are adequate */
+@media (pointer: coarse) {
+  .btn {
+    min-height: 48px;
+  }
+  
+  .nav-signin {
+    min-height: 48px;
+  }
+  
+  .integration-logo-more {
+    min-height: 48px;
+    min-width: 48px;
   }
 }
