@@ -25,7 +25,7 @@
 }
 
 .persona-toggle-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -98,10 +98,7 @@
 }
 
 .persona-panel.active {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+  display: block;
   animation: fadeIn 0.3s ease;
 }
 
@@ -118,6 +115,13 @@
 
 /* ===== Panel Content ===== */
 .persona-panel-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.persona-text-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -205,7 +209,11 @@
     0 4px 6px rgba(0, 64, 140, 0.04),
     0 12px 24px rgba(0, 64, 140, 0.08);
   width: 100%;
-  max-width: 320px;
+  min-height: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .mockup-badge {
@@ -322,6 +330,197 @@
   font-size: 18px;
 }
 
+/* Enhanced Mockup Styles */
+.mockup-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mockup-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-title-group {
+  flex: 1;
+}
+
+.mockup-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 2px;
+}
+
+.mockup-subtitle {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.mockup-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 16px 0;
+}
+
+.mockup-section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.section-label-icon {
+  font-size: 16px;
+}
+
+.mockup-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef3c7;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #f59e0b;
+  margin-top: 12px;
+}
+
+.mockup-alert svg {
+  width: 16px;
+  height: 16px;
+  fill: #f59e0b;
+  flex-shrink: 0;
+}
+
+.mockup-alert span {
+  font-size: 12px;
+  color: #92400e;
+  font-weight: 500;
+}
+
+.mockup-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--pale-blue);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mockup-link:hover {
+  text-decoration: underline;
+}
+
+/* Psychologist - Query and Trend */
+.mockup-query {
+  background: var(--dark-navy);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 16px 16px 4px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  align-self: flex-end;
+  max-width: 85%;
+}
+
+.trend-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.trend-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  height: 120px;
+  padding: 16px 12px 12px 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.trend-point {
+  flex: 1;
+  background: linear-gradient(180deg, #3b82f6, #1d4ed8);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.point-label {
+  position: absolute;
+  top: -20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.trend-months {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  margin-bottom: 8px;
+}
+
+.trend-months span {
+  font-size: 11px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.trend-insight {
+  font-size: 13px;
+  color: #059669;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: #d1fae5;
+  border-radius: 6px;
+}
+
+/* Therapist - Memory with Context */
+.memory-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.memory-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.memory-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.memory-context {
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .use-cases {
@@ -344,6 +543,11 @@
     padding: 28px;
   }
   
+  .persona-panel-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
   .persona-header h3 {
     font-size: 24px;
   }
@@ -354,6 +558,10 @@
   
   .persona-mockup {
     max-width: 100%;
+  }
+  
+  .mockup-query {
+    max-width: 90%;
   }
 }
 

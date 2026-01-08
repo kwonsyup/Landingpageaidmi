@@ -644,48 +644,69 @@ export default function App() {
               {/* Psychiatrist Panel */}
               <div className="persona-panel active" data-panel="psychiatrist" role="tabpanel">
                 <div className="persona-panel-content">
-                  <div className="persona-header">
-                    <span className="persona-emoji">🩺</span>
-                    <h3>Speed is everything.</h3>
+                  <div className="persona-text-content">
+                    <div className="persona-header">
+                      <span className="persona-emoji">🩺</span>
+                      <h3>Speed is everything.</h3>
+                    </div>
+                    <p className="persona-intro">
+                      15-minute med checks. Back-to-back patients. You need the critical info instantly — what changed, what to refill, what to flag.
+                    </p>
+                    <ul className="persona-benefits">
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Medication timeline at a glance</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Today&apos;s Brief ready in 30 seconds</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Finish notes before your next patient</span>
+                      </li>
+                    </ul>
+                    <blockquote className="persona-quote">
+                      &quot;I document between appointments now, not after hours.&quot;
+                      <cite>— Psychiatrist, San Francisco</cite>
+                    </blockquote>
                   </div>
-                  <p className="persona-intro">
-                    15-minute med checks. Back-to-back patients. You need the critical info instantly — what changed, what to refill, what to flag.
-                  </p>
-                  <ul className="persona-benefits">
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Medication timeline at a glance</span>
-                    </li>
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Today&apos;s Brief ready in 30 seconds</span>
-                    </li>
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Finish notes before your next patient</span>
-                    </li>
-                  </ul>
-                  <blockquote className="persona-quote">
-                    &quot;I document between appointments now, not after hours.&quot;
-                    <cite>— Psychiatrist, San Francisco</cite>
-                  </blockquote>
-                </div>
-                <div className="persona-visual">
-                  <div className="persona-mockup">
-                    <div className="mockup-badge">Today&apos;s Brief</div>
-                    <div className="mockup-med-list">
-                      <div className="med-item">
-                        <span className="med-name">Lexapro 15mg</span>
-                        <span className="med-status med-status-current">Current</span>
+                  
+                  <div className="persona-visual">
+                    <div className="persona-mockup">
+                      <div className="mockup-header">
+                        <span className="mockup-icon">📄</span>
+                        <div className="mockup-title-group">
+                          <div className="mockup-title">Today's Brief</div>
+                          <div className="mockup-subtitle">Sarah M. · 9:00 AM</div>
+                        </div>
                       </div>
-                      <div className="med-item">
-                        <span className="med-name">Wellbutrin 150mg</span>
-                        <span className="med-status med-status-new">+New</span>
+                      <div className="mockup-divider"></div>
+                      <div className="mockup-section-label">
+                        <span className="section-label-icon">💊</span>
+                        <span>Medication Changes</span>
                       </div>
-                      <div className="med-item">
-                        <span className="med-name">Trazodone 50mg</span>
-                        <span className="med-status med-status-discontinued">Stopped</span>
+                      <div className="mockup-med-list">
+                        <div className="med-item">
+                          <span className="med-name">Lexapro 15mg</span>
+                          <span className="med-status med-status-current">Current</span>
+                        </div>
+                        <div className="med-item">
+                          <span className="med-name">Wellbutrin 150mg</span>
+                          <span className="med-status med-status-new">+New</span>
+                        </div>
+                        <div className="med-item">
+                          <span className="med-name">Trazodone 50mg</span>
+                          <span className="med-status med-status-discontinued">Stopped</span>
+                        </div>
                       </div>
+                      <div className="mockup-alert">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                        </svg>
+                        <span>Flag: Check BP after Wellbutrin add</span>
+                      </div>
+                      <a className="mockup-link">View full brief →</a>
                     </div>
                   </div>
                 </div>
@@ -694,45 +715,63 @@ export default function App() {
               {/* Psychologist Panel */}
               <div className="persona-panel" data-panel="psychologist" role="tabpanel">
                 <div className="persona-panel-content">
-                  <div className="persona-header">
-                    <span className="persona-emoji">🧠</span>
-                    <h3>Deep work. Long arcs.</h3>
+                  <div className="persona-text-content">
+                    <div className="persona-header">
+                      <span className="persona-emoji">🧠</span>
+                      <h3>Deep work. Long arcs.</h3>
+                    </div>
+                    <p className="persona-intro">
+                      Therapy that spans months. Treatment goals that evolve. You need to track progress without re-reading every note.
+                    </p>
+                    <ul className="persona-benefits">
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Track symptom trends across sessions</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Ask Aimé about treatment history</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Stay present — let AidMi remember</span>
+                      </li>
+                    </ul>
+                    <blockquote className="persona-quote">
+                      &quot;I can finally see the full treatment arc without digging through notes.&quot;
+                      <cite>— Clinical Psychologist, Palo Alto</cite>
+                    </blockquote>
                   </div>
-                  <p className="persona-intro">
-                    Therapy that spans months. Treatment goals that evolve. You need to track progress without re-reading every note.
-                  </p>
-                  <ul className="persona-benefits">
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Track symptom trends across sessions</span>
-                    </li>
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Ask Aimé about treatment history</span>
-                    </li>
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Stay present — let AidMi remember</span>
-                    </li>
-                  </ul>
-                  <blockquote className="persona-quote">
-                    &quot;I can finally see the full treatment arc without digging through notes.&quot;
-                    <cite>— Clinical Psychologist, Palo Alto</cite>
-                  </blockquote>
-                </div>
-                <div className="persona-visual">
-                  <div className="persona-mockup">
-                    <div className="mockup-badge">Aimé Q&amp;A</div>
-                    <div className="mockup-trend">
-                      <span className="trend-label">PHQ-9 Score</span>
-                      <div className="trend-chart">
-                        <div className="trend-point" style={{ height: '80%' }}></div>
-                        <div className="trend-point" style={{ height: '65%' }}></div>
-                        <div className="trend-point" style={{ height: '50%' }}></div>
-                        <div className="trend-point" style={{ height: '35%' }}></div>
-                        <div className="trend-point" style={{ height: '25%' }}></div>
+                  
+                  <div className="persona-visual">
+                    <div className="persona-mockup">
+                      <div className="mockup-header">
+                        <span className="mockup-icon">⭐</span>
+                        <div className="mockup-title-group">
+                          <div className="mockup-title">Aimé</div>
+                        </div>
                       </div>
-                      <span className="trend-insight">↓ Improving over 5 sessions</span>
+                      <div className="mockup-query">
+                        <span>How has their PHQ-9 changed?</span>
+                      </div>
+                      <div className="mockup-trend">
+                        <div className="trend-header">PHQ-9 Trend (5 sessions)</div>
+                        <div className="trend-chart">
+                          <div className="trend-point" style={{ height: '80%' }}><span className="point-label">14</span></div>
+                          <div className="trend-point" style={{ height: '65%' }}><span className="point-label">12</span></div>
+                          <div className="trend-point" style={{ height: '50%' }}><span className="point-label">10</span></div>
+                          <div className="trend-point" style={{ height: '35%' }}><span className="point-label">8</span></div>
+                          <div className="trend-point" style={{ height: '25%' }}><span className="point-label">6</span></div>
+                        </div>
+                        <div className="trend-months">
+                          <span>Sep</span>
+                          <span>Oct</span>
+                          <span>Nov</span>
+                          <span>Dec</span>
+                          <span>Jan</span>
+                        </div>
+                        <div className="trend-insight">↓ Improving · 14 → 6 over 5 sessions</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -741,47 +780,66 @@ export default function App() {
               {/* Therapist Panel */}
               <div className="persona-panel" data-panel="therapist" role="tabpanel">
                 <div className="persona-panel-content">
-                  <div className="persona-header">
-                    <span className="persona-emoji">💬</span>
-                    <h3>Rapport is everything.</h3>
+                  <div className="persona-text-content">
+                    <div className="persona-header">
+                      <span className="persona-emoji">💬</span>
+                      <h3>Rapport is everything.</h3>
+                    </div>
+                    <p className="persona-intro">
+                      The details build connection — the sister&apos;s name, the job interview, the vacation that helped. You need to remember what matters to them.
+                    </p>
+                    <ul className="persona-benefits">
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Personal details surfaced automatically</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Pick up exactly where you left off</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Never forget what mattered to them</span>
+                      </li>
+                    </ul>
+                    <blockquote className="persona-quote">
+                      &quot;My clients feel heard because I actually remember their lives.&quot;
+                      <cite>— LMFT, Mountain View</cite>
+                    </blockquote>
                   </div>
-                  <p className="persona-intro">
-                    The details build connection — the sister&apos;s name, the job interview, the vacation that helped. You need to remember what matters to them.
-                  </p>
-                  <ul className="persona-benefits">
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Personal details surfaced automatically</span>
-                    </li>
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Pick up exactly where you left off</span>
-                    </li>
-                    <li>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      <span>Never forget what mattered to them</span>
-                    </li>
-                  </ul>
-                  <blockquote className="persona-quote">
-                    &quot;My clients feel heard because I actually remember their lives.&quot;
-                    <cite>— LMFT, Mountain View</cite>
-                  </blockquote>
-                </div>
-                <div className="persona-visual">
-                  <div className="persona-mockup">
-                    <div className="mockup-badge">Memory</div>
-                    <div className="mockup-memory-list">
-                      <div className="memory-item">
-                        <span className="memory-icon">👨‍👩‍👧</span>
-                        <span>Sister &quot;Maria&quot; — close relationship</span>
+                  
+                  <div className="persona-visual">
+                    <div className="persona-mockup">
+                      <div className="mockup-header">
+                        <span className="mockup-icon">🧠</span>
+                        <div className="mockup-title-group">
+                          <div className="mockup-title">Memory</div>
+                          <div className="mockup-subtitle">Auto-surfaced before session</div>
+                        </div>
                       </div>
-                      <div className="memory-item">
-                        <span className="memory-icon">💼</span>
-                        <span>Google interview on Nov 15</span>
-                      </div>
-                      <div className="memory-item">
-                        <span className="memory-icon">🏖️</span>
-                        <span>Hawaii trip helped with stress</span>
+                      <div className="mockup-divider"></div>
+                      <div className="mockup-memory-list">
+                        <div className="memory-item">
+                          <span className="memory-icon">👨‍👩‍👧</span>
+                          <div className="memory-content">
+                            <div className="memory-text">Sister &quot;Maria&quot; — close relationship</div>
+                            <div className="memory-context">Last mentioned: Session #12</div>
+                          </div>
+                        </div>
+                        <div className="memory-item">
+                          <span className="memory-icon">💼</span>
+                          <div className="memory-content">
+                            <div className="memory-text">Google interview on Nov 15</div>
+                            <div className="memory-context">Feeling anxious but prepared</div>
+                          </div>
+                        </div>
+                        <div className="memory-item">
+                          <span className="memory-icon">🏝️</span>
+                          <div className="memory-content">
+                            <div className="memory-text">Hawaii trip helped with stress</div>
+                            <div className="memory-context">&quot;First real vacation in 2 years&quot;</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
