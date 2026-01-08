@@ -663,39 +663,41 @@ export default function App() {
                   
                   <div className="persona-visual">
                     <div className="persona-mockup">
-                      <div className="mockup-header">
-                        <span className="mockup-icon">📄</span>
-                        <div className="mockup-title-group">
-                          <div className="mockup-title">Today's Brief</div>
-                          <div className="mockup-subtitle">Sarah M. · 9:00 AM</div>
+                      <div className="mockup-card">
+                        <div className="mockup-header">
+                          <span className="mockup-icon">📄</span>
+                          <div className="mockup-title-group">
+                            <div className="mockup-title">Today's Brief</div>
+                            <div className="mockup-subtitle">Sarah M. · 9:00 AM</div>
+                          </div>
                         </div>
-                      </div>
-                      <div className="mockup-divider"></div>
-                      <div className="mockup-section-label">
-                        <span className="section-label-icon">💊</span>
-                        <span>Medication Changes</span>
-                      </div>
-                      <div className="mockup-med-list">
-                        <div className="med-item">
-                          <span className="med-name">Lexapro 15mg</span>
-                          <span className="med-status med-status-current">Current</span>
+                        <div className="mockup-divider"></div>
+                        <div className="mockup-section-label">
+                          <span className="section-label-icon">💊</span>
+                          <span>Medication Changes</span>
                         </div>
-                        <div className="med-item">
-                          <span className="med-name">Wellbutrin 150mg</span>
-                          <span className="med-status med-status-new">+New</span>
+                        <div className="mockup-med-list">
+                          <div className="med-item">
+                            <span className="med-name">Lexapro 15mg</span>
+                            <span className="med-status med-status-current">Current</span>
+                          </div>
+                          <div className="med-item">
+                            <span className="med-name">Wellbutrin 150mg</span>
+                            <span className="med-status med-status-new">+New</span>
+                          </div>
+                          <div className="med-item">
+                            <span className="med-name">Trazodone 50mg</span>
+                            <span className="med-status med-status-discontinued">Stopped</span>
+                          </div>
                         </div>
-                        <div className="med-item">
-                          <span className="med-name">Trazodone 50mg</span>
-                          <span className="med-status med-status-discontinued">Stopped</span>
+                        <div className="mockup-alert">
+                          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                          </svg>
+                          <span>Flag: Check BP after Wellbutrin add</span>
                         </div>
+                        <a className="mockup-link">View full brief →</a>
                       </div>
-                      <div className="mockup-alert">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
-                        </svg>
-                        <span>Flag: Check BP after Wellbutrin add</span>
-                      </div>
-                      <a className="mockup-link">View full brief →</a>
                     </div>
                   </div>
                 </div>
@@ -734,32 +736,34 @@ export default function App() {
                   
                   <div className="persona-visual">
                     <div className="persona-mockup">
-                      <div className="mockup-header">
-                        <span className="mockup-icon">⭐</span>
-                        <div className="mockup-title-group">
-                          <div className="mockup-title">Aimé</div>
+                      <div className="mockup-card">
+                        <div className="mockup-header">
+                          <span className="mockup-icon">⭐</span>
+                          <div className="mockup-title-group">
+                            <div className="mockup-title">Aimé</div>
+                          </div>
                         </div>
-                      </div>
-                      <div className="mockup-query">
-                        <span>How has their PHQ-9 changed?</span>
-                      </div>
-                      <div className="mockup-trend">
-                        <div className="trend-header">PHQ-9 Trend (5 sessions)</div>
-                        <div className="trend-chart">
-                          <div className="trend-point" style={{ height: '80%' }}><span className="point-label">14</span></div>
-                          <div className="trend-point" style={{ height: '65%' }}><span className="point-label">12</span></div>
-                          <div className="trend-point" style={{ height: '50%' }}><span className="point-label">10</span></div>
-                          <div className="trend-point" style={{ height: '35%' }}><span className="point-label">8</span></div>
-                          <div className="trend-point" style={{ height: '25%' }}><span className="point-label">6</span></div>
+                        <div className="mockup-query">
+                          <span>How has their PHQ-9 changed?</span>
                         </div>
-                        <div className="trend-months">
-                          <span>Sep</span>
-                          <span>Oct</span>
-                          <span>Nov</span>
-                          <span>Dec</span>
-                          <span>Jan</span>
+                        <div className="mockup-trend">
+                          <div className="trend-header">PHQ-9 Trend (5 sessions)</div>
+                          <div className="trend-chart">
+                            <div className="trend-point" style={{ height: '80%' }}><span className="point-label">14</span></div>
+                            <div className="trend-point" style={{ height: '65%' }}><span className="point-label">12</span></div>
+                            <div className="trend-point" style={{ height: '50%' }}><span className="point-label">10</span></div>
+                            <div className="trend-point" style={{ height: '35%' }}><span className="point-label">8</span></div>
+                            <div className="trend-point" style={{ height: '25%' }}><span className="point-label">6</span></div>
+                          </div>
+                          <div className="trend-months">
+                            <span>Sep</span>
+                            <span>Oct</span>
+                            <span>Nov</span>
+                            <span>Dec</span>
+                            <span>Jan</span>
+                          </div>
+                          <div className="trend-insight">↓ Improving · 14 → 6 over 5 sessions</div>
                         </div>
-                        <div className="trend-insight">↓ Improving · 14 → 6 over 5 sessions</div>
                       </div>
                     </div>
                   </div>
@@ -799,34 +803,36 @@ export default function App() {
                   
                   <div className="persona-visual">
                     <div className="persona-mockup">
-                      <div className="mockup-header">
-                        <span className="mockup-icon">🧠</span>
-                        <div className="mockup-title-group">
-                          <div className="mockup-title">Memory</div>
-                          <div className="mockup-subtitle">Auto-surfaced before session</div>
-                        </div>
-                      </div>
-                      <div className="mockup-divider"></div>
-                      <div className="mockup-memory-list">
-                        <div className="memory-item">
-                          <span className="memory-icon">👨‍👩‍👧</span>
-                          <div className="memory-content">
-                            <div className="memory-text">Sister &quot;Maria&quot; — close relationship</div>
-                            <div className="memory-context">Last mentioned: Session #12</div>
+                      <div className="mockup-card">
+                        <div className="mockup-header">
+                          <span className="mockup-icon">🧠</span>
+                          <div className="mockup-title-group">
+                            <div className="mockup-title">Memory</div>
+                            <div className="mockup-subtitle">Auto-surfaced before session</div>
                           </div>
                         </div>
-                        <div className="memory-item">
-                          <span className="memory-icon">💼</span>
-                          <div className="memory-content">
-                            <div className="memory-text">Google interview on Nov 15</div>
-                            <div className="memory-context">Feeling anxious but prepared</div>
+                        <div className="mockup-divider"></div>
+                        <div className="mockup-memory-list">
+                          <div className="memory-item">
+                            <span className="memory-icon">👨‍👩‍👧</span>
+                            <div className="memory-content">
+                              <div className="memory-text">Sister &quot;Maria&quot; — close relationship</div>
+                              <div className="memory-context">Last mentioned: Session #12</div>
+                            </div>
                           </div>
-                        </div>
-                        <div className="memory-item">
-                          <span className="memory-icon">🏝️</span>
-                          <div className="memory-content">
-                            <div className="memory-text">Hawaii trip helped with stress</div>
-                            <div className="memory-context">&quot;First real vacation in 2 years&quot;</div>
+                          <div className="memory-item">
+                            <span className="memory-icon">💼</span>
+                            <div className="memory-content">
+                              <div className="memory-text">Google interview on Nov 15</div>
+                              <div className="memory-context">Feeling anxious but prepared</div>
+                            </div>
+                          </div>
+                          <div className="memory-item">
+                            <span className="memory-icon">🏝️</span>
+                            <div className="memory-content">
+                              <div className="memory-text">Hawaii trip helped with stress</div>
+                              <div className="memory-context">&quot;First real vacation in 2 years&quot;</div>
+                            </div>
                           </div>
                         </div>
                       </div>

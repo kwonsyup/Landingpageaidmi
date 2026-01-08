@@ -199,21 +199,34 @@
 .persona-visual {
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* Align to top instead of center */
 }
 
 .persona-mockup {
-  background: var(--pure-white);
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   box-shadow: 
     0 4px 6px rgba(0, 64, 140, 0.04),
     0 12px 24px rgba(0, 64, 140, 0.08);
   width: 100%;
-  min-height: 200px;
-  height: auto;
+  max-width: 360px; /* Constrain width */
+  min-height: auto; /* Remove fixed min-height */
+  height: fit-content; /* Fit content height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+/* Inner card wrapper */
+.mockup-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 
+    0 1px 3px rgba(0, 64, 140, 0.04),
+    0 8px 24px rgba(0, 64, 140, 0.08);
+  border: 1px solid rgba(0, 64, 140, 0.06);
 }
 
 .mockup-badge {
@@ -238,23 +251,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+  padding: 10px 12px;
   background: #f8fafc;
   border-radius: 8px;
+  border: 1px solid #e5e7eb;
 }
 
 .med-name {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-dark);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark-navy);
 }
 
 .med-status {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.3px;
   padding: 4px 8px;
   border-radius: 4px;
+  margin-left: 12px; /* Ensure spacing from med name */
 }
 
 .med-status-current {
