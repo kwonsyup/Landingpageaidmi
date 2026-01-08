@@ -227,18 +227,14 @@ export default function App() {
                   <div className="integration-logo-text logo-therapynotes">
                     <span>Therapy</span><span className="logo-bold">Notes</span>
                   </div>
-                  <div className="integration-logo-text logo-alma">
-                    alma
-                  </div>
-                  <div className="integration-logo-text logo-headway">
-                    headway
-                  </div>
                   <div className="integration-logo-text logo-valant">
                     Valant
                   </div>
-                  <div className="integration-logo-more">
-                    <span className="more-icon">+</span>
-                    <span>More</span>
+                  <div className="integration-logo-text logo-theranest">
+                    <span>Thera</span><span className="logo-bold">Nest</span>
+                  </div>
+                  <div className="integration-logo-text logo-icanotes">
+                    <span>ICA</span><span className="logo-bold">Notes</span>
                   </div>
                 </div>
               </div>

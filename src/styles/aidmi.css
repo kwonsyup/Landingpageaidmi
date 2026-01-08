@@ -1222,24 +1222,6 @@ nav a:focus {
   letter-spacing: -0.3px;
 }
 
-/* Alma - Lowercase, modern */
-.logo-alma {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: lowercase;
-}
-
-/* Headway - Bold, friendly */
-.logo-headway {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  text-transform: lowercase;
-}
-
 /* Valant - Professional, clinical */
 .logo-valant {
   font-family: 'Inter', sans-serif;
@@ -1248,42 +1230,18 @@ nav a:focus {
   letter-spacing: 0.2px;
 }
 
-/* +More button */
-.integration-logo-more {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  cursor: pointer;
+/* TheraNest - Similar to SimplePractice/TherapyNotes */
+.logo-theranest {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.3px;
 }
 
-.integration-logo-more .more-icon {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 500;
-  color: #94a3b8;
-  border: 1.5px dashed #cbd5e1;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.integration-logo-more span:last-child {
-  font-size: 10px;
-  font-weight: 500;
-  color: #94a3b8;
-}
-
-.integration-logo-more:hover .more-icon {
-  color: var(--dark-navy);
-  border-color: var(--dark-navy);
-}
-
-.integration-logo-more:hover span:last-child {
-  color: var(--dark-navy);
+/* ICANotes - Similar to SimplePractice/TherapyNotes */
+.logo-icanotes {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.3px;
 }
 
 /* ==================== MOCKUP FRAMES ==================== */
