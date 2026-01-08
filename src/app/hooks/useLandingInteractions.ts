@@ -19,53 +19,85 @@ export default function useLandingInteractions() {
     const videoModal = document.getElementById("videoModal");
     const videoTrigger = document.querySelector<HTMLElement>(".video-trigger");
     const videoClose = document.querySelector<HTMLElement>(".video-modal-close");
+    const videoWrapper = document.getElementById("videoWrapper");
+    const videoPlaceholder = videoWrapper?.querySelector<HTMLElement>(".video-placeholder-state");
+    const videoBackdrop = videoModal?.querySelector<HTMLElement>(".video-modal-backdrop");
+    
+    let videoIframe: HTMLIFrameElement | null = null;
 
-    if (videoTrigger && videoModal) {
-      videoTrigger.addEventListener(
-        "click",
-        (e) => {
-          e.preventDefault();
-          videoModal.classList.add("active");
-          document.body.style.overflow = "hidden";
-        },
-        { signal }
-      );
+    const openVideoModal = () => {
+      if (!videoModal) return;
+      videoModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeVideoModal = () => {
+      if (!videoModal) return;
+      videoModal.classList.remove("active");
+      document.body.style.overflow = "";
+      
+      // CRITICAL: Remove iframe to stop video/audio
+      if (videoIframe) {
+        videoIframe.remove();
+        videoIframe = null;
+      }
+      
+      // Show placeholder again
+      if (videoPlaceholder) {
+        videoPlaceholder.style.display = "flex";
+      }
+    };
+
+    const loadVideo = () => {
+      if (!videoWrapper || videoIframe) return;
+      
+      // Hide placeholder
+      if (videoPlaceholder) {
+        videoPlaceholder.style.display = "none";
+      }
+      
+      // Create and insert iframe
+      // Replace YOUR_VIDEO_ID with actual YouTube/Vimeo ID
+      videoIframe = document.createElement("iframe");
+      videoIframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0";
+      videoIframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      videoIframe.allowFullscreen = true;
+      videoWrapper.appendChild(videoIframe);
+    };
+
+    if (videoTrigger) {
+      videoTrigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        openVideoModal();
+      }, { signal });
     }
 
-    if (videoClose && videoModal) {
-      videoClose.addEventListener(
-        "click",
-        (e) => {
-          e.preventDefault();
-          videoModal.classList.remove("active");
-          document.body.style.overflow = "";
-        },
-        { signal }
-      );
+    if (videoClose) {
+      videoClose.addEventListener("click", (e) => {
+        e.preventDefault();
+        closeVideoModal();
+      }, { signal });
+    }
+
+    if (videoBackdrop) {
+      videoBackdrop.addEventListener("click", () => {
+        closeVideoModal();
+      }, { signal });
+    }
+
+    // Click placeholder to load video
+    if (videoPlaceholder) {
+      videoPlaceholder.addEventListener("click", () => {
+        loadVideo();
+      }, { signal });
     }
 
     if (videoModal) {
-      videoModal.addEventListener(
-        "click",
-        (e) => {
-          if (e.target === videoModal) {
-            videoModal.classList.remove("active");
-            document.body.style.overflow = "";
-          }
-        },
-        { signal }
-      );
-
-      document.addEventListener(
-        "keydown",
-        (e) => {
-          if (e.key === "Escape" && videoModal.classList.contains("active")) {
-            videoModal.classList.remove("active");
-            document.body.style.overflow = "";
-          }
-        },
-        { signal }
-      );
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && videoModal.classList.contains("active")) {
+          closeVideoModal();
+        }
+      }, { signal });
     }
 
     // Contact modal functionality
@@ -129,20 +161,18 @@ export default function useLandingInteractions() {
         (e) => {
           e.preventDefault();
 
-          const formData = new FormData(contactForm);
-          const data = Object.fromEntries(formData.entries());
+          const emailInput = document.getElementById("email") as HTMLInputElement | null;
+          const email = emailInput?.value;
 
-          // TEMPORARY: For demo purposes only
-          // (matches the HTML behavior)
-          // eslint-disable-next-line no-console
-          console.log("Form submitted:", data);
-          alert(
-            "Welcome to AidMi! Check your email to complete your free account setup."
-          );
-
-          contactModal.classList.remove("active");
-          document.body.style.overflow = "";
-          contactForm.reset();
+          if (email) {
+            // Redirect to app signup with email pre-filled
+            window.location.href = `https://app.aidmi.com/signup?email=${encodeURIComponent(email)}`;
+          } else {
+            // Fallback if no email
+            contactModal.classList.remove("active");
+            document.body.style.overflow = "";
+            alert("Check your email to complete signup!");
+          }
         },
         { signal }
       );

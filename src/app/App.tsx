@@ -104,9 +104,7 @@ export default function App() {
         <div className="container">
           <div className="hero-layout">
             <div className="hero-content">
-              <span className="hero-eyebrow">Works alongside your existing EHR</span>
-              
-              <h1>The AI That <em>Briefs</em> You Before Your Patient Walks In.</h1>
+              <h1>Know Your Patient<br /><em>Before</em> They Walk In.</h1>
               
               <p className="hero-subhead">
                 AidMi builds longitudinal context for every patient — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.
@@ -147,6 +145,49 @@ export default function App() {
                   </div>
                 </div>
               </div>
+              
+              {/* Integration Strip */}
+              <div className="integration-strip">
+                <span className="integration-label">Works alongside your EHR</span>
+                <div className="integration-logos">
+                  <div className="integration-logo">
+                    <div className="logo-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/>
+                      </svg>
+                    </div>
+                    <span>Epic</span>
+                  </div>
+                  <div className="integration-logo">
+                    <div className="logo-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/>
+                      </svg>
+                    </div>
+                    <span>Cerner</span>
+                  </div>
+                  <div className="integration-logo">
+                    <div className="logo-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                      </svg>
+                    </div>
+                    <span>SimplePractice</span>
+                  </div>
+                  <div className="integration-logo">
+                    <div className="logo-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
+                      </svg>
+                    </div>
+                    <span>TherapyNotes</span>
+                  </div>
+                  <div className="integration-logo">
+                    <div className="logo-icon logo-icon-more">+</div>
+                    <span>More</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -154,7 +195,7 @@ export default function App() {
 
       {/* Trust Strip (Marquee) */}
       <section className="trust-strip">
-        <div className="trust-label">Co-designed with US behavioral health clinicians from:</div>
+        <div className="trust-label">Co-designed with clinicians from:</div>
         <div className="marquee">
           <div className="marquee-content">
             <div className="partner-logo">Meta</div>
@@ -808,63 +849,70 @@ export default function App() {
 
       {/* Video Modal */}
       <div className="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+        <div className="video-modal-backdrop"></div>
         <div className="video-modal-content">
+          <button className="video-modal-close" aria-label="Close video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
           <h2 id="videoModalTitle" className="sr-only">AidMi Product Demo</h2>
-          <button className="video-modal-close" aria-label="Close video">×</button>
-          <div className="video-placeholder">[Video Player: 90-second Product Demo]</div>
+          <div className="video-container">
+            <div className="video-wrapper" id="videoWrapper">
+              {/* Placeholder until video loads */}
+              <div className="video-placeholder-state">
+                <div className="play-button-large">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5V19L19 12L8 5Z"/>
+                  </svg>
+                </div>
+                <p>AidMi Product Demo</p>
+                <span>90 seconds</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Contact Modal */}
       <div className="contact-modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-        <div className="contact-modal-content">
+        <div className="contact-modal-content contact-modal-simple">
           <button className="contact-modal-close" aria-label="Close form">×</button>
-          <div className="contact-modal-header">
-            <h3 id="contactModalTitle">Get Started with AidMi Free</h3>
-            <p>Create your free account. No credit card required. Start documenting with confidence today.</p>
-          </div>
-          <div className="contact-modal-body">
-            <form id="contactForm" className="contact-form">
-              <div className="contact-form-group">
-                <label htmlFor="fullName">Full Name *</label>
-                <input type="text" id="fullName" name="fullName" required placeholder="Dr. Jane Smith" />
+          
+          <div className="modal-simple-content">
+            <div className="modal-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            
+            <h3 id="contactModalTitle">Start Free in 60 Seconds</h3>
+            <p className="modal-simple-subhead">No credit card. No sales call. Just your email.</p>
+            
+            <form id="contactForm" className="contact-form-simple">
+              <div className="form-row">
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  placeholder="you@practice.com"
+                  className="input-email"
+                />
+                <button type="submit" className="btn-submit">
+                  Get Started
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="arrow-icon">
+                    <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/>
+                  </svg>
+                </button>
               </div>
-              <div className="contact-form-group">
-                <label htmlFor="email">Email Address *</label>
-                <input type="email" id="email" name="email" required placeholder="jane.smith@practice.com" />
-              </div>
-              <div className="contact-form-group">
-                <label htmlFor="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
-              </div>
-              <div className="contact-form-group">
-                <label htmlFor="role">Your Role *</label>
-                <select id="role" name="role" required>
-                  <option value="">Select your role...</option>
-                  <option value="psychiatrist">Psychiatrist</option>
-                  <option value="psychologist">Psychologist</option>
-                  <option value="therapist">Therapist / LCSW / LPC</option>
-                  <option value="psychiatric-np">Psychiatric Nurse Practitioner</option>
-                  <option value="practice-manager">Practice Manager</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div className="contact-form-group">
-                <label htmlFor="practiceSize">Practice Size *</label>
-                <select id="practiceSize" name="practiceSize" required>
-                  <option value="">Select practice size...</option>
-                  <option value="solo">Solo Practitioner</option>
-                  <option value="small">Small Group (2-5 clinicians)</option>
-                  <option value="medium">Medium Group (6-15 clinicians)</option>
-                  <option value="large">Large Practice (16+ clinicians)</option>
-                </select>
-              </div>
-              <div className="contact-form-group">
-                <label htmlFor="message">Tell Us About Your Workflow (Optional)</label>
-                <textarea id="message" name="message" placeholder="What are your biggest documentation challenges? What EHR do you use?"></textarea>
-              </div>
-              <button type="submit" className="contact-submit-btn">Create Free Account</button>
             </form>
+            
+            <div className="modal-trust-row">
+              <span><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg> HIPAA compliant</span>
+              <span><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg> No credit card</span>
+              <span><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg> Setup in 2 min</span>
+            </div>
           </div>
         </div>
       </div>
