@@ -153,12 +153,14 @@ header.scrolled {
 }
 
 .logo {
-  font-family: 'Merriweather', serif;
-  font-size: 32px;
-  font-weight: 900;
-  color: var(--dark-navy);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -1px;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
 }
 
 nav ul {
@@ -352,6 +354,7 @@ nav a:focus {
   background: linear-gradient(135deg, var(--dark-navy) 0%, #00509e 100%);
   color: var(--pure-white);
   box-shadow: 0 4px 16px rgba(0, 64, 140, 0.2);
+  border-radius: 9999px; /* Explicit pill shape */
   position: relative;
   overflow: hidden;
 }
@@ -385,6 +388,7 @@ nav a:focus {
   background: rgba(0, 64, 140, 0.05);
   color: var(--dark-navy);
   border: 2px solid var(--dark-navy);
+  border-radius: 9999px; /* Explicit pill shape */
 }
 
 .btn-secondary:hover {
@@ -407,9 +411,10 @@ nav a:focus {
 }
 
 .btn-large {
-  padding: 16px 36px;
-  font-size: 16px;
+  padding: 18px 44px; /* More horizontal padding for proper pill proportions */
+  font-size: 17px;
   min-height: 52px;
+  border-radius: 9999px; /* Ensure pill is maintained at large size */
 }
 
 /* ==================== VIDEO MODAL - IMPROVED ==================== */
@@ -651,14 +656,16 @@ nav a:focus {
 
 /* Logo */
 .getstarted-logo {
-  font-family: 'Merriweather', serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--dark-navy);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 24px;
   margin-bottom: 8px;
-  letter-spacing: -1px;
+}
+
+.getstarted-logo img {
+  height: 36px;
+  width: auto;
 }
 
 /* Title */
@@ -760,56 +767,64 @@ nav a:focus {
   flex-shrink: 0;
 }
 
-/* Trust Footer */
+/* Trust Footer - Grounded Base */
 .getstarted-trust {
+  background: #F8FAFC;
+  padding: 20px 32px;
+  border-top: 1px solid rgba(0, 64, 140, 0.08);
+  border-radius: 0 0 20px 20px;
+  margin: 24px -32px -32px -32px;
+}
+
+/* Trust badges row */
+.getstarted-trust-badges {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid #e2e8f0;
-  background: #f8fafc;
-  margin-left: -32px;
-  margin-right: -32px;
-  margin-bottom: -32px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 24px;
-  border-radius: 0 0 20px 20px;
+  margin-bottom: 12px;
 }
 
 .getstarted-trust span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 12px;
+  gap: 8px;
+  font-size: 13px;
   font-weight: 500;
-  color: var(--text-gray);
+  color: #475569;
 }
 
 .getstarted-trust svg {
-  width: 16px;
-  height: 16px;
-  fill: #059669;
+  width: 18px;
+  height: 18px;
+}
+
+/* HIPAA badge - green shield */
+.getstarted-trust span:first-child svg {
+  fill: #10b981;
+}
+
+/* No credit card badge - teal card */
+.getstarted-trust span:last-child svg {
+  fill: #0891b2;
 }
 
 /* Footer Link */
 .getstarted-footer-link {
   text-align: center;
-  margin-top: 24px;
   font-size: 14px;
-  color: var(--text-gray);
+  color: #64748b;
 }
 
 .getstarted-footer-link a {
   color: var(--dark-navy);
   font-weight: 600;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .getstarted-footer-link a:hover {
-  opacity: 0.7;
+  color: #00509e;
+  text-decoration: underline;
 }
 
 /* Login View Styles */
@@ -948,14 +963,20 @@ nav a:focus {
     margin: 16px;
   }
   
-  .getstarted-login-link {
-    top: 16px;
-    left: 20px;
-    font-size: 13px;
+  .getstarted-trust {
+    padding: 16px 24px;
+    margin: 20px -24px -24px -24px;
   }
   
-  .getstarted-logo {
-    font-size: 24px;
+  .getstarted-trust-badges {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .getstarted-logo img {
+    height: 30px;
   }
   
   .getstarted-title {
@@ -1138,7 +1159,13 @@ nav a:focus {
 }
 
 .hero-buttons .btn-primary {
-  padding: 16px 40px;
+  padding: 18px 40px;
+  border-radius: 9999px; /* Explicit pill shape */
+}
+
+.hero-buttons .btn-secondary {
+  padding: 18px 40px;
+  border-radius: 9999px; /* Explicit pill shape */
 }
 
 .hero-trust-text {
@@ -1204,6 +1231,16 @@ nav a:focus {
   .hero-mockup-image:hover {
     transform: perspective(1200px) rotateY(-1.5deg) rotateX(0.75deg) translateY(-4px);
   }
+  
+  .integration-strip {
+    align-items: center;
+    text-align: center;
+    border-top: none;
+  }
+  
+  .integration-logos {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1254,32 +1291,34 @@ nav a:focus {
   position: relative;
 }
 
-/* ==================== INTEGRATION STRIP (Deconstructed) ==================== */
+/* ==================== INTEGRATION STRIP (Sidebar Cluster) ==================== */
 .integration-strip {
   margin-top: 40px;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-  /* Ensure it's outside transform context */
-  transform: translateZ(0);
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 64, 140, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .integration-label {
   display: block;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #64748b;
-  margin-bottom: 16px;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin: 0;
 }
 
 .integration-logos {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 28px;
-  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px 32px;
+  flex-wrap: wrap;
 }
 
 .integration-logo {
@@ -4498,6 +4537,7 @@ footer {
     width: auto;
     max-width: 280px;
     padding: 14px 32px;
+    border-radius: 9999px; /* Maintain pill shape on mobile */
   }
 
   .hero-compliance {
@@ -4507,9 +4547,13 @@ footer {
 
   .integration-strip {
     margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    border-top: none;
   }
   
   .integration-logos {
+    justify-content: center;
     gap: 20px;
   }
 

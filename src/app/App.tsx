@@ -2,6 +2,7 @@ import '../styles/aidmi.css';
 import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
 import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
+import aidmiLogo from 'figma:asset/06630e6d0f3cdbeb4d97043d9c269f80ec260d53.png';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
@@ -34,7 +35,9 @@ export default function App() {
       {/* Header */}
       <header id="main-header">
         <div className="header-container">
-          <a href="/" className="logo">AidMi</a>
+          <a href="/" className="logo">
+            <img src={aidmiLogo} alt="AidMi" />
+          </a>
           <nav>
             <ul>
               <li className="nav-item has-dropdown">
@@ -153,6 +156,28 @@ export default function App() {
                 </svg>
                 <span>HIPAA Compliant · BAA Included · AES-256 Encrypted</span>
               </div>
+              
+              {/* Integration Strip - Sidebar Cluster */}
+              <div className="integration-strip">
+                <span className="integration-label">Works alongside your EHR</span>
+                <div className="integration-logos">
+                  <div className="integration-logo-text logo-simplepractice">
+                    <span>Simple</span><span className="logo-bold">Practice</span>
+                  </div>
+                  <div className="integration-logo-text logo-therapynotes">
+                    <span>Therapy</span><span className="logo-bold">Notes</span>
+                  </div>
+                  <div className="integration-logo-text logo-valant">
+                    Valant
+                  </div>
+                  <div className="integration-logo-text logo-theranest">
+                    <span>Thera</span><span className="logo-bold">Nest</span>
+                  </div>
+                  <div className="integration-logo-text logo-icanotes">
+                    <span>ICA</span><span className="logo-bold">Notes</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="hero-visual">
@@ -162,28 +187,6 @@ export default function App() {
                   alt="AidMi Today's Brief showing patient status with PHQ-9, GAD-7 scores, recent stressors, symptom patterns, and rapport anchors"
                   className="hero-mockup-image"
                 />
-              </div>
-            </div>
-            
-            {/* Integration Strip - MOVED OUTSIDE hero-visual */}
-            <div className="integration-strip">
-              <span className="integration-label">Works alongside your EHR</span>
-              <div className="integration-logos">
-                <div className="integration-logo-text logo-simplepractice">
-                  <span>Simple</span><span className="logo-bold">Practice</span>
-                </div>
-                <div className="integration-logo-text logo-therapynotes">
-                  <span>Therapy</span><span className="logo-bold">Notes</span>
-                </div>
-                <div className="integration-logo-text logo-valant">
-                  Valant
-                </div>
-                <div className="integration-logo-text logo-theranest">
-                  <span>Thera</span><span className="logo-bold">Nest</span>
-                </div>
-                <div className="integration-logo-text logo-icanotes">
-                  <span>ICA</span><span className="logo-bold">Notes</span>
-                </div>
               </div>
             </div>
           </div>
@@ -1339,7 +1342,9 @@ export default function App() {
           {modalView === 'onboarding' ? (
             <>
               {/* Logo */}
-              <div className="getstarted-logo">AidMi</div>
+              <div className="getstarted-logo">
+                <img src={aidmiLogo} alt="AidMi" />
+              </div>
               
               <h2 id="getStartedModalTitle" className="getstarted-title">Let&apos;s get you started</h2>
               
@@ -1379,31 +1384,33 @@ export default function App() {
                 </a>
               </div>
               
-              {/* Trust Footer */}
+              {/* Trust Footer - Grounded */}
               <div className="getstarted-trust">
-                <span>
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                  </svg>
-                  HIPAA Compliant
-                </span>
-                <span>
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
-                  </svg>
-                  No Credit Card
-                </span>
-              </div>
-              
-              {/* Login Link */}
-              <div className="getstarted-footer-link">
-                Already have an account? <a href="#" onClick={(e) => { e.preventDefault(); setModalView('login'); }}>Log in</a>
+                <div className="getstarted-trust-badges">
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                    </svg>
+                    HIPAA Compliant
+                  </span>
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
+                    No Credit Card
+                  </span>
+                </div>
+                <div className="getstarted-footer-link">
+                  Already have an account? <a href="#" onClick={(e) => { e.preventDefault(); setModalView('login'); }}>Log in</a>
+                </div>
               </div>
             </>
           ) : (
             <>
               {/* Logo */}
-              <div className="getstarted-logo">AidMi</div>
+              <div className="getstarted-logo">
+                <img src={aidmiLogo} alt="AidMi" />
+              </div>
               
               <h3 className="getstarted-title">Welcome back</h3>
               <p className="modal-simple-subhead">To clinical clarity.</p>
