@@ -782,6 +782,14 @@ nav a:focus {
     gap: 8px;
     align-items: center;
   }
+
+  /* Integration Strip - Mobile */
+  .integration-logos {
+    flex-wrap: wrap;
+    gap: 20px 24px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }
 
 /* ==================== HERO SECTION ==================== */
@@ -915,16 +923,21 @@ nav a:focus {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  font-weight: 500;
-  color: var(--text-light);
-  margin-top: 32px;
+  letter-spacing: 0.01em;
+  color: #64748b;
+  margin-top: 24px;
+  /* NO border-top, NO padding-top - direct connection to buttons */
 }
 
 .hero-trust-text .trust-icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--text-light);
-  opacity: 0.7;
+  width: 14px;
+  height: 14px;
+  fill: #22c55e;
+  flex-shrink: 0;
+}
+
+.hero-trust-text span {
+  line-height: 1;
 }
 
 .hero-visual {
@@ -935,10 +948,11 @@ nav a:focus {
   position: relative;
 }
 
-/* ==================== INTEGRATION STRIP ==================== */
+/* ==================== INTEGRATION STRIP (Deconstructed) ==================== */
 .integration-strip {
-  margin-top: 32px;
+  margin-top: 24px;
   text-align: center;
+  /* NO background, NO border, NO shadow - sits directly on page */
 }
 
 .integration-label {
@@ -946,16 +960,17 @@ nav a:focus {
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-light);
-  margin-bottom: 16px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 14px;
 }
 
 .integration-logos {
   display: flex;
   justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: nowrap;
 }
 
 .integration-logo {
@@ -963,57 +978,52 @@ nav a:focus {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  opacity: 0.6;
-  transition: all 0.2s ease;
-  cursor: default;
+  width: 64px;
+  flex-shrink: 0;
 }
 
-.integration-logo:hover {
-  opacity: 1;
+.integration-logo svg {
+  width: 28px;
+  height: 28px;
+  fill: #94a3b8;
+  transition: fill 0.2s ease;
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--pure-white);
-  border: 1px solid rgba(0, 64, 140, 0.1);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 64, 140, 0.06);
-  transition: all 0.2s ease;
-}
-
-.integration-logo:hover .logo-icon {
-  border-color: var(--pale-blue);
-  box-shadow: 0 4px 12px rgba(0, 64, 140, 0.1);
-}
-
-.logo-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--text-light);
-}
-
-.integration-logo:hover .logo-icon svg {
+.integration-logo:hover svg {
   fill: var(--dark-navy);
 }
 
-.logo-icon-more {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-light);
-}
-
 .integration-logo span {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
-  color: var(--text-light);
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .integration-logo:hover span {
   color: var(--dark-navy);
+}
+
+.integration-logo-more .more-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #94a3b8;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.integration-logo-more:hover .more-icon {
+  color: var(--dark-navy);
+  border-color: var(--dark-navy);
 }
 
 /* ==================== MOCKUP FRAMES ==================== */
@@ -1296,76 +1306,220 @@ nav a:focus {
   position: relative;
 }
 
-.problem-content {
-  max-width: 760px;
-  margin: 0 auto;
+.problem-section .section-header {
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
 }
 
 .problem-section h2 {
   font-size: clamp(2rem, 4vw, 2.75rem);
   color: var(--dark-navy);
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   line-height: 1.2;
 }
 
-.problem-body {
-  text-align: left;
-}
-
-.problem-pain {
-  font-size: 19px;
-  line-height: 1.8;
-  color: var(--text-dark);
-  margin-bottom: 24px;
-}
-
-.problem-pain em {
-  color: var(--dark-navy);
-  font-style: italic;
-  background: linear-gradient(180deg, transparent 60%, rgba(249, 184, 175, 0.4) 60%);
-  padding: 0 4px;
-}
-
-.problem-current {
-  font-size: 19px;
-  line-height: 1.8;
+.problem-section .section-subhead {
+  font-size: 1.125rem;
   color: var(--text-gray);
-  margin-bottom: 24px;
-  padding-left: 20px;
-  border-left: 3px solid var(--pale-blue);
+  line-height: 1.6;
 }
 
-.problem-solution {
-  font-size: 19px;
-  line-height: 1.8;
-  color: var(--text-dark);
-  background: rgba(0, 64, 140, 0.03);
-  padding: 24px 28px;
-  border-radius: var(--border-radius-sm);
-  border: 1px solid rgba(0, 64, 140, 0.08);
+/* Before/After Split Card - "Floating Card" Design */
+.before-after-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-.problem-solution strong {
-  color: var(--dark-navy);
+/* BEFORE Column (Problem) - Faded, Receding */
+.before-column {
+  background: transparent;
+  padding: 48px 40px;
+  position: relative;
+  opacity: 0.75;
+  transform: scale(0.98);
+  transition: all 0.3s ease;
+}
+
+.before-column:hover {
+  opacity: 0.85;
+  transform: scale(0.99);
+}
+
+/* AFTER Column (Solution) - Elevated, Popping Out */
+.after-column {
+  background: var(--pure-white);
+  padding: 48px 40px;
+  position: relative;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 64, 140, 0.12);
+  box-shadow: 
+    0 4px 6px rgba(0, 64, 140, 0.04),
+    0 12px 24px rgba(0, 64, 140, 0.08),
+    0 24px 48px rgba(0, 64, 140, 0.06);
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Accent corner element */
+.after-column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(0, 64, 140, 0.03) 0%, transparent 70%);
+  border-radius: 0 16px 0 100%;
+  pointer-events: none;
+}
+
+.after-column:hover {
+  transform: translateY(-12px);
+  box-shadow: 
+    0 6px 8px rgba(0, 64, 140, 0.05),
+    0 16px 32px rgba(0, 64, 140, 0.1),
+    0 32px 64px rgba(0, 64, 140, 0.08);
+  border-color: rgba(0, 64, 140, 0.18);
+}
+
+/* Column Labels (Badges) */
+.column-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .problem-section {
-    padding: 80px 0;
-  }
-  
-  .problem-section h2 {
-    font-size: 1.75rem;
-  }
-  
-  .problem-pain,
-  .problem-current,
-  .problem-solution {
-    font-size: 17px;
-  }
+.before-column .column-label {
+  background: rgba(100, 116, 139, 0.08);
+  color: #64748b;
+  border: 1px solid rgba(100, 116, 139, 0.15);
+}
+
+.after-column .column-label {
+  background: rgba(0, 64, 140, 0.1);
+  color: var(--dark-navy);
+  border: 1px solid rgba(0, 64, 140, 0.2);
+}
+
+.column-label .label-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Column Titles */
+.column-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+
+.before-column .column-title {
+  color: #64748b;
+}
+
+/* Problem List (Red icons) */
+.problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.problem-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.problem-list li svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  fill: #94a3b8;
+  opacity: 0.6;
+}
+
+.problem-list li div {
+  flex: 1;
+}
+
+.problem-list li strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.problem-list li span {
+  display: block;
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* Solution List (Green icons) */
+.solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.solution-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.solution-list li svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  fill: #059669;
+  filter: drop-shadow(0 1px 2px rgba(5, 150, 105, 0.2));
+}
+
+.solution-list li div {
+  flex: 1;
+}
+
+.solution-list li strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.solution-list li span {
+  display: block;
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.6;
 }
 
 /* ==================== HOW IT WORKS (INTERACTIVE FEATURE SWITCHER) ==================== */
@@ -2776,6 +2930,27 @@ footer {
   .segmentation-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Problem Section - Tablet */
+  .before-after-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .before-column {
+    padding: 40px 32px;
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  .after-column {
+    padding: 40px 32px;
+    transform: translateY(0);
+  }
+
+  .column-title {
+    font-size: 1.375rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2838,22 +3013,69 @@ footer {
     padding: 0 20px;
   }
   
+  .integration-strip {
+    margin-top: 24px;
+  }
+  
   .integration-logos {
-    gap: 16px;
+    gap: 20px;
   }
-  
-  .logo-icon {
-    width: 36px;
-    height: 36px;
+
+  .integration-logo {
+    width: 60px;
   }
-  
-  .logo-icon svg {
-    width: 18px;
-    height: 18px;
+
+  .integration-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .integration-logo span {
+    font-size: 9px;
+  }
+
+  .integration-logo-more .more-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
   }
 
   .glassmorphism-card {
     padding: 24px;
+  }
+
+  /* Problem Section - Mobile */
+  .problem-section {
+    padding: 80px 0;
+  }
+
+  .problem-section .section-header {
+    margin-bottom: 48px;
+  }
+
+  .before-column,
+  .after-column {
+    padding: 32px 24px;
+  }
+
+  .column-title {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+
+  .problem-list,
+  .solution-list {
+    gap: 20px;
+  }
+
+  .problem-list li strong,
+  .solution-list li strong {
+    font-size: 15px;
+  }
+
+  .problem-list li span,
+  .solution-list li span {
+    font-size: 13px;
   }
 
   /* Deep Dive Section - Allow wrapping on mobile */

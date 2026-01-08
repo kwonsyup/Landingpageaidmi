@@ -104,7 +104,7 @@ export default function App() {
         <div className="container">
           <div className="hero-layout">
             <div className="hero-content">
-              <h1>Know Your Patient<br /><em>Before</em> They Walk In.</h1>
+              <h1>The AI That <em>Briefs</em> You Before Your Patient Walks In.</h1>
               
               <p className="hero-subhead">
                 AidMi builds longitudinal context for every patient — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.
@@ -124,7 +124,7 @@ export default function App() {
                 <svg viewBox="0 0 24 24" fill="currentColor" className="trust-icon">
                   <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                 </svg>
-                <span>HIPAA compliant · SOC 2 · BAA included</span>
+                <span>HIPAA compliant · BAA included</span>
               </div>
             </div>
 
@@ -151,39 +151,31 @@ export default function App() {
                 <span className="integration-label">Works alongside your EHR</span>
                 <div className="integration-logos">
                   <div className="integration-logo">
-                    <div className="logo-icon">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/>
-                      </svg>
-                    </div>
-                    <span>Epic</span>
-                  </div>
-                  <div className="integration-logo">
-                    <div className="logo-icon">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/>
-                      </svg>
-                    </div>
-                    <span>Cerner</span>
-                  </div>
-                  <div className="integration-logo">
-                    <div className="logo-icon">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                      </svg>
-                    </div>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
                     <span>SimplePractice</span>
                   </div>
                   <div className="integration-logo">
-                    <div className="logo-icon">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
-                      </svg>
-                    </div>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
+                    </svg>
                     <span>TherapyNotes</span>
                   </div>
                   <div className="integration-logo">
-                    <div className="logo-icon logo-icon-more">+</div>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>Alma</span>
+                  </div>
+                  <div className="integration-logo">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/>
+                    </svg>
+                    <span>Headway</span>
+                  </div>
+                  <div className="integration-logo integration-logo-more">
+                    <span className="more-icon">+</span>
                     <span>More</span>
                   </div>
                 </div>
@@ -225,22 +217,102 @@ export default function App() {
       {/* Problem Section */}
       <section className="problem-section fade-in-section">
         <div className="container">
-          <div className="problem-content">
+          <div className="section-header">
             <h2>Your notes are a filing cabinet.<br />Your brain does all the work.</h2>
-            
-            <div className="problem-body">
-              <p className="problem-pain">
-                Before every session, the same scramble. Skimming old notes. Trying to remember: 
-                <em> What did we adjust last time? When did the panic attacks start? Did I follow up on that job situation?</em>
-              </p>
+            <p className="section-subhead">
+              Current tools store information. AidMi surfaces it when you need it.
+            </p>
+          </div>
+
+          <div className="before-after-card">
+            {/* BEFORE (Problem) */}
+            <div className="before-column">
+              <div className="column-label">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="label-icon">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+                <span>Without AidMi</span>
+              </div>
               
-              <p className="problem-current">
-                Your current tools store information. They don&apos;t surface it when you need it.
-              </p>
+              <h3 className="column-title">The Pre-Session Scramble</h3>
               
-              <p className="problem-solution">
-                AidMi is different. It synthesizes your patient&apos;s history into a brief you can scan in 30 seconds. It answers questions across months of sessions — with citations. <strong>Longitudinal context for every patient.</strong>
-              </p>
+              <ul className="problem-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" opacity="0.2"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                  </svg>
+                  <div>
+                    <strong>Skimming old notes 5 minutes before the patient walks in</strong>
+                    <span>Trying to remember: "What did we adjust last time?"</span>
+                  </div>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" opacity="0.2"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                  </svg>
+                  <div>
+                    <strong>No quick way to find critical context</strong>
+                    <span>"When did the panic attacks start? Which session?"</span>
+                  </div>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" opacity="0.2"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                  </svg>
+                  <div>
+                    <strong>Walking in unprepared, relying on memory</strong>
+                    <span>Patients notice when you forget what mattered to them</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* AFTER (Solution) */}
+            <div className="after-column">
+              <div className="column-label">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="label-icon">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>With AidMi</span>
+              </div>
+              
+              <h3 className="column-title">Briefed & Ready</h3>
+              
+              <ul className="solution-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" opacity="0.15"/>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  <div>
+                    <strong>Today's Brief auto-generated before each session</strong>
+                    <span>What changed, what to follow up on. Scan in 30 seconds.</span>
+                  </div>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" opacity="0.15"/>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  <div>
+                    <strong>Aimé answers questions across months of sessions</strong>
+                    <span>"When did we start Lexapro?" → Instant answer with citation.</span>
+                  </div>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" opacity="0.15"/>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  <div>
+                    <strong>Walk in confident with longitudinal context</strong>
+                    <span>Every patient gets the attention they deserve, every time.</span>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
