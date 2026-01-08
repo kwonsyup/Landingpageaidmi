@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
 import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
 import aidmiLogo from 'figma:asset/914aef0a7ba2e5e4040bf62e5cf27aa2b5b35101.png';
-import todaysBriefScreenshot from 'figma:asset/9002df476557e2afda7088fca33f9da86e2e1f62.png';
-import aimeScreenshot from 'figma:asset/80c0e6820539c27aa0b083552ab101943b46f550.png';
-import scribeScreenshot from 'figma:asset/09a6457aabf0b021c48f85c966219fa39c66e3a3.png';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
@@ -366,8 +363,7 @@ export default function App() {
                     <span className="section-dot dot-blue"></span>
                     <h4>Current Status</h4>
                   </div>
-                  <p>Patient showing significant improvement in anxiety symptoms, with <span className="inline-citation">GAD-7 score declining from 12 to 5</span>.</p>
-                  <p>Mood stable with <span className="inline-citation">PHQ-9: 4</span> (down from 6), patient reports enjoying activities again.</p>
+                  <p><span className="inline-citation">GAD-7: 12 → 5</span> · <span className="inline-citation">PHQ-9: 4 (↓ from 6)</span> · Patient reports enjoying activities again.</p>
                 </div>
 
                 <div className="brief-section">
@@ -375,8 +371,7 @@ export default function App() {
                     <span className="section-dot dot-orange"></span>
                     <h4>Recent Stressors</h4>
                   </div>
-                  <p>Work demands remain high as <span className="inline-citation">senior product manager at tech startup</span> with typical 50-60 hour weeks.</p>
-                  <p>Tight deadlines and always-on culture identified as <span className="inline-citation">primary triggers</span>, though patient managing better with coping strategies.</p>
+                  <p>Senior PM at tech startup · 50-60 hr weeks · Managing better with coping strategies.</p>
                 </div>
 
                 <div className="brief-section">
@@ -384,8 +379,7 @@ export default function App() {
                     <span className="section-dot dot-purple"></span>
                     <h4>Symptom Patterns</h4>
                   </div>
-                  <p>Sleep quality significantly improved - now <span className="inline-citation">6-7 hours most nights</span> (up from 4-5 hours), using pre-bed routine and screen avoidance.</p>
-                  <p>Workplace stress tracking shows <span className="inline-citation">steady decline from 8/10 to 4/10</span> over two weeks.</p>
+                  <p><span className="inline-citation">Sleep: 6-7 hrs (↑ from 4-5)</span> · <span className="inline-citation">Stress: 8/10 → 4/10</span></p>
                 </div>
 
                 <div className="brief-section">
@@ -393,8 +387,7 @@ export default function App() {
                     <span className="section-dot dot-green"></span>
                     <h4>What's Helping</h4>
                   </div>
-                  <p><span className="inline-citation">Progressive muscle relaxation practiced daily</span>, described as 'game-changer' for anxiety management.</p>
-                  <p>Consistent exercise routine maintained including gym, running, and new yoga practice. <span className="inline-citation">Psychiatric evaluation scheduled at Stanford Behavioral Health</span>.</p>
+                  <p>PMR daily · Exercise routine · Yoga · <span className="inline-citation">Psych eval scheduled at Stanford BH</span></p>
                 </div>
 
                 {/* Divider */}
@@ -436,32 +429,40 @@ export default function App() {
                     </ul>
                   </div>
 
-                  <div className="brief-rapport-section">
+                  <div className="brief-rapport-section social-dynamics-section">
                     <div className="rapport-header">
-                      <div className="rapport-icon rapport-icon-green">
+                      <div className="rapport-icon rapport-icon-purple">
                         <svg viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                         </svg>
                       </div>
                       <div className="rapport-title">
-                        <h5>Friends</h5>
-                        <span className="rapport-timestamp">Last updated 5 min ago</span>
+                        <h5>Social Dynamics</h5>
+                        <span className="rapport-timestamp">Last updated 3 min ago</span>
                       </div>
                     </div>
-                    <ul className="rapport-list">
-                      <li>
-                        <div>
-                          <div className="rapport-friend-name">College friend (Mike) <span className="support-badge">Supportive</span></div>
-                          <div className="rapport-friend-detail">Monthly dinners, consistent support system</div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <div className="rapport-friend-name">Gym buddy (Alex) <span className="support-badge">Supportive</span></div>
-                          <div className="rapport-friend-detail">Regular workouts together - positive outlet</div>
-                        </div>
-                      </li>
-                    </ul>
+                    <div className="social-dynamics-grid">
+                      <div className="dynamics-item">
+                        <div className="dynamics-icon dynamics-icon-blue">🏠</div>
+                        <div className="dynamics-label">Family</div>
+                        <div className="dynamics-status status-supportive">Supportive · 4</div>
+                      </div>
+                      <div className="dynamics-item">
+                        <div className="dynamics-icon dynamics-icon-green">💼</div>
+                        <div className="dynamics-label">Work</div>
+                        <div className="dynamics-status status-stressful">Stressful · 4</div>
+                      </div>
+                      <div className="dynamics-item">
+                        <div className="dynamics-icon dynamics-icon-pink">👥</div>
+                        <div className="dynamics-label">Social</div>
+                        <div className="dynamics-status status-neutral">Neutral · 2</div>
+                      </div>
+                      <div className="dynamics-item">
+                        <div className="dynamics-icon dynamics-icon-rose">💕</div>
+                        <div className="dynamics-label">Romantic</div>
+                        <div className="dynamics-status status-supportive">Supportive · 1</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -484,12 +485,55 @@ export default function App() {
                 </div>
               </div>
               
-              <div className="bento-chat-preview">
-                <img 
-                  src={aimeScreenshot} 
-                  alt="Aimé AI assistant showing medication history with cited responses"
-                  className="bento-screenshot"
-                />
+              <div className="bento-chat-preview aime-mockup">
+                {/* Header bar */}
+                <div className="aime-header">
+                  <div className="aime-identity">
+                    <div className="aime-avatar-large">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/>
+                      </svg>
+                    </div>
+                    <div className="aime-name">
+                      <span className="aime-title">Aimé</span>
+                      <span className="aime-subtitle">Your AI Resident</span>
+                    </div>
+                  </div>
+                  <div className="aime-actions">
+                    <button className="aime-action-btn" aria-label="Undo">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.5 8c-2.65 0-5.05 1.04-6.83 2.73L2.5 7.5v9h9l-3.19-3.19c1.32-1.19 3.05-1.9 4.92-1.9 3.16 0 5.83 2.08 6.72 4.95l2.14-.67C20.91 11.54 17.06 8 12.5 8z"/>
+                      </svg>
+                    </button>
+                    <button className="aime-action-btn" aria-label="Close">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* User query bubble */}
+                <div className="aime-query">
+                  <span>Show recent medication changes</span>
+                </div>
+
+                {/* AI response */}
+                <div className="aime-response">
+                  <div className="aime-response-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/>
+                    </svg>
+                  </div>
+                  <div className="aime-response-content">
+                    <div className="aime-response-label">Key takeaways:</div>
+                    <ul className="aime-takeaways">
+                      <li>Sertraline recently increased to 100mg daily with good tolerance<sup className="citation-num">1</sup></li>
+                      <li>Client reports improved mood stability with minimal side effects<sup className="citation-num">2</sup></li>
+                      <li>Sleep quality has improved significantly to 6-7 hours consistently<sup className="citation-num">3</sup></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -508,12 +552,41 @@ export default function App() {
                 </div>
               </div>
               
-              <div className="bento-documentation-preview">
-                <img 
-                  src={scribeScreenshot} 
-                  alt="Evidence-backed clinical note with citation linking to source transcript"
-                  className="bento-screenshot"
-                />
+              <div className="bento-documentation-preview scribe-mockup">
+                {/* Note content */}
+                <div className="scribe-note">
+                  <h4 className="scribe-section-title">Assessment</h4>
+                  <p className="scribe-text">
+                    Client continues to demonstrate steady progress in managing generalized anxiety disorder and mild depression. Medication regimen appears effective with no reported adverse effects<span className="scribe-citation-trigger">⁸</span>. Client is actively engaging in therapeutic interventions...
+                  </p>
+                  
+                  <h4 className="scribe-section-title">Plan</h4>
+                  <ul className="scribe-plan-list">
+                    <li>Continue current medication regimen (Sertraline 10...</li>
+                    <li>Introduce 5-4-3-2-1 grounding technique for acut...</li>
+                    <li>Continue daily mindfulness practice (10 minutes m...</li>
+                    <li>Maintain sleep and anxiety tracking journal</li>
+                  </ul>
+                </div>
+                
+                {/* Citation popup overlay */}
+                <div className="scribe-citation-popup">
+                  <div className="citation-popup-header">
+                    <span className="citation-popup-label">Citation [8]</span>
+                    <span className="citation-popup-time">02:48</span>
+                  </div>
+                  <div className="citation-popup-source">Client</div>
+                  <div className="citation-popup-quote">
+                    <div className="quote-bar"></div>
+                    <p>"The Sertraline seems to be working well. I haven't had any side effects, and I think it's helping level things out."</p>
+                  </div>
+                  <a className="citation-popup-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/>
+                    </svg>
+                    Click to view in transcript
+                  </a>
+                </div>
               </div>
             </div>
           </div>

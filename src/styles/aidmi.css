@@ -3396,6 +3396,76 @@ nav a:focus {
   letter-spacing: 0.02em;
 }
 
+/* Social Dynamics Grid */
+.social-dynamics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.dynamics-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.dynamics-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.dynamics-icon-blue {
+  background: #dbeafe;
+}
+
+.dynamics-icon-green {
+  background: #d1fae5;
+}
+
+.dynamics-icon-pink {
+  background: #fce7f3;
+}
+
+.dynamics-icon-rose {
+  background: #ffe4e6;
+}
+
+.dynamics-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-navy);
+}
+
+.dynamics-status {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.status-supportive {
+  color: #059669;
+}
+
+.status-stressful {
+  color: #dc2626;
+}
+
+.status-neutral {
+  color: #6b7280;
+}
+
+.rapport-icon-purple {
+  background: #EDE9FE;
+  color: #8B5CF6;
+}
+
 /* === AIMÉ CHAT PREVIEW === */
 .bento-chat-preview {
   display: flex;
@@ -3406,6 +3476,166 @@ nav a:focus {
   border-radius: 12px;
 }
 
+/* Aimé Mockup */
+.aime-mockup {
+  background: #fafbfc;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.aime-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.aime-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aime-avatar-large {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aime-avatar-large svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.aime-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.aime-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.aime-subtitle {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.aime-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.aime-action-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.aime-action-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.aime-action-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--text-light);
+}
+
+.aime-query {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.aime-query span {
+  background: var(--dark-navy);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 18px 18px 4px 18px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.aime-response {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.aime-response-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aime-response-avatar svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+.aime-response-content {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px 12px 12px 4px;
+  padding: 14px;
+  flex: 1;
+}
+
+.aime-response-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 8px;
+}
+
+.aime-takeaways {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aime-takeaways li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dark);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.aime-takeaways li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text-light);
+}
+
+.aime-takeaways li:last-child {
+  margin-bottom: 0;
+}
+
+/* Legacy chat styles (keep for backwards compatibility) */
 .chat-message {
   display: flex;
   gap: 10px;
@@ -3781,6 +4011,134 @@ nav a:focus {
   flex-shrink: 0;
 }
 
+/* Scribe Mockup */
+.scribe-mockup {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  overflow: visible;
+}
+
+.scribe-note {
+  padding: 16px;
+}
+
+.scribe-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin: 0 0 8px 0;
+}
+
+.scribe-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin: 0 0 16px 0;
+}
+
+.scribe-citation-trigger {
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scribe-plan-list {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  padding-left: 20px;
+  margin: 0;
+}
+
+.scribe-plan-list li {
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Citation popup - positioned to overlap */
+.scribe-citation-popup {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  z-index: 10;
+}
+
+.citation-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.citation-popup-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.citation-popup-time {
+  font-size: 12px;
+  color: var(--text-light);
+  font-family: monospace;
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.citation-popup-source {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.citation-popup-quote {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.quote-bar {
+  width: 3px;
+  background: #f97316;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.citation-popup-quote p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin: 0;
+  background: #fffbeb;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.citation-popup-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--pale-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.citation-popup-link svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--pale-blue);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .bento-grid {
@@ -3835,6 +4193,18 @@ nav a:focus {
   
   .bento-card-wide .bento-brief-preview {
     padding: 16px;
+  }
+  
+  /* Scribe citation popup responsive */
+  .scribe-citation-popup {
+    right: -10px;
+    width: 260px;
+    padding: 12px;
+  }
+  
+  .citation-popup-quote p {
+    font-size: 12px;
+    padding: 8px;
   }
 }
 
