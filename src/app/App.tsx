@@ -239,253 +239,169 @@ export default function App() {
         </div>
       </section>
 
-      {/* Deep Dive Features (Tabs + Bento Grid) */}
-      <section id="features" className="deep-dive">
+      {/* Problem Section */}
+      <section className="problem-section">
         <div className="container">
-          <div className="section-header">
-            <h2>The World's Best Clinical Resident</h2>
-            <p className="section-subhead">Imagine an assistant who memorizes every transcript, tracks every PHQ-9 trend, and preps your chart before you walk in the room.<br /><br />That's AidMi.</p>
-          </div>
-
-          <div className="feature-tabs" role="tablist" aria-label="Product features">
-            <button className="feature-tab active" data-tab="brief" role="tab" aria-selected="true" aria-controls="tab-brief" id="tab-btn-brief">Morning Briefs</button>
-            <button className="feature-tab" data-tab="ambient" role="tab" aria-selected="false" aria-controls="tab-ambient" id="tab-btn-ambient">Ambient Scribe</button>
-            <button className="feature-tab" data-tab="pebble" role="tab" aria-selected="false" aria-controls="tab-pebble" id="tab-btn-pebble">Pebble Companion</button>
-            <button className="feature-tab" data-tab="tracking" role="tab" aria-selected="false" aria-controls="tab-tracking" id="tab-btn-tracking">Practice Health</button>
-          </div>
-
-          <div className="tab-content active" data-content="brief" role="tabpanel" id="tab-brief" aria-labelledby="tab-btn-brief">
-            <div className="bento-grid">
-              <div className="bento-card large">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Daily Triage</h3>
-                  <p className="bento-description">No more opening charts one by one. AidMi digests overnight updates, PHQ-9 scores, and risk alerts into a single, prioritized briefing. Know exactly who needs you before you sip your coffee.</p>
-                </div>
-                <div className="product-demo-placeholder">[Product Demo: Daily Triage Dashboard]
-                  <br /><small style={{ display: "block", marginTop: "12px", fontSize: "12px", opacity: "0.7" }}>
-                    💡 Replace with mockup showing prioritized client list with alerts, PHQ-9 scores, and risk flags
-                  </small>
-                </div>
-              </div>
-
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C15.97 14.9 19.1 16.36 19.1 17.1V18.1H4.9V17.1C4.9 16.36 8.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V20H20V17C20 14.34 14.67 13 12 13Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Relationship Card</h3>
-                  <p className="bento-description">Never forget a detail. A sticky note that reminds you: &quot;Client&apos;s dog (Buster) had surgery. Ask for update.&quot;</p>
-                </div>
-              </div>
-
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Safety Strip</h3>
-                  <p className="bento-description">Immediate visibility on high-risk clients with links to their Stanley-Brown Safety Plans.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="tab-content" data-content="ambient" role="tabpanel" id="tab-ambient" aria-labelledby="tab-btn-ambient">
-            <div className="bento-grid">
-              <div className="bento-card large">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 14C13.66 14 15 12.66 15 11V5C15 3.34 13.66 2 12 2C10.34 2 9 3.34 9 5V11C9 12.66 10.34 14 12 14ZM19.11 11C19.11 14.42 16.28 17.17 13 17.72V21H11V17.72C7.72 17.17 4.89 14.42 4.89 11H6.89C6.89 13.76 9.24 16 12 16C14.76 16 17.11 13.76 17.11 11H19.11Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Invisible Documentation</h3>
-                  <p className="bento-description">Return to eye contact. AidMi works in the background, capturing affect, tone, and clinical nuance. Unlike creative AI, our Constrained Clinical Model is strictly anchored to your session data so you can review and sign.</p>
-                </div>
-                <div className="product-demo-placeholder">[Product Demo: Audio Waveform Visualization]
-                  <br /><small style={{ display: "block", marginTop: "12px", fontSize: "12px", opacity: "0.7" }}>
-                    💡 Replace with looping GIF showing ambient audio capture with waveform visualization
-                  </small>
-                </div>
-              </div>
-
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H6L4 18V4H20V16ZM7 9H17V11H7V9ZM7 6H17V8H7V6ZM7 12H14V14H7V12Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Memory Sidekick</h3>
-                  <p className="bento-description">Your sidebar assistant. Chat with the Memory Agent to instantly recall details—"When did they last mention insomnia?"—cited directly from past encounters.</p>
-                </div>
-              </div>
-
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20ZM8 15.01L8.01 15H16V17H8V15.01ZM8 12H16V14H8V12ZM8 9H13V11H8V9Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Adaptive Formats</h3>
-                  <p className="bento-description">SOAP, DAP, BIRP, or yours. Toggle formats with one click. AidMi automatically sorts the session chaos into your exact headers and preferred structure.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="tab-content" data-content="pebble" role="tabpanel" id="tab-pebble" aria-labelledby="tab-btn-pebble">
-            <div className="bento-grid">
-              <div className="bento-card large">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M17 1.01L7 1C5.9 1 5 1.9 5 3V21C5 22.1 5.9 23 7 23H17C18.1 23 19 22.1 19 21V3C19 1.9 18.1 1.01 17 1.01ZM17 19H7V5H17V19Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Continuous Care Bridge</h3>
-                  <p className="bento-description">Pebble is a client companion that bridges the gap between visits, turning insights into daily habits without you needing to act as a reminder service.<br /><br /><strong>Plus, it grows your practice:</strong> Pebble is open to the public for self-care, and we funnel high-intent users directly to you when they are ready for professional help.</p>
-                  <div className="async-note">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" />
-                    </svg>
-                    <span><strong>Zero-Dependency:</strong> AidMi works perfectly with or without client usage. Use Pebble only for clients who want it.</span>
-                  </div>
-                </div>
-                <div className="product-demo-placeholder">[Product Demo: Continuous Care Interface]
-                  <br /><small style={{ display: "block", marginTop: "12px", fontSize: "12px", opacity: "0.7" }}>
-                    💡 Replace with mockup showing client app interface with care bridge features
-                  </small>
-                </div>
-              </div>
-
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Micro-Quests</h3>
-                  <p className="bento-description">Turn homework into tiny, checkable tasks ('Open curtains', '10 min walk') that feed back into your chart.</p>
-                </div>
-              </div>
-
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V10H19V20Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">The Dot Calendar</h3>
-                  <p className="bento-description">Zero-friction mood logging. Clients tap a color dot in 5 seconds. No long forms to ignore.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="tab-content" data-content="tracking" role="tabpanel" id="tab-tracking" aria-labelledby="tab-btn-tracking">
-            <div className="bento-grid">
-              <div className="bento-card large">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" />
-                      <path d="M7 10H9L10.5 13L12.5 7L14 10H17V12H13L12.5 11L10.5 17L9 14H7V10Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">The Pulse of Your Practice</h3>
-                  <p className="bento-description">AidMi aggregates your caseload data to show you the health of your practice—from revenue projections to capacity planning and income goals.</p>
-                </div>
-                <div className="product-demo-placeholder">
-                  [Product Demo: Practice Health Dashboard]
-                  <br />
-                  <small style={{ display: "block", marginTop: "12px", fontSize: "12px", opacity: "0.7" }}>💡 Replace with mockup showing practice metrics dashboard with revenue and capacity visualizations</small>
-                </div>
-              </div>
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19 3H5C3.9 3 3 3.9 3 5V9H5V5H19V19H5V15H3V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM11 16L15 12L11 8V11H3V13H11V16Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Active Waitlist</h3>
-                  <p className="bento-description">Don't let leads die in email. Automated periodic check-ins ('You're still on my list, ETA ~3 weeks') and 1-click 'Convert to Active'.</p>
-                </div>
-              </div>
-              <div className="bento-card">
-                <div>
-                  <div className="bento-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V10H19V20Z" />
-                    </svg>
-                  </div>
-                  <h3 className="bento-title">Capacity Planner</h3>
-                  <p className="bento-description">Weekly vs. bi-weekly clients make calendars messy. Visualize your true availability and exactly how many slots you have left to hit your income goals.</p>
-                </div>
-              </div>
+          <div className="problem-content">
+            <h2>Your notes are a filing cabinet.<br />Your brain does all the work.</h2>
+            
+            <div className="problem-body">
+              <p className="problem-pain">
+                Before every session, the same scramble. Skimming old notes. Trying to remember: 
+                <em> What did we adjust last time? When did the panic attacks start? Did I follow up on that job situation?</em>
+              </p>
+              
+              <p className="problem-current">
+                Your current tools store information. They don&apos;t surface it when you need it.
+              </p>
+              
+              <p className="problem-solution">
+                AidMi is different. It synthesizes your client&apos;s history into a brief you can scan in 30 seconds. It answers questions across months of sessions — with citations. <strong>Longitudinal context for every client.</strong>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Who We're For (Split Segmentation) */}
-      <section className="who-for">
+      {/* Core Value Props Section */}
+      <section id="features" className="value-props">
+        <div className="container">
+          <div className="section-header">
+            <h2>World&apos;s Best Clinical Resident</h2>
+            <p className="section-subhead">
+              An assistant who reads every note, tracks every trend, and preps your chart before you walk in the room. That&apos;s AidMi.
+            </p>
+          </div>
+
+          <div className="value-props-grid">
+            {/* Card 1: Today's Brief */}
+            <div className="value-prop-card">
+              <div className="value-prop-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z"/>
+                </svg>
+              </div>
+              <h3 className="value-prop-title">Today&apos;s Brief</h3>
+              <p className="value-prop-tagline">Walk into every session prepared.</p>
+              <p className="value-prop-description">
+                Before each appointment, AidMi generates a brief: what changed since last visit, symptom trends, medication updates, open threads to revisit. Scan it in 30 seconds. Walk in ready.
+              </p>
+            </div>
+
+            {/* Card 2: Aimé */}
+            <div className="value-prop-card">
+              <div className="value-prop-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"/>
+                </svg>
+              </div>
+              <h3 className="value-prop-title">Aimé</h3>
+              <p className="value-prop-tagline">Ask anything. Get answers with proof.</p>
+              <p className="value-prop-description">
+                &quot;When did we first discuss the insomnia?&quot; &quot;What medications have we tried?&quot; Aimé searches across every session and returns answers with citations. Like a research assistant for every client.
+              </p>
+            </div>
+
+            {/* Card 3: Evidence-Backed Notes */}
+            <div className="value-prop-card">
+              <div className="value-prop-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"/>
+                </svg>
+              </div>
+              <h3 className="value-prop-title">Evidence-Backed Notes</h3>
+              <p className="value-prop-tagline">Documentation you can defend.</p>
+              <p className="value-prop-description">
+                Every claim in your note links directly to the source. Click to verify. If evidence is missing, we flag it. No second-guessing. Sign with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="use-cases">
         <div className="container">
           <div className="section-header">
             <h2>Built for How <em>You</em> Practice</h2>
-            <p className="section-subhead">AidMi listens differently for short med checks, complex assessments, and 50-minute therapy sessions—so your briefs, notes, and dashboards match the way you actually practice.</p>
-            
-            {/* Persona Toggle */}
-            <div className="persona-toggle-container">
-              <span className="persona-label">I am a:</span>
-              <div className="persona-toggle">
-                <button className="persona-btn active" data-persona="psychiatrist">Psychiatrist</button>
-                <button className="persona-btn" data-persona="psychologist">Psychologist</button>
-                <button className="persona-btn" data-persona="therapist">Therapist</button>
-                <div className="persona-slider"></div>
-              </div>
-            </div>
           </div>
 
-          <div className="segmentation-grid">
-            <div className="segment-card psychiatrists active" data-segment="psychiatrist">
-              <div className="segment-card-content">
-                <div className="segment-card-text">
-                  <h3 className="segment-title">15-Minute Med Check, Solved.</h3>
-                  <p className="segment-description">You shouldn't have to scroll through 6 months of notes to find the last dosage change. AidMi lines up meds, side effects, PHQ-9/GAD-7 trends, and key risks into a single view so you can make decisions in seconds.</p>
-                  <ul className="segment-features">
-                    <li>✓ <strong>Side-Effect Scanner:</strong> AI highlights reported side effects automatically.</li>
-                    <li>✓ <strong>Dose vs. symptoms at a glance</strong> – See PHQ-9 and meds plotted together over time before you walk into the room.</li>
-                    <li>✓ <strong>1-click "No change" visits</strong> – Carry forward MSE, risk, and plan safely when today really was stable.</li>
-                    <li>✓ <strong>Caseload clarity</strong> – See how full you are before you squeeze in &quot;just one more&quot; client.</li>
-                  </ul>
-                </div>
-                <div className="segment-card-visual">
-                  <div className="segment-mockup">
-                    <div className="mockup-title">Meds vs. Symptoms Timeline</div>
-                    <div className="product-demo-placeholder" style={{ height: "100%", minHeight: "250px", flexDirection: "column", gap: "8px" }}>
-                      {'[Visual: A split timeline. Top row shows medication bars (e.g., "Zoloft 50mg" -> "100mg"). Bottom graph shows PHQ-9 score dropping from 18 to 9 aligned with the dose increase.]'}
-                      <small style={{ display: "block", marginTop: "8px", fontSize: "12px", opacity: "0.8", maxWidth: "90%", textAlign: "center" }}>
-                        💡 Insert visualization showing medication dose changes overlaid with PHQ-9 score trend lines
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="use-cases-grid">
+            {/* Psychiatrists */}
+            <div className="use-case-block">
+              <h3>For Psychiatrists</h3>
+              <p>
+                High-volume, short sessions. You need to know what changed and what to refill — fast. Today&apos;s Brief gives you the snapshot. Aimé answers the edge cases. Finish documentation in the 2 minutes between appointments, not after hours.
+              </p>
             </div>
+
+            {/* Psychologists */}
+            <div className="use-case-block">
+              <h3>For Psychologists</h3>
+              <p>
+                Deep therapeutic work that spans months. Track treatment progress without re-reading every note. Let AidMi remember the threads so you can stay present in the room.
+              </p>
+            </div>
+
+            {/* Therapists */}
+            <div className="use-case-block">
+              <h3>For Therapists</h3>
+              <p>
+                Rapport is everything. AidMi captures the details that build connection — the sister&apos;s name, the job interview, the vacation that helped. Start every session exactly where you left off.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className="testimonials">
+        <div className="container">
+          <div className="section-header">
+            <h2>Clinicians who practice with confidence.</h2>
+          </div>
+
+          <div className="testimonials-grid">
+            {/* Testimonial 1 */}
+            <div className="testimonial-card">
+              <blockquote className="testimonial-quote">
+                &quot;I used to spend 10 minutes before each session digging through old notes. Now I glance at Today&apos;s Brief and I&apos;m ready.&quot;
+              </blockquote>
+              <cite className="testimonial-attribution">
+                — Psychologist, Palo Alto
+              </cite>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="testimonial-card">
+              <blockquote className="testimonial-quote">
+                &quot;Aimé is the feature I didn&apos;t know I needed. I asked &apos;when did we start the Lexapro?&apos; and got the answer with the exact session cited. Took 2 seconds.&quot;
+              </blockquote>
+              <cite className="testimonial-attribution">
+                — Psychiatrist, San Francisco
+              </cite>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="testimonial-card">
+              <blockquote className="testimonial-quote">
+                &quot;I finally trust my AI notes. One click shows the supporting source. That&apos;s the difference.&quot;
+              </blockquote>
+              <cite className="testimonial-attribution">
+                — LMFT, Mountain View
+              </cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        {/* FAQ */}
+        <section className="faq">
+          <div className="container">
+            <div className="section-header">
+              <h2>Frequently Asked Questions</h2>
+            </div>
+            <div className="faq-list">
 
             <div className="segment-card psychologists" data-segment="psychologist">
               <div className="segment-card-content">
@@ -546,55 +462,54 @@ export default function App() {
       <section id="how-it-works" className="how-it-works">
         <div className="container">
           <div className="section-header">
-            <h2>Your Entire Day, Decoded.</h2>
-            <p className="section-subhead">Wake up to a briefing. Flow through your sessions. Go home with empty charts.</p>
+            <h2>From session to signed note in 2 minutes.</h2>
           </div>
 
           <div className="split-layout">
             <div className="steps-list">
-              <div className="step-item active" data-step="prep">
+              <div className="step-item active" data-step="capture">
                 <div className="step-number">1</div>
-                <h3 className="step-title">Before: The Morning Brief</h3>
-                <p className="step-description">AidMi processes overnight client data—Pebble check-ins, PHQ-9 shifts, and risk alerts—to hand you a prioritized &apos;Watch List&apos; before your 9 AM.</p>
-              </div>
-
-              <div className="step-item" data-step="listen">
-                <div className="step-number">2</div>
-                <h3 className="step-title">During: 2-Minute Notes, Your Way</h3>
-                <p className="step-description">We capture the data, so you focus on the client&apos;s affect. AidMi filters out the noise and translates the session into structured, insurance-ready clinical prose (MSE, Risk, Plan) in real-time. Sign off in 2 minutes before your next session.</p>
+                <h3 className="step-title">Capture</h3>
+                <p className="step-description">Start your in-person or telehealth session. AidMi transcribes in real-time with speaker separation.</p>
               </div>
 
               <div className="step-item" data-step="sign">
+                <div className="step-number">2</div>
+                <h3 className="step-title">Sign</h3>
+                <p className="step-description">End the session. Your note appears — fully drafted, with every clinical claim linked to the source. Verify with a click. Edit if needed. Sign.</p>
+              </div>
+
+              <div className="step-item" data-step="context">
                 <div className="step-number">3</div>
-                <h3 className="step-title">After: Verify, Click, Vanish.</h3>
-                <p className="step-description">Review the note with 'Source-Anchor' verification—click any sentence to recall that exact moment. Confirm the codes, hit Export, and leave the office with zero backlog.</p>
+                <h3 className="step-title">Context Builds</h3>
+                <p className="step-description">Each signed note updates your client&apos;s profile. Today&apos;s Brief evolves. Aimé gets smarter. Your clinical intelligence compounds.</p>
               </div>
             </div>
 
             <div className="dynamic-visual">
-              <div className="visual-content active" data-visual="prep">
+              <div className="visual-content active" data-visual="capture">
                 <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
-                  [Morning Triage Dashboard]
+                  [Session Recording Interface]
                   <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 Show client list with RED WARNING TRIANGLE icons next to high-acuity clients. Example: &quot;Sarah M. ⚠️ Risk Flag: Medication non-adherence 3 days&quot; and &quot;James K. ⚠️ PHQ-9 increased +6 points&quot;
-                  </small>
-                </div>
-              </div>
-
-              <div className="visual-content" data-visual="listen">
-                <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
-                  [Translation Layer Visualization]
-                  <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 Show SPLIT VIEW: Left side = Raw text bubble: &quot;I haven&apos;t slept in 3 days and I&apos;m hearing buzzing.&quot; | Right side = Structured text: &quot;Client reports varying degrees of insomnia and auditory hallucinations.&quot;
+                    💡 Audio waveform with real-time transcription and speaker labels
                   </small>
                 </div>
               </div>
 
               <div className="visual-content" data-visual="sign">
                 <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
-                  [Export Success Notification]
+                  [Note Review Interface]
                   <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 Show the "Green Checkmark." A "Successfully Exported to Epic" toast notification with checkmark icon—the most satisfying image a doctor can see.
+                    💡 SOAP note with highlighted citations — click any claim to see source
+                  </small>
+                </div>
+              </div>
+
+              <div className="visual-content" data-visual="context">
+                <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
+                  [Client Profile Growth]
+                  <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
+                    💡 Timeline showing sessions compounding into longitudinal intelligence
                   </small>
                 </div>
               </div>

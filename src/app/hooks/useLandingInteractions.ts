@@ -171,62 +171,6 @@ export default function useLandingInteractions() {
       item.addEventListener("mouseleave", () => item.classList.remove("open"), { signal });
     });
 
-    // Persona Toggle (Who We're For)
-    const personaBtns = document.querySelectorAll<HTMLElement>(".persona-btn");
-    const personaToggle = document.querySelector<HTMLElement>(".persona-toggle");
-    const segmentCards = document.querySelectorAll<HTMLElement>(".segment-card");
-    const whoForSection = document.querySelector<HTMLElement>(".who-for");
-
-    personaBtns.forEach((btn) => {
-      btn.addEventListener(
-        "click",
-        () => {
-          const persona = btn.getAttribute("data-persona");
-          if (!persona) return;
-
-          // Update button active states
-          personaBtns.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-
-          // Update toggle state
-          if (personaToggle) {
-            personaToggle.classList.remove(
-              "psychiatrist-selected",
-              "psychologist-selected",
-              "therapist-selected"
-            );
-            personaToggle.classList.add(`${persona}-selected`);
-          }
-
-          // Update background
-          if (whoForSection) {
-            whoForSection.classList.remove(
-              "psychiatrist-active",
-              "psychologist-active",
-              "therapist-active"
-            );
-            whoForSection.classList.add(`${persona}-active`);
-          }
-
-          // Update content
-          segmentCards.forEach((card) => {
-            card.classList.remove("active");
-            if (card.getAttribute("data-segment") === persona) {
-              setTimeout(() => {
-                card.classList.add("active");
-              }, 100);
-            }
-          });
-        },
-        { signal }
-      );
-    });
-
-    // Initialize with psychiatrist background
-    if (whoForSection) {
-      whoForSection.classList.add("psychiatrist-active");
-    }
-
     // Interactive Feature Switcher (How It Works)
     const stepItems = document.querySelectorAll<HTMLElement>(".step-item");
     const visualContents = document.querySelectorAll<HTMLElement>(".visual-content");
@@ -243,31 +187,6 @@ export default function useLandingInteractions() {
 
           step.classList.add("active");
           document.querySelector<HTMLElement>(`[data-visual="${stepType}"]`)?.classList.add("active");
-        },
-        { signal }
-      );
-    });
-
-    // Feature Tabs
-    const featureTabs = document.querySelectorAll<HTMLElement>(".feature-tab");
-    const tabContents = document.querySelectorAll<HTMLElement>(".tab-content");
-
-    featureTabs.forEach((tab) => {
-      tab.addEventListener(
-        "click",
-        () => {
-          const tabName = tab.getAttribute("data-tab");
-          if (!tabName) return;
-
-          featureTabs.forEach((t) => {
-            t.classList.remove("active");
-            t.setAttribute("aria-selected", "false");
-          });
-          tabContents.forEach((c) => c.classList.remove("active"));
-
-          tab.classList.add("active");
-          tab.setAttribute("aria-selected", "true");
-          document.querySelector<HTMLElement>(`[data-content="${tabName}"]`)?.classList.add("active");
         },
         { signal }
       );
