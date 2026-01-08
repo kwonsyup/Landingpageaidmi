@@ -120,25 +120,12 @@ export default function App() {
                 </button>
               </div>
               
-              {/* Social Proof */}
-              <div className="hero-social-proof">
-                <div className="avatar-cluster">
-                  <div className="avatar" style={{ background: '#E0E7FF' }}>P</div>
-                  <div className="avatar" style={{ background: '#FCE7F3' }}>M</div>
-                  <div className="avatar" style={{ background: '#D1FAE5' }}>T</div>
-                  <div className="avatar" style={{ background: '#FEF3C7' }}>K</div>
-                  <div className="avatar" style={{ background: '#E0E7FF' }}>S</div>
-                </div>
-                <span className="social-proof-text">
-                  Join <strong>500+ clinicians</strong> using AidMi
-                </span>
-              </div>
-              
+
               <div className="hero-trust-text">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="trust-icon">
-                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                 </svg>
-                <span>HIPAA compliant · BAA included</span>
+                <span>HIPAA Compliant · BAA Included · AES-256 Encrypted</span>
               </div>
             </div>
 
@@ -220,7 +207,7 @@ export default function App() {
 
       {/* Trust Strip (Marquee) */}
       <section className="trust-strip">
-        <div className="trust-label">AidMi users practice at:</div>
+        <div className="trust-label">Co-designed with clinicians from:</div>
         <div className="marquee">
           <div className="marquee-content">
             <div className="partner-logo">Stanford Medicine</div>
@@ -687,8 +674,8 @@ export default function App() {
       <section className="testimonials fade-in-section">
         <div className="container">
           <div className="section-header">
-            <h2>Clinicians who practice with confidence.</h2>
-            <p className="section-subhead">Trusted by licensed professionals across behavioral health.</p>
+            <h2>2 hours back. Every single day.</h2>
+            <p className="section-subhead">Hear from licensed professionals who transformed their practice.</p>
           </div>
 
           <div className="testimonials-grid">
