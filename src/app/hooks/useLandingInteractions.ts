@@ -100,11 +100,11 @@ export default function useLandingInteractions() {
       }, { signal });
     }
 
-    // Contact modal functionality
+    // Get started modal functionality
     const contactModal = document.getElementById("contactModal");
     const contactTriggers = document.querySelectorAll<HTMLElement>(".contact-trigger");
-    const contactClose = document.querySelector<HTMLElement>(".contact-modal-close");
-    const contactForm = document.getElementById("contactForm") as HTMLFormElement | null;
+    const modalClose = document.querySelector<HTMLElement>(".getstarted-modal-close");
+    const modalBackdrop = document.querySelector<HTMLElement>(".getstarted-modal-backdrop");
 
     if (contactModal) {
       contactTriggers.forEach((trigger) => {
@@ -119,8 +119,8 @@ export default function useLandingInteractions() {
         );
       });
 
-      if (contactClose) {
-        contactClose.addEventListener(
+      if (modalClose) {
+        modalClose.addEventListener(
           "click",
           (e) => {
             e.preventDefault();
@@ -131,16 +131,17 @@ export default function useLandingInteractions() {
         );
       }
 
-      contactModal.addEventListener(
-        "click",
-        (e) => {
-          if (e.target === contactModal) {
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener(
+          "click",
+          (e) => {
+            e.preventDefault();
             contactModal.classList.remove("active");
             document.body.style.overflow = "";
-          }
-        },
-        { signal }
-      );
+          },
+          { signal }
+        );
+      }
 
       document.addEventListener(
         "keydown",
@@ -148,30 +149,6 @@ export default function useLandingInteractions() {
           if (e.key === "Escape" && contactModal.classList.contains("active")) {
             contactModal.classList.remove("active");
             document.body.style.overflow = "";
-          }
-        },
-        { signal }
-      );
-    }
-
-    // Handle form submission
-    if (contactForm && contactModal) {
-      contactForm.addEventListener(
-        "submit",
-        (e) => {
-          e.preventDefault();
-
-          const emailInput = document.getElementById("email") as HTMLInputElement | null;
-          const email = emailInput?.value;
-
-          if (email) {
-            // Redirect to app signup with email pre-filled
-            window.location.href = `https://app.aidmi.com/signup?email=${encodeURIComponent(email)}`;
-          } else {
-            // Fallback if no email
-            contactModal.classList.remove("active");
-            document.body.style.overflow = "";
-            alert("Check your email to complete signup!");
           }
         },
         { signal }

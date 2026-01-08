@@ -1383,45 +1383,78 @@ export default function App() {
         </div>
       </div>
 
-      {/* Contact Modal */}
-      <div className="contact-modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-        <div className="contact-modal-content contact-modal-simple">
-          <button className="contact-modal-close" aria-label="Close form">×</button>
+      {/* Get Started Modal */}
+      <div className="getstarted-modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="getStartedModalTitle">
+        <div className="getstarted-modal-backdrop"></div>
+        <div className="getstarted-modal-content">
+          <button className="getstarted-modal-close" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
           
-          <div className="modal-simple-content">
-            <div className="modal-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            </div>
-            
-            <h3 id="contactModalTitle">Start Free in 60 Seconds</h3>
-            <p className="modal-simple-subhead">No credit card. No sales call. Just your email.</p>
-            
-            <form id="contactForm" className="contact-form-simple">
-              <div className="form-row">
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  required 
-                  placeholder="you@practice.com"
-                  className="input-email"
-                />
-                <button type="submit" className="btn-submit">
-                  Get Started
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="arrow-icon">
-                    <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/>
-                  </svg>
-                </button>
+          {/* Login link */}
+          <a href="https://app.aidmi.ai/login" className="getstarted-login-link">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            Log in
+          </a>
+          
+          {/* Logo */}
+          <div className="getstarted-logo">AidMi</div>
+          
+          <h2 id="getStartedModalTitle" className="getstarted-title">Let&apos;s get you started</h2>
+          
+          {/* Option Cards */}
+          <div className="getstarted-options">
+            {/* Option 1: Start Free */}
+            <a href="https://app.aidmi.ai/" className="getstarted-option-card">
+              <div className="option-illustration option-illustration-start">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+                </svg>
               </div>
-            </form>
+              <div className="option-content">
+                <h3>Start Free Now</h3>
+                <p>Create your account and begin immediately</p>
+              </div>
+              <svg className="option-arrow" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+              </svg>
+            </a>
             
-            <div className="modal-trust-row">
-              <span><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg> HIPAA compliant</span>
-              <span><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg> No credit card</span>
-              <span><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg> Setup in 2 min</span>
-            </div>
+            {/* Option 2: Book Demo */}
+            <a href="https://calendly.com/aidmi/demo" className="getstarted-option-card" target="_blank" rel="noopener noreferrer">
+              <div className="option-illustration option-illustration-demo">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                </svg>
+              </div>
+              <div className="option-content">
+                <h3>Book a Demo</h3>
+                <p>See AidMi in action with a quick walkthrough</p>
+              </div>
+              <svg className="option-arrow" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+              </svg>
+            </a>
+          </div>
+          
+          {/* Trust Footer */}
+          <div className="getstarted-trust">
+            <span>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+              </svg>
+              HIPAA Compliant
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z"/>
+              </svg>
+              No Credit Card
+            </span>
           </div>
         </div>
       </div>
