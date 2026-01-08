@@ -1968,28 +1968,46 @@ nav a:focus {
 .before-after-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 2rem; /* Reduced from 24px to 32px */
   max-width: 1100px;
   margin: 0 auto;
-  align-items: start;
+  align-items: stretch; /* Equal height columns */
   position: relative;
 }
 
-/* Transformation arrow between cards */
+/* Transformation arrow between cards - strengthened */
 .before-after-card::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: var(--pale-blue);
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 64, 140, 0.2);
+}
+
+.before-after-card::after {
   content: '→';
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 32px;
-  font-weight: 300;
-  color: rgba(0, 64, 140, 0.15);
-  z-index: 10;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  z-index: 11;
   pointer-events: none;
 }
 
-/* BEFORE Column (Problem) - Chaotic, Receding */
+/* BEFORE Column (Problem) - Chaotic, Receding with Dashed Border */
 .before-column {
   background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
   padding: 32px;
@@ -1997,7 +2015,7 @@ nav a:focus {
   border-radius: 12px;
   transform: scale(0.96) perspective(500px) rotateY(2deg);
   transition: all 0.4s ease;
-  border: 1px solid #e2e8f0;
+  border: 2px dashed #cbd5e1; /* Dashed border for "incomplete" feel */
 }
 
 /* Noise/grain overlay for "messy" feel */
@@ -2261,7 +2279,8 @@ nav a:focus {
   }
   
   /* Hide transformation arrow on mobile */
-  .before-after-card::before {
+  .before-after-card::before,
+  .before-after-card::after {
     display: none;
   }
   
@@ -3507,78 +3526,7 @@ nav a:focus {
   padding: 16px;
 }
 
-.aime-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.aime-identity {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.aime-avatar-large {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.aime-avatar-large svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
-}
-
-.aime-name {
-  display: flex;
-  flex-direction: column;
-}
-
-.aime-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--dark-navy);
-}
-
-.aime-subtitle {
-  font-size: 12px;
-  color: var(--text-light);
-}
-
-.aime-actions {
-  display: flex;
-  gap: 8px;
-}
-
-.aime-action-btn {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease;
-}
-
-.aime-action-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.aime-action-btn svg {
-  width: 18px;
-  height: 18px;
-  fill: var(--text-light);
-}
+/* Removed: .aime-header and related styles - no longer needed after removing redundant inner header */
 
 .aime-query {
   display: flex;

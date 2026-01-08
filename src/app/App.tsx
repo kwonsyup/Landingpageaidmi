@@ -502,33 +502,6 @@ export default function App() {
               </div>
               
               <div className="bento-chat-preview aime-mockup">
-                {/* Header bar */}
-                <div className="aime-header">
-                  <div className="aime-identity">
-                    <div className="aime-avatar-large">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/>
-                      </svg>
-                    </div>
-                    <div className="aime-name">
-                      <span className="aime-title">Aimé</span>
-                      <span className="aime-subtitle">Your AI Resident</span>
-                    </div>
-                  </div>
-                  <div className="aime-actions">
-                    <button className="aime-action-btn" aria-label="Undo">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12.5 8c-2.65 0-5.05 1.04-6.83 2.73L2.5 7.5v9h9l-3.19-3.19c1.32-1.19 3.05-1.9 4.92-1.9 3.16 0 5.83 2.08 6.72 4.95l2.14-.67C20.91 11.54 17.06 8 12.5 8z"/>
-                      </svg>
-                    </button>
-                    <button className="aime-action-btn" aria-label="Close">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
                 {/* User query bubble */}
                 <div className="aime-query">
                   <span>Show recent medication changes</span>
