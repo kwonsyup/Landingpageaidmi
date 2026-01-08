@@ -721,8 +721,18 @@ nav a:focus {
 }
 
 .hero h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.08;
   color: var(--dark-navy);
   margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--dark-navy);
 }
 
 .hero-subhead {
@@ -732,16 +742,14 @@ nav a:focus {
   line-height: 1.7;
 }
 
-.hero-ehr-note {
-  font-size: 16px;
-  color: var(--text-gray);
-  margin-bottom: 32px;
+.hero-eyebrow {
+  display: block;
+  font-size: 13px;
   font-weight: 600;
-  font-style: normal;
-  background: rgba(0, 64, 140, 0.04);
-  padding: 12px 20px;
-  border-radius: var(--border-radius-pill);
-  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-light);
+  margin-bottom: 20px;
 }
 
 .hero-buttons {
@@ -751,25 +759,21 @@ nav a:focus {
   flex-wrap: wrap;
 }
 
-.hero-compliance {
+.hero-trust-text {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
-  padding: 16px 28px;
-  border-radius: var(--border-radius-pill);
-  border: 2px solid rgba(16, 185, 129, 0.3);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--dark-navy);
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-top: 32px;
 }
 
-.hero-compliance svg {
-  width: 24px;
-  height: 24px;
-  fill: #10b981;
-  flex-shrink: 0;
+.hero-trust-text .trust-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--text-light);
+  opacity: 0.7;
 }
 
 .hero-visual {

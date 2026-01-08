@@ -104,9 +104,13 @@ export default function App() {
         <div className="container">
           <div className="hero-layout">
             <div className="hero-content">
-              <h1>The AI That <em style={{ fontStyle: "italic" }}>Briefs</em> You Before Your Patient Walks In.</h1>
-              <p className="hero-subhead">AidMi builds longitudinal context for every patient — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.</p>
-              <p className="hero-ehr-note">Works alongside your existing EHR.</p>
+              <span className="hero-eyebrow">Works alongside your existing EHR</span>
+              
+              <h1>The AI That <em>Briefs</em> You Before Your Patient Walks In.</h1>
+              
+              <p className="hero-subhead">
+                AidMi builds longitudinal context for every patient — what changed, what matters, what to follow up on. Prep in seconds. Document with proof. Answer questions about their history instantly.
+              </p>
               
               <div className="hero-buttons">
                 <a href="#" className="btn btn-primary btn-large contact-trigger">Get AidMi Free</a>
@@ -114,15 +118,15 @@ export default function App() {
                   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "18px", height: "18px", marginRight: "8px" }}>
                     <path d="M8 5V19L19 12L8 5Z" />
                   </svg>
-                  Watch a 1-minute demo
+                  Watch Demo
                 </button>
               </div>
               
-              <div className="hero-compliance">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" />
+              <div className="hero-trust-text">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="trust-icon">
+                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                 </svg>
-                <span>HIPAA Compliant • AES-256 Encryption</span>
+                <span>HIPAA compliant · SOC 2 · BAA included</span>
               </div>
             </div>
 
