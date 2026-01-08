@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
 import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
 import aidmiLogo from 'figma:asset/914aef0a7ba2e5e4040bf62e5cf27aa2b5b35101.png';
+import todaysBriefScreenshot from 'figma:asset/9002df476557e2afda7088fca33f9da86e2e1f62.png';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
@@ -328,13 +329,6 @@ export default function App() {
               </ul>
             </div>
           </div>
-          
-          {/* Section CTA */}
-          <div className="problem-section-cta">
-            <p className="section-cta-text">Ready to stop scrambling?</p>
-            <a href="#" className="btn btn-primary contact-trigger">Get AidMi Free</a>
-            <span className="section-cta-note">No credit card required · HIPAA compliant</span>
-          </div>
         </div>
       </section>
 
@@ -342,9 +336,9 @@ export default function App() {
       <section id="features" className="value-props fade-in-section">
         <div className="container">
           <div className="section-header">
-            <h2>World&apos;s Best Clinical Resident</h2>
+            <h2>Your AI Clinical Resident</h2>
             <p className="section-subhead">
-              An assistant who reads every note, tracks every trend, and preps your chart before you walk in the room.
+              Save 2 hours of chart prep every day. HIPAA-compliant, always.
             </p>
           </div>
 
@@ -364,28 +358,11 @@ export default function App() {
               </div>
               
               <div className="bento-brief-preview">
-                <div className="brief-preview-bar">
-                  <span className="brief-time">9:00 AM</span>
-                  <span className="brief-patient">Sarah M. — Session #14</span>
-                </div>
-                <ul className="brief-updates-list">
-                  <li>
-                    <span className="update-badge update-badge-change">Changed</span>
-                    <span>Lexapro increased 10mg → 15mg on Oct 3</span>
-                  </li>
-                  <li>
-                    <span className="update-badge update-badge-trend">Trending</span>
-                    <span>Sleep improving: 5 wakings → 2 per night</span>
-                  </li>
-                  <li>
-                    <span className="update-badge update-badge-followup">Follow up</span>
-                    <span>Job interview anxiety — mentioned Google interview</span>
-                  </li>
-                </ul>
-                <div className="brief-preview-footer">
-                  <span>3 more patients today</span>
-                  <span className="brief-ready-badge">✓ Briefs ready</span>
-                </div>
+                <img 
+                  src={todaysBriefScreenshot} 
+                  alt="Today's Brief showing patient status, symptom patterns, rapport anchors, and social support network"
+                  className="bento-screenshot"
+                />
               </div>
             </div>
 
@@ -394,7 +371,10 @@ export default function App() {
               <div className="bento-card-header">
                 <div className="bento-icon bento-icon-aime">
                   <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm1.61-9.96c-2.06-.3-3.88.97-4.43 2.79-.18.58.26 1.17.87 1.17h.2c.41 0 .74-.29.88-.67.32-.89 1.27-1.5 2.3-1.28.95.2 1.65 1.13 1.57 2.1-.1 1.34-1.62 1.63-2.45 2.88 0 .01-.01.01-.01.02-.01.02-.02.03-.03.05-.09.15-.18.32-.25.5-.01.03-.03.05-.04.08-.01.02-.01.04-.02.07-.12.34-.2.75-.2 1.25h2c0-.42.11-.77.28-1.07.02-.03.03-.06.05-.09.08-.14.18-.27.28-.39.01-.01.02-.03.03-.04.1-.12.21-.23.33-.34.96-.91 2.26-1.65 1.99-3.56-.24-1.74-1.61-3.21-3.35-3.47z"/>
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                    <circle cx="8" cy="10" r="1.5"/>
+                    <circle cx="12" cy="10" r="1.5"/>
+                    <circle cx="16" cy="10" r="1.5"/>
                   </svg>
                 </div>
                 <div className="bento-card-titles">
@@ -412,7 +392,7 @@ export default function App() {
                   <div className="chat-message-content">
                     <p>Lexapro 10mg was started on <strong>September 5, 2024</strong> (Session #8).</p>
                     <p>Patient reported &quot;feeling ready to try medication&quot; after 2 months of therapy.</p>
-                    <a href="#" className="chat-citation">View source →</a>
+                    <span className="chat-citation">View source →</span>
                   </div>
                 </div>
                 <div className="chat-input-preview">
@@ -434,30 +414,20 @@ export default function App() {
                 </div>
                 <div className="bento-card-titles">
                   <h3>Evidence-Backed Notes</h3>
-                  <p className="bento-tagline">Documentation you can defend.</p>
+                  <p className="bento-tagline">Defend every claim.</p>
                 </div>
               </div>
               
               <div className="bento-citation-preview">
                 <div className="citation-example">
                   <p className="citation-text">
-                    &quot;Patient reports <span className="citation-highlight" data-tooltip="Session #12, Oct 3">improved sleep quality</span> since medication adjustment.&quot;
+                    &quot;Patient reports <span className="citation-highlight">improved sleep quality</span> since medication adjustment.&quot;
                   </p>
                   <div className="citation-proof">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    <span>Click any claim to verify source</span>
-                  </div>
-                </div>
-                <div className="citation-stats">
-                  <div className="citation-stat">
-                    <span className="stat-number">100%</span>
-                    <span className="stat-label">Claims cited</span>
-                  </div>
-                  <div className="citation-stat">
-                    <span className="stat-number">0</span>
-                    <span className="stat-label">Unsupported</span>
+                    <span>Every claim links to the source transcript</span>
                   </div>
                 </div>
               </div>
@@ -1385,19 +1355,11 @@ export default function App() {
               
               {/* Trust Footer - Grounded */}
               <div className="getstarted-trust">
-                <div className="getstarted-trust-badges">
-                  <span>
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                    </svg>
-                    HIPAA Compliant
-                  </span>
-                  <span>
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
-                    </svg>
-                    No Credit Card
-                  </span>
+                <div className="getstarted-trust-inline">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="trust-shield">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                  </svg>
+                  <span>HIPAA Compliant · No Credit Card Required</span>
                 </div>
                 <div className="getstarted-footer-link">
                   Already have an account? <a href="#" onClick={(e) => { e.preventDefault(); setModalView('login'); }}>Log in</a>

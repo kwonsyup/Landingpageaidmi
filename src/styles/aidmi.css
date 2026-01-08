@@ -796,36 +796,26 @@ nav a:focus {
   margin: 24px -32px -32px -32px;
 }
 
-/* Trust badges row */
-.getstarted-trust-badges {
+/* Trust inline - matches hero section */
+.getstarted-trust-inline {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 12px;
-}
-
-.getstarted-trust span {
-  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 13px;
-  font-weight: 500;
-  color: #475569;
+  color: #64748b;
+  margin-bottom: 16px;
 }
 
-.getstarted-trust svg {
-  width: 18px;
-  height: 18px;
+.getstarted-trust-inline .trust-shield {
+  width: 14px;
+  height: 14px;
+  fill: #22c55e;
+  flex-shrink: 0;
 }
 
-/* HIPAA badge - green shield */
-.getstarted-trust span:first-child svg {
-  fill: #10b981;
-}
-
-/* No credit card badge - teal card */
-.getstarted-trust span:last-child svg {
-  fill: #0891b2;
+.getstarted-trust-inline span {
+  line-height: 1;
 }
 
 /* Footer Link */
@@ -1028,11 +1018,8 @@ nav a:focus {
     margin: 20px -24px -24px -24px;
   }
   
-  .getstarted-trust-badges {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    margin-bottom: 16px;
+  .getstarted-trust-inline {
+    font-size: 12px;
   }
   
   .getstarted-logo img {
@@ -1955,7 +1942,7 @@ nav a:focus {
 
 /* ==================== PROBLEM SECTION ==================== */
 .problem-section {
-  padding: 60px 0 80px;
+  padding: 48px 0 60px;
   background: linear-gradient(180deg, var(--pure-white) 0%, var(--off-white) 100%);
   position: relative;
 }
@@ -1963,7 +1950,7 @@ nav a:focus {
 .problem-section .section-header {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 48px;
+  margin: 0 auto 32px;
 }
 
 .problem-section h2 {
@@ -1983,7 +1970,7 @@ nav a:focus {
 .before-after-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
   align-items: start;
@@ -1997,7 +1984,7 @@ nav a:focus {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 300;
   color: rgba(0, 64, 140, 0.15);
   z-index: 10;
@@ -2007,7 +1994,7 @@ nav a:focus {
 /* BEFORE Column (Problem) - Chaotic, Receding */
 .before-column {
   background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
-  padding: 48px 40px;
+  padding: 32px;
   position: relative;
   border-radius: 12px;
   transform: scale(0.96) perspective(500px) rotateY(2deg);
@@ -2059,7 +2046,7 @@ nav a:focus {
 /* AFTER Column (Solution) - Elevated, Illuminated */
 .after-column {
   background: var(--pure-white);
-  padding: 48px 40px;
+  padding: 32px;
   position: relative;
   border-radius: 16px;
   border: 2px solid rgba(0, 64, 140, 0.15);
@@ -2166,7 +2153,7 @@ nav a:focus {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--dark-navy);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   line-height: 1.3;
 }
 
@@ -2304,44 +2291,6 @@ nav a:focus {
   .before-column,
   .after-column {
     padding: 32px 24px;
-  }
-}
-
-/* ===== PROBLEM SECTION CTA ===== */
-.problem-section-cta {
-  text-align: center;
-  margin-top: 56px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(0, 64, 140, 0.08);
-}
-
-.section-cta-text {
-  font-family: 'Merriweather', serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--dark-navy);
-  margin-bottom: 20px;
-}
-
-.problem-section-cta .btn {
-  margin-bottom: 12px;
-}
-
-.section-cta-note {
-  display: block;
-  font-size: 13px;
-  color: var(--text-light);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .problem-section-cta {
-    margin-top: 40px;
-    padding-top: 32px;
-  }
-  
-  .section-cta-text {
-    font-size: 18px;
   }
 }
 
@@ -3191,15 +3140,21 @@ nav a:focus {
   font-style: italic;
 }
 
-/* Actual HTML Class Names - Wide/Standard Cards */
+/* Actual HTML Class Names - Wide/Tall/Standard Cards */
 .bento-card-wide {
   grid-column: 1;
   grid-row: 1 / 3;
 }
 
+.bento-card-tall {
+  grid-column: 2;
+  grid-row: 1;
+}
+
 .bento-card-standard {
   grid-column: 2;
-  grid-row: span 1;
+  grid-row: 2;
+  min-height: 280px;
 }
 
 /* Icon Variants */
@@ -3234,77 +3189,19 @@ nav a:focus {
 }
 
 /* === TODAY'S BRIEF PREVIEW === */
-.bento-brief-preview {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.brief-preview-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  background: #f8fafc;
-  border-radius: 8px;
-  border-left: 3px solid var(--dark-navy);
-}
-
-.brief-time {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dark-navy);
-}
-
-.brief-patient {
-  font-size: 14px;
-  color: var(--text-gray);
-}
-
-.brief-updates-list {
-  list-style: none;
+.bento-card-wide .bento-brief-preview {
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin-top: 8px;
 }
 
-.brief-updates-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  color: var(--text-dark);
-  padding: 10px 12px;
-  background: #fafbfc;
-  border-radius: 6px;
-  border: 1px solid #e2e8f0;
-}
-
-.update-badge {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  flex-shrink: 0;
-}
-
-.update-badge-change {
-  background: #dbeafe;
-  color: #1e40af;
-}
-
-.update-badge-trend {
-  background: #d1fae5;
-  color: #065f46;
-}
-
-.update-badge-followup {
-  background: #fef3c7;
-  color: #92400e;
+.bento-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 
+    0 2px 8px rgba(0, 64, 140, 0.06),
+    0 8px 24px rgba(0, 64, 140, 0.08);
+  border: 1px solid rgba(0, 64, 140, 0.06);
 }
 
 /* === AIMÉ CHAT PREVIEW === */
@@ -3378,10 +3275,12 @@ nav a:focus {
   color: var(--pale-blue);
   text-decoration: none;
   font-weight: 500;
+  cursor: default;
+  pointer-events: none;
 }
 
 .chat-citation:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .chat-input-preview {
@@ -3506,6 +3405,10 @@ nav a:focus {
   
   .bento-card {
     padding: 24px;
+  }
+  
+  .bento-screenshot {
+    border-radius: 8px;
   }
   
   .bento-card-title {
@@ -4856,17 +4759,17 @@ footer {
   }
 
   .problem-section .section-header {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 
   .before-column,
   .after-column {
-    padding: 32px 24px;
+    padding: 24px 20px;
   }
 
   .column-title {
     font-size: 1.25rem;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .problem-list,
