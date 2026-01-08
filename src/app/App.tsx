@@ -793,82 +793,161 @@ export default function App() {
           </div>
 
           <div className="pricing-grid">
-            {/* Free Tier */}
-            <div className="pricing-card">
+            {/* Free Tier - Demoted */}
+            <div className="pricing-card pricing-card-free">
               <div className="pricing-header">
                 <h3 className="pricing-tier-name">Free</h3>
                 <div className="pricing-price">
                   <span className="pricing-amount">$0</span>
                   <span className="pricing-period">/forever</span>
                 </div>
-                <p className="pricing-tagline">We charge for speed and context, not for seeing patients.</p>
+                <p className="pricing-tagline">Get started, no strings attached.</p>
               </div>
               
               <ul className="pricing-features">
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited in-person + telehealth sessions</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited AI note generation</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Evidence-backed citations</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Today&apos;s Brief (recent sessions)</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>20 Aimé queries/month</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>HIPAA compliant, BAA included</li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Unlimited sessions
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Unlimited AI notes
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Evidence citations
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Today&apos;s Brief (last 3 sessions)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  20 Aimé queries/month
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  HIPAA compliant + BAA
+                </li>
               </ul>
               
               <div className="pricing-cta">
-                <a href="#" className="btn btn-secondary btn-large contact-trigger">Get AidMi Free</a>
-                <span className="pricing-cta-note">No credit card required.</span>
+                <a href="#" className="btn btn-tertiary contact-trigger">Start Free</a>
+                <span className="pricing-cta-note">No credit card required</span>
               </div>
             </div>
 
-            {/* Professional Tier (Highlighted) */}
-            <div className="pricing-card pricing-card-featured">
+            {/* Professional Tier - HERO */}
+            <div className="pricing-card pricing-card-pro">
               <div className="pricing-badge">Most Popular</div>
               <div className="pricing-header">
                 <h3 className="pricing-tier-name">Professional</h3>
                 <div className="pricing-price">
-                  <span className="pricing-amount">$79</span>
+                  <span className="pricing-amount" data-annual="79" data-monthly="99">$79</span>
                   <span className="pricing-period">/mo</span>
                 </div>
-                <p className="pricing-billing-note">billed annually ($99 monthly)</p>
-                <p className="pricing-tagline">For busy clinicians who need full continuity.</p>
+                <p className="pricing-billing-note">
+                  <span className="billing-detail" data-annual="billed annually" data-monthly="billed monthly">billed annually</span>
+                  <span className="billing-savings" data-annual="($948/yr — save $240)" data-monthly="">($948/yr — save $240)</span>
+                </p>
+                <p className="pricing-tagline">For clinicians who need full continuity.</p>
               </div>
               
               <ul className="pricing-features">
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Everything in Free, plus:</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Today&apos;s Brief (full longitudinal history)</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited Aimé queries</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom note templates</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority processing</li>
+                <li className="feature-highlight">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <strong>Everything in Free, plus:</strong>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Today&apos;s Brief (full history)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <strong>Unlimited</strong> Aimé queries
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Custom note templates
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Priority processing
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Email support
+                </li>
               </ul>
               
               <div className="pricing-cta">
-                <a href="#" className="btn btn-primary btn-large contact-trigger">Start 14-day free trial</a>
+                <a href="#" className="btn btn-primary btn-large contact-trigger">Start 14-Day Free Trial</a>
               </div>
             </div>
 
-            {/* Clinic Tier */}
-            <div className="pricing-card">
+            {/* Clinic Tier - Relationship */}
+            <div className="pricing-card pricing-card-clinic">
               <div className="pricing-header">
                 <h3 className="pricing-tier-name">Clinic</h3>
                 <div className="pricing-price">
-                  <span className="pricing-amount">$69</span>
-                  <span className="pricing-period">/seat/mo</span>
+                  <span className="pricing-amount pricing-amount-custom">Let&apos;s talk</span>
                 </div>
-                <p className="pricing-billing-note">billed annually, min. 2 seats ($89 monthly)</p>
-                <p className="pricing-tagline">For care teams with compliance needs.</p>
+                <p className="pricing-tagline">For teams that need compliance + control.</p>
               </div>
               
               <ul className="pricing-features">
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Everything in Professional, plus:</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Admin dashboard</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Shared template library</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Role-based access</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Audit logs &amp; compliance suite</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority support</li>
+                <li className="feature-highlight">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <strong>Everything in Pro, plus:</strong>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Admin dashboard
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Shared template library
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Role-based access control
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Audit logs + compliance
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Dedicated support
+                </li>
               </ul>
               
               <div className="pricing-cta">
-                <a href="#" className="btn btn-secondary btn-large contact-trigger">Talk to us</a>
+                <a href="#" className="btn btn-secondary contact-trigger">Schedule a Call</a>
+                <span className="pricing-cta-note">Usually responds within 24 hours</span>
               </div>
+            </div>
+          </div>
+
+          {/* Trust footer */}
+          <div className="pricing-trust">
+            <div className="pricing-trust-item">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+              </svg>
+              <span>HIPAA compliant on all plans</span>
+            </div>
+            <div className="pricing-trust-item">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+              </svg>
+              <span>BAA included</span>
+            </div>
+            <div className="pricing-trust-item">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span>Cancel anytime</span>
             </div>
           </div>
         </div>
