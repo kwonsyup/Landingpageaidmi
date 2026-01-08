@@ -501,7 +501,7 @@ export default function App() {
               </div>
             </div>
 
-            <a href="/security" className="security-link">
+            <a href="#security" className="security-link">
               Learn more about our security practices →
             </a>
           </div>
@@ -697,13 +697,13 @@ export default function App() {
             <div className="footer-column">
               <h4>Who we're for</h4>
               <ul>
-                <li><a href="/psychiatrists">Psychiatrists & Nurse Practitioners</a></li>
-                <li><a href="/psychologists">Psychologists</a></li>
-                <li><a href="/therapists">Therapists & Counselors</a></li>
-                <li><a href="/all-specialties">All Specialties</a></li>
-                <li><a href="/solo">Solo Private Practice</a></li>
-                <li><a href="/group-practices">Group Practices</a></li>
-                <li><a href="/enterprise">Clinics & Networks</a></li>
+                <li><a href="#who-its-for">Psychiatrists & Nurse Practitioners</a></li>
+                <li><a href="#who-its-for">Psychologists</a></li>
+                <li><a href="#who-its-for">Therapists & Counselors</a></li>
+                <li><a href="#who-its-for">All Specialties</a></li>
+                <li><a href="#who-its-for">Solo Private Practice</a></li>
+                <li><a href="#who-its-for">Group Practices</a></li>
+                <li><a href="#who-its-for">Clinics & Networks</a></li>
               </ul>
             </div>
             <div className="footer-column">

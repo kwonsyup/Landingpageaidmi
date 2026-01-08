@@ -137,7 +137,7 @@ export default function useLandingInteractions() {
           // eslint-disable-next-line no-console
           console.log("Form submitted:", data);
           alert(
-            "Thank you for your interest! We will contact you shortly to discuss your pilot access."
+            "Welcome to AidMi! Check your email to complete your free account setup."
           );
 
           contactModal.classList.remove("active");
