@@ -797,69 +797,92 @@ nav a:focus {
   padding: 140px 0 100px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(-45deg, var(--off-white), var(--super-light-pink), #e6efff, var(--off-white));
-  background-size: 400% 400%;
-  animation: ambient-move 15s ease infinite;
+  background: linear-gradient(180deg, #f8fafc 0%, #f0f4f8 50%, #e8eff8 100%);
 }
 
-@keyframes ambient-move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
-/* Hero Blobs - Organic animated shapes */
-.hero-blob {
-  position: absolute;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  filter: blur(80px);
-  z-index: 0;
-  animation: blob-morph 15s ease-in-out infinite;
-}
-
-.hero-blob-1 {
-  top: -10%;
-  right: -5%;
-  width: 500px;
-  height: 500px;
-  background: var(--pastel-pink);
-  opacity: 0.35;
-}
-
-.hero-blob-2 {
-  bottom: -15%;
-  left: -10%;
-  width: 350px;
-  height: 350px;
-  background: var(--pale-blue);
-  opacity: 0.25;
-  animation-delay: -7s;
-}
-
-@keyframes blob-morph {
-  0%, 100% {
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    transform: rotate(0deg) scale(1);
-  }
-  33% {
-    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-    transform: rotate(5deg) scale(1.05);
-  }
-  66% {
-    border-radius: 50% 60% 30% 60% / 50% 40% 70% 50%;
-    transform: rotate(-5deg) scale(0.95);
-  }
-}
 
 .hero::before {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 60%;
   height: 100%;
-  background: radial-gradient(circle at 80% 50%, rgba(150, 173, 214, 0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 70% 30%, rgba(150, 173, 214, 0.12) 0%, transparent 50%);
   z-index: 0;
+  pointer-events: none;
+}
+
+/* ==================== HERO - CLINICAL MESH BACKGROUND ==================== */
+.hero-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(0, 64, 140, 0.08) 1px, transparent 0);
+  background-size: 32px 32px;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Flowing gradient lines - implies data flow */
+.hero-gradient-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 64, 140, 0.15) 20%, 
+    rgba(150, 173, 214, 0.3) 50%, 
+    rgba(0, 64, 140, 0.15) 80%, 
+    transparent 100%
+  );
+  z-index: 0;
+  animation: line-flow 8s ease-in-out infinite;
+}
+
+.hero-gradient-line-1 {
+  top: 30%;
+  left: -10%;
+  right: -10%;
+  transform: rotate(-3deg);
+}
+
+.hero-gradient-line-2 {
+  top: 70%;
+  left: -10%;
+  right: -10%;
+  transform: rotate(2deg);
+  animation-delay: -4s;
+  opacity: 0.7;
+}
+
+@keyframes line-flow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-2%) rotate(-3deg);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(2%) rotate(-3deg);
+  }
+}
+
+.hero-gradient-line-2 {
+  animation-name: line-flow-2;
+}
+
+@keyframes line-flow-2 {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translateX(2%) rotate(2deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-2%) rotate(2deg);
+  }
 }
 
 .hero .container {
@@ -940,8 +963,88 @@ nav a:focus {
   line-height: 1;
 }
 
+/* ==================== HERO - 3D MOCKUP ==================== */
 .hero-visual {
   position: relative;
+  perspective: 1000px;
+}
+
+.mockup-3d-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mockup-3d-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-8deg) rotateX(4deg);
+  transition: transform 0.4s ease;
+}
+
+.mockup-3d-wrapper:hover {
+  transform: rotateY(-4deg) rotateX(2deg);
+}
+
+.mockup-3d-wrapper .mockup-frame {
+  background: var(--pure-white);
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 6px rgba(0, 64, 140, 0.05),
+    0 20px 40px rgba(0, 64, 140, 0.1),
+    0 40px 80px rgba(0, 64, 140, 0.08),
+    -20px 20px 40px rgba(0, 64, 140, 0.06);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(0, 64, 140, 0.08);
+  transform: translateZ(20px);
+}
+
+/* Reflection/ground shadow for 3D effect */
+.mockup-reflection {
+  position: absolute;
+  bottom: -40px;
+  left: 10%;
+  right: 10%;
+  height: 60px;
+  background: linear-gradient(180deg, 
+    rgba(0, 64, 140, 0.08) 0%, 
+    transparent 100%
+  );
+  border-radius: 50%;
+  filter: blur(20px);
+  transform: rotateX(60deg) translateZ(-20px);
+  opacity: 0.6;
+}
+
+/* Responsive - reduce 3D effect on mobile */
+@media (max-width: 1024px) {
+  .mockup-3d-wrapper {
+    transform: rotateY(-4deg) rotateX(2deg);
+  }
+  
+  .mockup-3d-wrapper:hover {
+    transform: rotateY(-2deg) rotateX(1deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .mockup-3d-wrapper {
+    transform: none;
+  }
+  
+  .mockup-3d-wrapper:hover {
+    transform: translateY(-4px);
+  }
+  
+  .mockup-reflection {
+    display: none;
+  }
+  
+  .hero-gradient-line {
+    display: none;
+  }
 }
 
 .floating-ui {
@@ -1563,87 +1666,158 @@ nav a:focus {
   align-items: start;
 }
 
-/* BEFORE Column (Problem) - Muted but Readable */
+/* BEFORE Column (Problem) - Chaotic, Receding */
 .before-column {
-  background: transparent;
+  background: #f8f9fa;
   padding: 48px 40px;
   position: relative;
-  opacity: 1;
-  transform: scale(0.98);
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  transform: scale(0.96) perspective(500px) rotateY(2deg);
+  transition: all 0.4s ease;
+  border: 1px dashed #d1d5db;
+}
+
+/* Noise/grain overlay for "messy" feel */
+.before-column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scattered "paper" decoration */
+.before-column::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 60px;
+  height: 40px;
+  background: #f1f3f5;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  transform: rotate(12deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: -1;
 }
 
 .before-column:hover {
-  transform: scale(0.99);
+  transform: scale(0.97) perspective(500px) rotateY(1deg);
 }
 
-/* AFTER Column (Solution) - Elevated, Popping Out */
+.before-column > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* AFTER Column (Solution) - Elevated, Illuminated */
 .after-column {
   background: var(--pure-white);
   padding: 48px 40px;
   position: relative;
   border-radius: 16px;
-  border: 2px solid rgba(0, 64, 140, 0.12);
+  border: 2px solid rgba(0, 64, 140, 0.15);
   box-shadow: 
     0 4px 6px rgba(0, 64, 140, 0.04),
     0 12px 24px rgba(0, 64, 140, 0.08),
-    0 24px 48px rgba(0, 64, 140, 0.06);
-  transform: translateY(-8px);
-  transition: all 0.3s ease;
+    0 24px 48px rgba(0, 64, 140, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  transform: translateY(-12px) scale(1.02);
+  transition: all 0.4s ease;
   overflow: hidden;
 }
 
-/* Accent corner element */
+/* Soft glow/illumination effect */
 .after-column::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at 30% 20%,
+    rgba(150, 173, 214, 0.15) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Accent corner — "organized" feel */
+.after-column::after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, rgba(0, 64, 140, 0.03) 0%, transparent 70%);
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(0, 64, 140, 0.04) 0%, transparent 60%);
   border-radius: 0 16px 0 100%;
   pointer-events: none;
+  z-index: 0;
 }
 
 .after-column:hover {
-  transform: translateY(-12px);
+  transform: translateY(-16px) scale(1.03);
   box-shadow: 
     0 6px 8px rgba(0, 64, 140, 0.05),
     0 16px 32px rgba(0, 64, 140, 0.1),
-    0 32px 64px rgba(0, 64, 140, 0.08);
-  border-color: rgba(0, 64, 140, 0.18);
+    0 32px 64px rgba(0, 64, 140, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  border-color: rgba(0, 64, 140, 0.2);
+}
+
+.after-column > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Column Labels (Badges) */
 .column-label {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
+  gap: 8px;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   margin-bottom: 24px;
 }
 
 .before-column .column-label {
-  background: rgba(100, 116, 139, 0.12);
-  color: #475569;
-  border: 1px solid rgba(100, 116, 139, 0.2);
+  background: #f1f3f5;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+}
+
+.before-column .column-label .label-icon {
+  fill: #9ca3af;
 }
 
 .after-column .column-label {
-  background: rgba(0, 64, 140, 0.1);
+  background: linear-gradient(135deg, rgba(0, 64, 140, 0.1), rgba(0, 64, 140, 0.05));
   color: var(--dark-navy);
   border: 1px solid rgba(0, 64, 140, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 64, 140, 0.08);
+}
+
+.after-column .column-label .label-icon {
+  fill: var(--dark-navy);
 }
 
 .column-label .label-icon {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 /* Column Titles */
@@ -1747,6 +1921,40 @@ nav a:focus {
   font-size: 14px;
   color: var(--text-gray);
   line-height: 1.6;
+}
+
+/* Responsive Problem Section */
+@media (max-width: 1024px) {
+  .before-after-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  /* On mobile, stack with Solution first */
+  .after-column {
+    order: -1;
+    transform: none;
+  }
+  
+  .before-column {
+    transform: none;
+  }
+  
+  .before-column::after {
+    display: none; /* Hide scattered paper decoration */
+  }
+  
+  .after-column:hover,
+  .before-column:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 640px) {
+  .before-column,
+  .after-column {
+    padding: 32px 24px;
+  }
 }
 
 /* ==================== HOW IT WORKS (INTERACTIVE FEATURE SWITCHER) ==================== */
