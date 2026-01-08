@@ -38,11 +38,9 @@ export default function App() {
                   <div className="nav-dropdown-columns">
                     <div className="nav-dropdown-column">
                       <h4>Core Features</h4>
-                      <a href="#precharting" className="nav-dropdown-link">Morning Briefs</a>
-                      <a href="#ambient" className="nav-dropdown-link">Ambient Scribe</a>
-                      <a href="#pebble" className="nav-dropdown-link">Pebble Client App</a>
-                      <a href="#practice-health" className="nav-dropdown-link">Practice Health</a>
-                      <a href="#features" className="nav-dropdown-link">See All Features</a>
+                      <a href="#features" className="nav-dropdown-link">Today&apos;s Brief</a>
+                      <a href="#features" className="nav-dropdown-link">Aimé Q&A</a>
+                      <a href="#features" className="nav-dropdown-link">Evidence-Backed Notes</a>
                     </div>
                     <div className="nav-dropdown-column">
                       <h4>Integrations</h4>
@@ -114,11 +112,10 @@ export default function App() {
         </div>
         <div className="mobile-menu-section">
           <h4>Product</h4>
-          <a href="#precharting">Morning Briefs</a>
-          <a href="#ambient">Ambient Scribe</a>
-          <a href="#pebble">Pebble Client App</a>
-          <a href="#practice-health">Practice Health</a>
-          <a href="#features">See All Features</a>
+          <a href="#features">Today&apos;s Brief</a>
+          <a href="#features">Aimé Q&A</a>
+          <a href="#features">Evidence-Backed Notes</a>
+          <a href="#pricing">Pricing</a>
           <a href="/integrations">EHR Integrations</a>
         </div>
         <div className="mobile-menu-section">
@@ -395,65 +392,163 @@ export default function App() {
         </div>
       </section>
 
-        {/* FAQ */}
-        <section className="faq">
-          <div className="container">
-            <div className="section-header">
-              <h2>Frequently Asked Questions</h2>
-            </div>
-            <div className="faq-list">
+      {/* Pricing Section */}
+      <section id="pricing" className="pricing">
+        <div className="container">
+          <div className="section-header">
+            <h2>Unlimited telehealth + AI notes on every plan.</h2>
+            <p className="section-subhead">Built for behavioral health.</p>
+          </div>
 
-            <div className="segment-card psychologists" data-segment="psychologist">
-              <div className="segment-card-content">
-                <div className="segment-card-text">
-                  <h3 className="segment-title">Assessment and Therapy in One Place</h3>
-                  <p className="segment-description">Whether you're doing a full psych eval or long-term therapy, AidMi pulls standardized measures into your narrative so your notes show objective progress and medical necessity—without turning sessions into form-filling.</p>
-                  <ul className="segment-features">
-                    <li>✓ <strong>Integrated measures</strong> – PHQ-9, GAD-7, and other scales pulled in automatically, not copy-pasted.</li>
-                    <li>✓ <strong>Eval-friendly structure</strong> – Intakes and assessments organized the way you already write, in your own voice.</li>
-                    <li>✓ <strong>Clear progress over time</strong> – Symptom and functioning trends surfaced alongside key interventions.</li>
-                    <li>✓ <strong>Between-Visit Visibility</strong> – Pebble captures mood trends and homework completion during the week, giving you objective data to guide the next session.</li>
-                  </ul>
+          <div className="pricing-grid">
+            {/* Free Tier */}
+            <div className="pricing-card">
+              <div className="pricing-header">
+                <h3 className="pricing-tier-name">Free</h3>
+                <div className="pricing-price">
+                  <span className="pricing-amount">$0</span>
+                  <span className="pricing-period">/forever</span>
                 </div>
-                <div className="segment-card-visual">
-                  <div className="segment-mockup">
-                    <div className="mockup-title">Embedded Progress Visualization</div>
-                    <div className="product-demo-placeholder" style={{ height: "100%", minHeight: "250px", flexDirection: "column", gap: "8px" }}>
-                      [Visual: A "Progress Note" interface where a graph of "Symptom Reduction" is embedded directly between the "Subjective" and "Assessment" text blocks.]
-                      <small style={{ display: "block", marginTop: "8px", fontSize: "12px", opacity: "0.8", maxWidth: "90%", textAlign: "center" }}>
-                        💡 Insert visualization showing symptom reduction graph embedded within progress note structure
-                      </small>
-                    </div>
-                  </div>
+                <p className="pricing-tagline">We charge for speed and context, not for seeing patients.</p>
+              </div>
+              
+              <ul className="pricing-features">
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited in-person + telehealth sessions</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited AI note generation</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Evidence-backed citations</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Today&apos;s Brief (recent sessions)</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>20 Aimé queries/month</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>HIPAA compliant, BAA included</li>
+              </ul>
+              
+              <div className="pricing-cta">
+                <a href="#" className="btn btn-secondary btn-large contact-trigger">Get AidMi Free</a>
+                <span className="pricing-cta-note">No credit card required.</span>
+              </div>
+            </div>
+
+            {/* Professional Tier (Highlighted) */}
+            <div className="pricing-card pricing-card-featured">
+              <div className="pricing-badge">Most Popular</div>
+              <div className="pricing-header">
+                <h3 className="pricing-tier-name">Professional</h3>
+                <div className="pricing-price">
+                  <span className="pricing-amount">$79</span>
+                  <span className="pricing-period">/mo</span>
+                </div>
+                <p className="pricing-billing-note">billed annually ($99 monthly)</p>
+                <p className="pricing-tagline">For busy clinicians who need full continuity.</p>
+              </div>
+              
+              <ul className="pricing-features">
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Everything in Free, plus:</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Today&apos;s Brief (full longitudinal history)</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited Aimé queries</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom note templates</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority processing</li>
+              </ul>
+              
+              <div className="pricing-cta">
+                <a href="#" className="btn btn-primary btn-large contact-trigger">Start 14-day free trial</a>
+              </div>
+            </div>
+
+            {/* Clinic Tier */}
+            <div className="pricing-card">
+              <div className="pricing-header">
+                <h3 className="pricing-tier-name">Clinic</h3>
+                <div className="pricing-price">
+                  <span className="pricing-amount">$69</span>
+                  <span className="pricing-period">/seat/mo</span>
+                </div>
+                <p className="pricing-billing-note">billed annually, min. 2 seats ($89 monthly)</p>
+                <p className="pricing-tagline">For care teams with compliance needs.</p>
+              </div>
+              
+              <ul className="pricing-features">
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Everything in Professional, plus:</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Admin dashboard</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Shared template library</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Role-based access</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Audit logs &amp; compliance suite</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority support</li>
+              </ul>
+              
+              <div className="pricing-cta">
+                <a href="#" className="btn btn-secondary btn-large contact-trigger">Talk to us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Section */}
+      <section className="security">
+        <div className="container">
+          <div className="security-content">
+            <div className="security-header">
+              <div className="security-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z"/>
+                </svg>
+              </div>
+              <h2>Your clients&apos; data, protected.</h2>
+              <p className="security-intro">AidMi is built for behavioral health — where privacy isn&apos;t optional.</p>
+            </div>
+
+            <div className="security-features">
+              <div className="security-feature">
+                <div className="security-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <div className="security-feature-text">
+                  <strong>HIPAA compliant</strong>
+                  <span>BAA included on all plans</span>
+                </div>
+              </div>
+
+              <div className="security-feature">
+                <div className="security-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <div className="security-feature-text">
+                  <strong>No audio stored</strong>
+                  <span>Recordings are deleted immediately after transcription</span>
+                </div>
+              </div>
+
+              <div className="security-feature">
+                <div className="security-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <div className="security-feature-text">
+                  <strong>Configurable transcript retention</strong>
+                  <span>Choose to retain, auto-delete after signing, or delete after X days</span>
+                </div>
+              </div>
+
+              <div className="security-feature">
+                <div className="security-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <div className="security-feature-text">
+                  <strong>Encrypted everywhere</strong>
+                  <span>Data encrypted in transit and at rest</span>
                 </div>
               </div>
             </div>
 
-            <div className="segment-card therapists" data-segment="therapist">
-              <div className="segment-card-content">
-                <div className="segment-card-text">
-                  <h3 className="segment-title">Stay in the Story</h3>
-                  <p className="segment-description">AidMi captures the narrative arc and key moments while you keep eye contact—and quietly tracks your capacity so you don't burn out.</p>
-                  <ul className="segment-features">
-                    <li>✓ <strong>Presence-first notes</strong> – Choose ambient listening or quick post-session dictation, depending on the client.</li>
-                    <li>✓ <strong>Recall Assistant:</strong> "What was her sister's name?" – Ask the sidebar before you start.</li>
-                    <li>✓ <strong>Realistic capacity planning</strong> – See how many open spots you actually have once cancellations and no-shows are factored in.</li>
-                    <li>✓ <strong>Warm waitlist nurture</strong> – Light-touch check-ins between sessions and 1-click "Convert to active" when a spot opens.</li>
-                  </ul>
-                </div>
-                <div className="segment-card-visual">
-                  <div className="segment-mockup">
-                    <div className="mockup-title">Detected Interventions</div>
-                    <div className="product-demo-placeholder" style={{ height: "100%", minHeight: "250px", flexDirection: "column", gap: "8px" }}>
-                      [Visual: A sidebar showing "Detected Interventions." It lists tags like "Cognitive Restructuring," "Validation," and "Grounding Techniques" extracted from the transcript.]
-                      <small style={{ display: "block", marginTop: "8px", fontSize: "12px", opacity: "0.8", maxWidth: "90%", textAlign: "center" }}>
-                        💡 Insert visualization showing detected therapeutic interventions sidebar with tags extracted from session
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/security" className="security-link">
+              Learn more about our security practices →
+            </a>
           </div>
         </div>
       </section>
@@ -601,165 +696,88 @@ export default function App() {
         </div>
       </section>
 
-      {/* The AidMi Difference */}
-      <section className="difference">
-        <div className="container">
-          <div className="section-header">
-            <h2>Why AidMi?</h2>
-            <p className="section-subhead">AidMi is built for behavioral health. It closes the loop from intake to follow-up, gives you back eye contact in session.</p>
-          </div>
-
-          <div className="difference-grid">
-            <div className="difference-card">
-              <div className="difference-visual">
-                <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "48px", height: "48px", color: "var(--dark-navy)" }}>
-                  <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z" />
-                </svg>
-              </div>
-              <h3 className="difference-title">Built for Behavioral Health</h3>
-              <p className="difference-description">AidMi is co-designed with psychiatrists, psychologists, therapists, and counselors. It understands 50-minute therapy, 15-minute med checks, risk language, and prior auth—not just "primary care notes with extra steps."</p>
-            </div>
-
-            <div className="difference-card">
-              <div className="difference-visual">
-                <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "48px", height: "48px", color: "var(--dark-navy)" }}>
-                  <path d="M18 8H17V6C17 3.24 14.76 1 12 1C9.24 1 7 3.24 7 6V8H6C4.9 8 4 8.9 4 10V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V10C20 8.9 19.1 8 18 8ZM12 17C10.9 17 10 16.1 10 15C10 13.9 10.9 13 12 13C13.1 13 14 13.9 14 15C14 16.1 13.1 17 12 17ZM15.1 8H8.9V6C8.9 4.29 10.29 2.9 12 2.9C13.71 2.9 15.1 4.29 15.1 6V8Z" />
-                </svg>
-              </div>
-              <h3 className="difference-title">One Assistant for each Session</h3>
-              <p className="difference-description">Morning Brief preps you before, Session Scribe captures the encounter in your voice, and Pebble nudges clients between visits. One loop, instead of three disconnected apps.</p>
-            </div>
-
-            <div className="difference-card">
-              <div className="difference-visual">
-                <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "48px", height: "48px", color: "var(--dark-navy)" }}>
-                  <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z" />
-                </svg>
-              </div>
-              <h3 className="difference-title">Safe, Source-Linked</h3>
-              <p className="difference-description">Every line the AI suggests can be traced back to real data: intake answers, measures, or transcript snippets. Your data stays siloed, and documentation stays insurance-ready without extra clicks.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="faq">
         <div className="container">
           <div className="section-header">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Questions? We've got answers.</h2>
           </div>
 
           <div className="faq-list">
-            {/* SAFETY & LIABILITY BLOCK */}
+            {/* Question 1 */}
             <div className="faq-item">
-              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
-                <span>Does the AI "hallucinate" or make things up?</span>
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer" id="faq-answer-1">
-                <div className="faq-answer-content">
-                  We use a "Constrained Clinical Model." Unlike ChatGPT, which is creative, AidMi is restrictive. It is programmed to prioritize accuracy over fluency. If the audio is unclear, it won't guess—it will flag the section for you to review. We never invent clinical details.
-                </div>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
-                <span>If clients track their mood in Pebble, am I liable if I don&apos;t see a suicide flag?</span>
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer" id="faq-answer-2">
-                <div className="faq-answer-content">
-                  No. Pebble is designed as a clinical insight tool, not a crisis monitoring service. During onboarding, clients explicitly acknowledge that data is reviewed only during scheduled appointments. Crucially, if a client logs a high-risk entry (e.g., high suicidality score), the app automatically intervenes by directing them to immediate crisis resources (988, Crisis Text Line) and displaying their safety plan. This ensures clients get immediate help while protecting your license and your boundaries outside of office hours.
-                </div>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
-                <span>What happens to the session audio? Is it recorded?</span>
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer" id="faq-answer-3">
-                <div className="faq-answer-content">
-                  We are a &quot;Zero-Retention&quot; platform. Once the note is generated and exported to your EHR, the audio is permanently scrubbed from our servers. Your clients&apos; privacy is our highest priority, and we never hold recordings longer than necessary to complete documentation.
-                </div>
-              </div>
-            </div>
-
-            {/* CAN IT HANDLE MY MESSY REALITY BLOCK */}
-            <div className="faq-item">
-              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
-                <span>Can it handle couples or family therapy?</span>
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer" id="faq-answer-4">
-                <div className="faq-answer-content">
-                  Yes. AidMi utilizes advanced speaker diarization to distinguish between multiple distinct voice signatures (e.g., "Partner A" vs. "Partner B"). The AI automatically attributes quotes and affect to the correct speaker in the generated note, so you don't have to untangle the conversation later.
-                </div>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
-                <span>My practice is niche (e.g., Somatic, Psychoanalytic, Child). Can it handle that?</span>
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer" id="faq-answer-5">
-                <div className="faq-answer-content">
-                  Yes. AidMi doesn't force you into a rigid box. You can toggle between formats—standard medical SOAP for a med check, or narrative DAP for a psychodynamic session, or your very own format. It listens for the interventions you use, whether that's CBT homework or somatic experiencing.
-                </div>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
-                <span>Does AidMi work with telehealth (Zoom, Google Meet, etc.)?</span>
+              <button className="faq-question" aria-expanded="false">
+                <span>Is the Free plan really unlimited?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div className="faq-answer-content">
-                  Yes. AidMi runs alongside whatever telehealth platform you already use—Zoom, Google Meet, Doxy, or your EMR's built-in video. For online sessions, you simply start the visit in AidMi and your AI assistant securely listens in.
-                  <br /><br />
-                  <strong>Prefer not to stream live?</strong> You can also drag-and-drop past audio files directly into AidMi to generate notes retroactively.
+                  Yes. Unlimited sessions and unlimited notes. We charge for speed and advanced continuity features (full longitudinal history, unlimited Aimé queries) — not per client or per session.
                 </div>
               </div>
             </div>
 
-            {/* LOGISTICS & BUSINESS BLOCK */}
+            {/* Question 2 */}
             <div className="faq-item">
-              <button className="faq-question">
-                <span>Do I need to change my EHR to use AidMi?</span>
+              <button className="faq-question" aria-expanded="false">
+                <span>What happens to my recordings?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div className="faq-answer-content">
-                  No. Integrating new tech is usually a nightmare, so we skipped it. AidMi lives alongside your EHR (SimplePractice, Epic, etc.) rather than inside it. You get the power of advanced AI without asking your IT department for permission. Just copy, paste, sign.
+                  Audio is deleted immediately after transcription. We never store recordings. Transcripts are retained to power citations, Today&apos;s Brief, and Aimé — but you can configure retention settings (auto-delete after signing, after X days, etc.).
                 </div>
               </div>
             </div>
 
+            {/* Question 3 */}
             <div className="faq-item">
-              <button className="faq-question">
-                <span>Is the Pebble client app required?</span>
+              <button className="faq-question" aria-expanded="false">
+                <span>Does AidMi work with my current EHR?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div className="faq-answer-content">
-                  No, Pebble is completely optional. Many clinicians use only the ambient documentation feature. However, clinicians who offer Pebble to clients report significantly better session prep and improved treatment outcomes due to continuous data between sessions.
+                  Yes. AidMi works alongside SimplePractice, TherapyNotes, Valant, and other EHRs. One-button to paste your signed note into your existing system, or use it standalone.
                 </div>
               </div>
             </div>
 
+            {/* Question 4 */}
             <div className="faq-item">
-              <button className="faq-question">
-                <span>How does pricing work?</span>
+              <button className="faq-question" aria-expanded="false">
+                <span>Is it HIPAA compliant?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div className="faq-answer-content">
-                  We offer simple per-clinician pricing starting at $99/month. This includes unlimited documentation, morning briefs, and EHR integrations. The Pebble client app is available as an add-on for practices that want between-session tracking. No contracts, cancel anytime.
+                  Yes. AidMi is HIPAA compliant with a BAA included on all plans — including Free. Data is encrypted in transit and at rest.
+                </div>
+              </div>
+            </div>
+
+            {/* Question 5 */}
+            <div className="faq-item">
+              <button className="faq-question" aria-expanded="false">
+                <span>Do you train your AI on my client data?</span>
+                <span className="faq-icon">+</span>
+              </button>
+              <div className="faq-answer">
+                <div className="faq-answer-content">
+                  No. Your client data is siloed, stored securely, and only used to power your clinical intelligence — Today&apos;s Brief, Aimé, and citations.
+                </div>
+              </div>
+            </div>
+
+            {/* Question 6 */}
+            <div className="faq-item">
+              <button className="faq-question" aria-expanded="false">
+                <span>How accurate are the AI notes?</span>
+                <span className="faq-icon">+</span>
+              </button>
+              <div className="faq-answer">
+                <div className="faq-answer-content">
+                  Every claim in your note links to the source in the transcript. Click to verify. If evidence is missing, we flag it as &quot;Needs confirmation.&quot; You review and sign — nothing goes into the chart without your approval.
                 </div>
               </div>
             </div>
@@ -772,12 +790,9 @@ export default function App() {
         <div className="container">
           <div className="cta-card">
             <div className="cta-content">
-              <h2>Go Home On Time Tonight</h2>
-              <p>You didn't become a clinician to do data entry.<br /><br />Let AidMi handle the paperwork while you handle the care.</p>
-              <div className="cta-buttons">
-                <a href="#" className="btn btn-primary btn-large contact-trigger">Reclaim Your Evening</a>
-                <a href="#" className="btn btn-secondary btn-large contact-trigger">Book a Demo</a>
-              </div>
+              <h2>Go home on time tonight.</h2>
+              <p>You didn&apos;t become a clinician to do paperwork.<br /><br />Let AidMi handle the documentation while you handle the care.</p>
+              <a href="#" className="btn btn-primary btn-large contact-trigger">Get AidMi Free</a>
             </div>
           </div>
         </div>
@@ -786,20 +801,6 @@ export default function App() {
       {/* Footer */}
       <footer>
         <div className="container">
-          <div className="footer-newsletter">
-            <h3>The Private Practice Growth Memo</h3>
-            <p>Join thousands of clinicians receiving weekly tips on billing codes, audit-proofing, and therapeutic workflows. No fluff, just practice management.</p>
-            <form className="newsletter-form">
-              <input type="email" placeholder="Dr.Email@practice.com" aria-label="Email" />
-              <button type="submit">Subscribe</button>
-            </form>
-            <div className="newsletter-privacy">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" />
-              </svg>
-              We respect your privacy. Unsubscribe anytime.
-            </div>
-          </div>
           <div className="footer-compliance">
             <div className="compliance-item">
               <svg viewBox="0 0 24 24" fill="currentColor">
@@ -836,13 +837,11 @@ export default function App() {
             <div className="footer-column">
               <h4>Product</h4>
               <ul>
-                <li><a href="#ambient">Ambient Scribe</a></li>
-                <li><a href="#precharting">Morning Briefs</a></li>
-                <li><a href="#pebble">Pebble Client App</a></li>
-                <li><a href="#practice-health">Practice Health</a></li>
-                <li><a href="#features">See All Features</a></li>
-                <li><a href="/integrations">Electronic Health Record (EHR)</a></li>
-                <li><a href="/integrations#telehealth">Telehealth</a></li>
+                <li><a href="#features">Today&apos;s Brief</a></li>
+                <li><a href="#features">Aimé Q&A</a></li>
+                <li><a href="#features">Evidence-Backed Notes</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="/integrations">EHR Integrations</a></li>
               </ul>
             </div>
             <div className="footer-column">
