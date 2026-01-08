@@ -689,22 +689,26 @@ nav a:focus {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 20px;
+  padding: 20px 24px;
   background: var(--pure-white);
   border: 2px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 16px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   cursor: pointer;
+  color: inherit;
 }
 
 .getstarted-option-card:hover {
   border-color: var(--dark-navy);
-  box-shadow: 0 4px 12px rgba(0, 64, 140, 0.1);
+  background: rgba(0, 64, 140, 0.02);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 64, 140, 0.08);
 }
 
 .getstarted-option-card:hover .option-arrow {
   transform: translateX(4px);
+  color: var(--dark-navy);
 }
 
 /* Illustration */
@@ -763,7 +767,9 @@ nav a:focus {
   width: 20px;
   height: 20px;
   fill: #94a3b8;
-  transition: transform 0.2s ease;
+  margin-left: auto;
+  color: #94a3b8;
+  transition: all 0.25s ease;
   flex-shrink: 0;
 }
 
@@ -843,6 +849,23 @@ nav a:focus {
   margin-bottom: 8px;
 }
 
+/* Forgot Password Link */
+.forgot-password-link {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: var(--dark-navy);
+  text-decoration: none;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: #00509e;
+  text-decoration: underline;
+}
+
 .login-label {
   display: block;
   font-size: 14px;
@@ -874,34 +897,21 @@ nav a:focus {
   color: #94a3b8;
 }
 
-.btn-primary {
-  background: var(--dark-navy);
-  color: var(--pure-white);
-  border: none;
-  padding: 14px 24px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-family: 'Inter', sans-serif;
-}
-
-.btn-primary:hover {
-  background: #003870;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 64, 140, 0.2);
-}
-
 .btn-full {
   width: 100%;
+  border-radius: 9999px; /* Pill shape */
+  padding: 16px 24px;
+  font-size: 16px;
+  justify-content: center;
 }
 
-/* Separator */
-.login-separator {
+/* Separator / Auth Divider */
+.login-separator,
+.auth-divider {
   display: flex;
   align-items: center;
-  color: var(--text-light);
+  gap: 16px;
+  color: #94a3b8;
   font-size: 13px;
   margin: 24px 0;
 }
@@ -933,14 +943,14 @@ nav a:focus {
   justify-content: center;
   gap: 12px;
   width: 100%;
-  padding: 12px;
+  padding: 14px 24px;
   margin-bottom: 12px;
-  background: #ffffff;
-  border: 2px solid #e2e8f0;
+  background: var(--pure-white);
+  border: 1px solid #e2e8f0;
   color: var(--text-dark);
   font-weight: 500;
   font-size: 15px;
-  border-radius: 8px;
+  border-radius: 9999px; /* Pill shape */
   transition: all 0.2s ease;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
@@ -954,6 +964,35 @@ nav a:focus {
 
 .btn-social:last-child {
   margin-bottom: 0;
+}
+
+/* SSO Icon */
+.btn-sso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  background: var(--pure-white);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sso:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sso-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Responsive */
@@ -1191,6 +1230,17 @@ nav a:focus {
 }
 
 /* ==================== HERO - 3D MOCKUP ==================== */
+
+/* Levitation Animation */
+@keyframes float-hero {
+  0%, 100% { 
+    transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg) translateY(0); 
+  }
+  50% { 
+    transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg) translateY(-10px); 
+  }
+}
+
 .hero-visual {
   position: relative;
   perspective: 1000px;
@@ -1209,27 +1259,39 @@ nav a:focus {
   height: auto;
   border-radius: 16px;
   box-shadow: 
-    0 25px 50px -12px rgba(0, 64, 140, 0.25),
-    0 12px 24px -8px rgba(0, 64, 140, 0.15);
-  transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -20px 20px 60px -10px rgba(0, 40, 85, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg);
+  animation: float-hero 6s ease-in-out infinite;
+  transition: box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hero-mockup-image:hover {
-  transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) translateY(-8px);
+  animation-play-state: paused;
+  transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg) translateY(-8px);
   box-shadow: 
-    0 35px 60px -15px rgba(0, 64, 140, 0.3),
-    0 20px 40px -10px rgba(0, 64, 140, 0.2);
+    -25px 25px 70px -12px rgba(0, 40, 85, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.7) inset;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+  @keyframes float-hero {
+    0%, 100% { 
+      transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg) translateY(0); 
+    }
+    50% { 
+      transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg) translateY(-8px); 
+    }
+  }
+  
   .hero-mockup-image {
-    transform: perspective(1200px) rotateY(-3deg) rotateX(1.5deg);
+    transform: perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(-0.5deg);
   }
   
   .hero-mockup-image:hover {
-    transform: perspective(1200px) rotateY(-1.5deg) rotateX(0.75deg) translateY(-4px);
+    animation-play-state: paused;
+    transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) rotateZ(-0.25deg) translateY(-6px);
   }
   
   .integration-strip {
@@ -1244,18 +1306,28 @@ nav a:focus {
 }
 
 @media (max-width: 768px) {
+  @keyframes float-hero {
+    0%, 100% { 
+      transform: perspective(1200px) rotateY(0deg) rotateX(2deg) translateY(0); 
+    }
+    50% { 
+      transform: perspective(1200px) rotateY(0deg) rotateX(2deg) translateY(-6px); 
+    }
+  }
+  
   .hero-mockup-wrapper {
     max-width: 100%;
     margin: 0 auto;
   }
   
   .hero-mockup-image {
-    transform: perspective(1200px) rotateY(0deg) rotateX(1deg);
+    transform: perspective(1200px) rotateY(0deg) rotateX(2deg);
     border-radius: 12px;
   }
   
   .hero-mockup-image:hover {
-    transform: perspective(1200px) rotateY(0deg) rotateX(0.5deg) translateY(-4px);
+    animation-play-state: paused;
+    transform: perspective(1200px) rotateY(0deg) rotateX(1deg) translateY(-4px);
   }
   
   .hero-glow {
@@ -1291,9 +1363,9 @@ nav a:focus {
   position: relative;
 }
 
-/* ==================== INTEGRATION STRIP (Sidebar Cluster) ==================== */
+/* ==================== INTEGRATION STRIP (Ghost-like Sidebar) ==================== */
 .integration-strip {
-  margin-top: 40px;
+  margin-top: 48px; /* More separation from HIPAA text */
   padding-top: 24px;
   border-top: 1px solid rgba(0, 64, 140, 0.1);
   text-align: left;
@@ -1301,16 +1373,22 @@ nav a:focus {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+  opacity: 0.5; /* Ghost-like default state */
+  transition: opacity 0.3s ease;
+}
+
+.integration-strip:hover {
+  opacity: 1; /* Full visibility on hover */
 }
 
 .integration-label {
   display: block;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #94a3b8;
-  margin: 0;
+  letter-spacing: 2px;
+  color: var(--text-light);
+  margin: 0 0 16px 0;
 }
 
 .integration-logos {
@@ -1357,9 +1435,9 @@ nav a:focus {
 
 /* Text-based logo treatment */
 .integration-logo-text {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  color: #94a3b8;
+  color: #64748b; /* Slate-500 for subtle appearance */
   letter-spacing: -0.3px;
   transition: color 0.2s ease;
   white-space: nowrap;
@@ -1367,7 +1445,7 @@ nav a:focus {
 }
 
 .integration-logo-text:hover {
-  color: #64748b;
+  color: var(--dark-navy);
 }
 
 .integration-logo-text .logo-bold {
