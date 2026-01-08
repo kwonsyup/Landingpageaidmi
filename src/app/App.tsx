@@ -98,30 +98,8 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-blob" style={{
-          position: "absolute",
-          top: "-10%",
-          right: "-10%",
-          width: "500px",
-          height: "500px",
-          background: "var(--pastel-pink)",
-          filter: "blur(80px)",
-          borderRadius: "50%",
-          opacity: "0.4",
-          zIndex: 0
-        }}></div>
-        <div className="hero-blob-2" style={{
-          position: "absolute",
-          bottom: "-10%",
-          left: "-10%",
-          width: "300px",
-          height: "300px",
-          background: "var(--pale-blue)",
-          filter: "blur(60px)",
-          borderRadius: "50%",
-          opacity: "0.3",
-          zIndex: 0
-        }}></div>
+        <div className="hero-blob hero-blob-1"></div>
+        <div className="hero-blob hero-blob-2"></div>
         
         <div className="container">
           <div className="hero-layout">
@@ -150,11 +128,19 @@ export default function App() {
 
             <div className="hero-visual">
               <div className="floating-ui">
-                <div className="product-demo-placeholder" style={{ height: "400px", flexDirection: "column", gap: "12px" }}>
-                  {"[Today's Brief UI Preview]"}
-                  <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "400px", textAlign: "center" }}>
-                    💡 Show a clean &quot;Today&apos;s Brief&quot; card with patient name, key changes, and action items
-                  </small>
+                <div className="mockup-frame">
+                  <div className="mockup-header">
+                    <div className="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span className="mockup-title">Today's Brief</span>
+                  </div>
+                  <div className="mockup-body">
+                    <div className="mockup-skeleton mockup-skeleton-title"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text short"></div>
+                    <div className="mockup-skeleton mockup-skeleton-card"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,7 +178,7 @@ export default function App() {
       </section>
 
       {/* Problem Section */}
-      <section className="problem-section">
+      <section className="problem-section fade-in-section">
         <div className="container">
           <div className="problem-content">
             <h2>Your notes are a filing cabinet.<br />Your brain does all the work.</h2>
@@ -216,7 +202,7 @@ export default function App() {
       </section>
 
       {/* Core Value Props Section */}
-      <section id="features" className="value-props">
+      <section id="features" className="value-props fade-in-section">
         <div className="container">
           <div className="section-header">
             <h2>World&apos;s Best Clinical Resident</h2>
@@ -272,7 +258,7 @@ export default function App() {
       </section>
 
       {/* Use Cases Section */}
-      <section id="who-its-for" className="use-cases">
+      <section id="who-its-for" className="use-cases fade-in-section">
         <div className="container">
           <div className="section-header">
             <h2>Built for How <em>You</em> Practice</h2>
@@ -307,7 +293,7 @@ export default function App() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="testimonials">
+      <section className="testimonials fade-in-section">
         <div className="container">
           <div className="section-header">
             <h2>Clinicians who practice with confidence.</h2>
@@ -319,9 +305,13 @@ export default function App() {
               <blockquote className="testimonial-quote">
                 &quot;I used to spend 10 minutes before each session digging through old notes. Now I glance at Today&apos;s Brief and I&apos;m ready.&quot;
               </blockquote>
-              <cite className="testimonial-attribution">
-                — Psychologist, Palo Alto
-              </cite>
+              <div className="testimonial-footer">
+                <div className="testimonial-avatar">P</div>
+                <cite className="testimonial-attribution">
+                  <span className="testimonial-role">Psychologist</span>
+                  <span className="testimonial-location">Palo Alto, CA</span>
+                </cite>
+              </div>
             </div>
 
             {/* Testimonial 2 */}
@@ -329,9 +319,13 @@ export default function App() {
               <blockquote className="testimonial-quote">
                 &quot;Aimé is the feature I didn&apos;t know I needed. I asked &apos;when did we start the Lexapro?&apos; and got the answer with the exact session cited. Took 2 seconds.&quot;
               </blockquote>
-              <cite className="testimonial-attribution">
-                — Psychiatrist, San Francisco
-              </cite>
+              <div className="testimonial-footer">
+                <div className="testimonial-avatar">M</div>
+                <cite className="testimonial-attribution">
+                  <span className="testimonial-role">Psychiatrist</span>
+                  <span className="testimonial-location">San Francisco, CA</span>
+                </cite>
+              </div>
             </div>
 
             {/* Testimonial 3 */}
@@ -339,16 +333,20 @@ export default function App() {
               <blockquote className="testimonial-quote">
                 &quot;I finally trust my AI notes. One click shows the supporting source. That&apos;s the difference.&quot;
               </blockquote>
-              <cite className="testimonial-attribution">
-                — LMFT, Mountain View
-              </cite>
+              <div className="testimonial-footer">
+                <div className="testimonial-avatar">T</div>
+                <cite className="testimonial-attribution">
+                  <span className="testimonial-role">LMFT</span>
+                  <span className="testimonial-location">Mountain View, CA</span>
+                </cite>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="pricing">
+      <section id="pricing" className="pricing fade-in-section">
         <div className="container">
           <div className="section-header">
             <h2>Unlimited telehealth + AI notes on every plan.</h2>
@@ -538,29 +536,53 @@ export default function App() {
 
             <div className="dynamic-visual">
               <div className="visual-content active" data-visual="capture">
-                <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
-                  [Session Recording Interface]
-                  <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 Audio waveform with real-time transcription and speaker labels
-                  </small>
+                <div className="mockup-frame">
+                  <div className="mockup-header">
+                    <div className="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span className="mockup-title">Recording Session</span>
+                  </div>
+                  <div className="mockup-body">
+                    <div className="mockup-skeleton mockup-skeleton-title"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text short"></div>
+                    <div className="mockup-skeleton mockup-skeleton-card"></div>
+                  </div>
                 </div>
               </div>
 
               <div className="visual-content" data-visual="sign">
-                <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
-                  [Note Review Interface]
-                  <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 SOAP note with highlighted citations — click any claim to see source
-                  </small>
+                <div className="mockup-frame">
+                  <div className="mockup-header">
+                    <div className="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span className="mockup-title">Review & Sign</span>
+                  </div>
+                  <div className="mockup-body">
+                    <div className="mockup-skeleton mockup-skeleton-title"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text"></div>
+                    <div className="mockup-skeleton mockup-skeleton-card"></div>
+                  </div>
                 </div>
               </div>
 
               <div className="visual-content" data-visual="context">
-                <div className="product-demo-placeholder" style={{ height: "320px", flexDirection: "column", gap: "12px" }}>
-                  [Patient Profile Growth]
-                  <small style={{ display: "block", marginTop: "12px", fontSize: "13px", opacity: "0.8", maxWidth: "380px", textAlign: "center" }}>
-                    💡 Timeline showing sessions compounding into longitudinal intelligence
-                  </small>
+                <div className="mockup-frame">
+                  <div className="mockup-header">
+                    <div className="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span className="mockup-title">Patient Profile</span>
+                  </div>
+                  <div className="mockup-body">
+                    <div className="mockup-skeleton mockup-skeleton-text short"></div>
+                    <div className="mockup-skeleton mockup-skeleton-card"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text"></div>
+                    <div className="mockup-skeleton mockup-skeleton-text short"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -580,7 +602,9 @@ export default function App() {
             <div className="faq-item">
               <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
                 <span>Is the Free plan really unlimited?</span>
-                <span className="faq-icon">+</span>
+                <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
               </button>
               <div className="faq-answer" id="faq-answer-1">
                 <div className="faq-answer-content">
@@ -593,7 +617,9 @@ export default function App() {
             <div className="faq-item">
               <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
                 <span>What happens to my recordings?</span>
-                <span className="faq-icon">+</span>
+                <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
               </button>
               <div className="faq-answer" id="faq-answer-2">
                 <div className="faq-answer-content">
@@ -606,7 +632,9 @@ export default function App() {
             <div className="faq-item">
               <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
                 <span>Does AidMi work with my current EHR?</span>
-                <span className="faq-icon">+</span>
+                <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
               </button>
               <div className="faq-answer" id="faq-answer-3">
                 <div className="faq-answer-content">
@@ -619,7 +647,9 @@ export default function App() {
             <div className="faq-item">
               <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
                 <span>Is it HIPAA compliant?</span>
-                <span className="faq-icon">+</span>
+                <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
               </button>
               <div className="faq-answer" id="faq-answer-4">
                 <div className="faq-answer-content">
@@ -632,7 +662,9 @@ export default function App() {
             <div className="faq-item">
               <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
                 <span>Do you train your AI on my patient data?</span>
-                <span className="faq-icon">+</span>
+                <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
               </button>
               <div className="faq-answer" id="faq-answer-5">
                 <div className="faq-answer-content">
@@ -645,7 +677,9 @@ export default function App() {
             <div className="faq-item">
               <button className="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
                 <span>How accurate are the AI notes?</span>
-                <span className="faq-icon">+</span>
+                <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
               </button>
               <div className="faq-answer" id="faq-answer-6">
                 <div className="faq-answer-content">
