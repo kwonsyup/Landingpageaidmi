@@ -1393,6 +1393,108 @@ nav a:focus {
   fill: var(--dark-navy);
 }
 
+/* ===== BRIEF PREVIEW - BH-SPECIFIC ELEMENTS ===== */
+
+/* Risk Banner - Green = Safe */
+.brief-risk-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, #d1fae5, #ecfdf5);
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #047857;
+  margin-bottom: 12px;
+}
+
+.brief-risk-banner svg {
+  fill: #059669;
+  flex-shrink: 0;
+}
+
+/* Clinical Measures Row */
+.brief-measures-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.brief-measure {
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.measure-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+}
+
+.measure-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.measure-improving {
+  color: #059669;
+}
+
+.measure-improving::before {
+  content: '↓ ';
+  font-size: 12px;
+}
+
+.measure-stable {
+  color: #64748b;
+}
+
+.measure-worsening {
+  color: #dc2626;
+}
+
+.measure-worsening::before {
+  content: '↑ ';
+  font-size: 12px;
+}
+
+/* Medication Change Badge */
+.med-change-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+/* Muted Item (secondary info) */
+.brief-item-muted {
+  color: #94a3b8 !important;
+  font-style: italic;
+  font-size: 12px !important;
+}
+
+.brief-item-muted::before {
+  background: #cbd5e1 !important;
+}
+
 /* ==================== HERO SOCIAL PROOF ==================== */
 .hero-social-proof {
   display: flex;
@@ -1632,7 +1734,7 @@ nav a:focus {
 
 /* ==================== PROBLEM SECTION ==================== */
 .problem-section {
-  padding: 100px 0;
+  padding: 60px 0 80px;
   background: linear-gradient(180deg, var(--pure-white) 0%, var(--off-white) 100%);
   position: relative;
 }
@@ -1640,7 +1742,7 @@ nav a:focus {
 .problem-section .section-header {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 60px;
+  margin: 0 auto 48px;
 }
 
 .problem-section h2 {
@@ -1954,6 +2056,44 @@ nav a:focus {
   .before-column,
   .after-column {
     padding: 32px 24px;
+  }
+}
+
+/* ===== PROBLEM SECTION CTA ===== */
+.problem-section-cta {
+  text-align: center;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0, 64, 140, 0.08);
+}
+
+.section-cta-text {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-bottom: 20px;
+}
+
+.problem-section-cta .btn {
+  margin-bottom: 12px;
+}
+
+.section-cta-note {
+  display: block;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .problem-section-cta {
+    margin-top: 40px;
+    padding-top: 32px;
+  }
+  
+  .section-cta-text {
+    font-size: 18px;
   }
 }
 

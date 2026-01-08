@@ -146,25 +146,61 @@ export default function App() {
                         <span className="brief-meta">Session #14 · Last seen Oct 3</span>
                       </div>
                       
-                      <div className="brief-preview-section">
-                        <div className="brief-preview-label">
-                          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                          </svg>
-                          What changed
-                        </div>
-                        <p className="brief-preview-item">Lexapro increased 10mg → 15mg <span className="brief-citation">(Oct 3)</span></p>
-                        <p className="brief-preview-item">Sleep improved: 5 wakings → 2 per night</p>
+                      {/* Risk Status - Critical for BH */}
+                      <div className="brief-risk-banner">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span>No SI/HI reported · Last assessed Oct 3</span>
                       </div>
                       
+                      {/* Clinical Measures */}
                       <div className="brief-preview-section">
                         <div className="brief-preview-label">
                           <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
-                            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                            <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/>
+                          </svg>
+                          Measures
+                        </div>
+                        <div className="brief-measures-row">
+                          <div className="brief-measure">
+                            <span className="measure-label">PHQ-9</span>
+                            <span className="measure-value measure-improving">12 → 8</span>
+                          </div>
+                          <div className="brief-measure">
+                            <span className="measure-label">GAD-7</span>
+                            <span className="measure-value measure-stable">10</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Medication */}
+                      <div className="brief-preview-section">
+                        <div className="brief-preview-label">
+                          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/>
+                          </svg>
+                          Medications
+                        </div>
+                        <p className="brief-preview-item">
+                          <span className="med-change-badge">↑</span>
+                          Lexapro 10mg → 15mg <span className="brief-citation">(Oct 3)</span>
+                        </p>
+                        <p className="brief-preview-item brief-item-muted">
+                          Reports taking as prescribed
+                        </p>
+                      </div>
+                      
+                      {/* Follow Up */}
+                      <div className="brief-preview-section">
+                        <div className="brief-preview-label">
+                          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '14px', height: '14px' }}>
+                            <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                           </svg>
                           Follow up
                         </div>
-                        <p className="brief-preview-item">Job interview anxiety — mentioned stress about upcoming interview</p>
+                        <p className="brief-preview-item">Review sleep hygiene homework</p>
+                        <p className="brief-preview-item">Check in: job interview stress</p>
                       </div>
                       
                       <div className="brief-preview-footer">
@@ -345,6 +381,13 @@ export default function App() {
                 </li>
               </ul>
             </div>
+          </div>
+          
+          {/* Section CTA */}
+          <div className="problem-section-cta">
+            <p className="section-cta-text">Ready to stop scrambling?</p>
+            <a href="#" className="btn btn-primary contact-trigger">Get AidMi Free</a>
+            <span className="section-cta-note">No credit card required · HIPAA compliant</span>
           </div>
         </div>
       </section>
