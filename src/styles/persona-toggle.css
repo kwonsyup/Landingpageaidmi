@@ -135,6 +135,15 @@
 
 .persona-emoji {
   font-size: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.persona-emoji svg {
+  fill: var(--dark-navy);
 }
 
 .persona-header h3 {
@@ -356,9 +365,15 @@
 
 .mockup-icon {
   font-size: 24px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mockup-icon svg {
+  fill: var(--dark-navy);
 }
 
 .mockup-title-group {
@@ -395,6 +410,15 @@
 
 .section-label-icon {
   font-size: 16px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-label-icon svg {
+  fill: var(--dark-navy);
 }
 
 .mockup-alert {

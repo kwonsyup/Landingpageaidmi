@@ -635,7 +635,11 @@ export default function App() {
                 <div className="persona-panel-content">
                   <div className="persona-text-content">
                     <div className="persona-header">
-                      <span className="persona-emoji">🩺</span>
+                      <span className="persona-emoji">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                          <path d="M19 8h-1V5a3 3 0 00-6 0v3H8a3 3 0 00-3 3v4a9 9 0 0018 0v-4a3 3 0 00-3-3zm-5-3a1 1 0 012 0v3h-2V5zm4 10a7 7 0 01-14 0v-4a1 1 0 011-1h12a1 1 0 011 1v4z"/>
+                        </svg>
+                      </span>
                       <h3>Speed is everything.</h3>
                     </div>
                     <p className="persona-intro">
@@ -665,7 +669,11 @@ export default function App() {
                     <div className="persona-mockup">
                       <div className="mockup-card">
                         <div className="mockup-header">
-                          <span className="mockup-icon">📄</span>
+                          <span className="mockup-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                              <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                            </svg>
+                          </span>
                           <div className="mockup-title-group">
                             <div className="mockup-title">Today's Brief</div>
                             <div className="mockup-subtitle">Sarah M. · 9:00 AM</div>
@@ -673,7 +681,11 @@ export default function App() {
                         </div>
                         <div className="mockup-divider"></div>
                         <div className="mockup-section-label">
-                          <span className="section-label-icon">💊</span>
+                          <span className="section-label-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                              <path d="M4.22 11.29l6.07-6.07a5.006 5.006 0 017.08 0 5.006 5.006 0 010 7.08l-6.07 6.07a5.006 5.006 0 01-7.08 0 5.006 5.006 0 010-7.08zm1.41 1.42a3.004 3.004 0 000 4.24 3.004 3.004 0 004.24 0l2.83-2.83-4.24-4.24-2.83 2.83z"/>
+                            </svg>
+                          </span>
                           <span>Medication Changes</span>
                         </div>
                         <div className="mockup-med-list">
@@ -708,7 +720,11 @@ export default function App() {
                 <div className="persona-panel-content">
                   <div className="persona-text-content">
                     <div className="persona-header">
-                      <span className="persona-emoji">🧠</span>
+                      <span className="persona-emoji">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                          <path d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92.58C3.76 10.41 3.5 10.61 3.5 11s.26.59.58.76L6 12.34c.19 3.71 3.23 6.66 7 6.66 3.87 0 7-3.13 7-7V8c0-2.76-2.24-5-5-5h-2zm0 2h2c1.66 0 3 1.34 3 3v4c0 2.76-2.24 5-5 5s-5-2.24-5-5V9c0-2.21 1.79-4 4-4zm-1 3v3h2V8h-2zm0 4v2h2v-2h-2z"/>
+                        </svg>
+                      </span>
                       <h3>Deep work. Long arcs.</h3>
                     </div>
                     <p className="persona-intro">
@@ -738,7 +754,11 @@ export default function App() {
                     <div className="persona-mockup">
                       <div className="mockup-card">
                         <div className="mockup-header">
-                          <span className="mockup-icon">⭐</span>
+                          <span className="mockup-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                            </svg>
+                          </span>
                           <div className="mockup-title-group">
                             <div className="mockup-title">Aimé</div>
                           </div>
@@ -775,7 +795,11 @@ export default function App() {
                 <div className="persona-panel-content">
                   <div className="persona-text-content">
                     <div className="persona-header">
-                      <span className="persona-emoji">💬</span>
+                      <span className="persona-emoji">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                        </svg>
+                      </span>
                       <h3>Rapport is everything.</h3>
                     </div>
                     <p className="persona-intro">
@@ -805,7 +829,11 @@ export default function App() {
                     <div className="persona-mockup">
                       <div className="mockup-card">
                         <div className="mockup-header">
-                          <span className="mockup-icon">🧠</span>
+                          <span className="mockup-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                              <path d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92.58C3.76 10.41 3.5 10.61 3.5 11s.26.59.58.76L6 12.34c.19 3.71 3.23 6.66 7 6.66 3.87 0 7-3.13 7-7V8c0-2.76-2.24-5-5-5h-2zm0 2h2c1.66 0 3 1.34 3 3v4c0 2.76-2.24 5-5 5s-5-2.24-5-5V9c0-2.21 1.79-4 4-4zm-1 3v3h2V8h-2zm0 4v2h2v-2h-2z"/>
+                            </svg>
+                          </span>
                           <div className="mockup-title-group">
                             <div className="mockup-title">Memory</div>
                             <div className="mockup-subtitle">Auto-surfaced before session</div>
