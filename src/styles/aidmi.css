@@ -1364,34 +1364,36 @@ nav a:focus {
 }
 
 /* === Patient Header — HIGH CONTRAST VERSION === */
+/* === COMPACT: Patient Header — Single Row Layout === */
 .mockup-patient-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 18px;
+  padding: 10px 16px; /* Reduced from 12px */
   background: var(--dark-navy);
   color: white;
+  min-height: auto;
 }
 
 .patient-info {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
+/* Smaller avatar - COMPACT */
 .patient-avatar {
-  width: 44px;
-  height: 44px;
+  width: 32px; /* Reduced from 36px */
+  height: 32px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--salmon) 0%, #e08a7a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 11px; /* Reduced from 13px */
   font-weight: 700;
   color: white;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
 }
 
 /* Teal variant for Sarah Chen (different from bento's implied salmon) */
@@ -1399,78 +1401,151 @@ nav a:focus {
   background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
 }
 
-.patient-details {
+/* Inline layout for name + meta */
+.patient-details-inline {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 /* CRITICAL FIX: Patient name visibility - Increased specificity */
 .mockup-patient-header .patient-name {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 14px; /* Reduced from 15px */
+  font-weight: 600;
   margin: 0;
-  color: #ffffff !important;
-  letter-spacing: 0.2px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  white-space: nowrap;
 }
 
+.patient-meta-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.meta-diagnosis {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.meta-dot {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.meta-session {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Compact badges */
+.patient-badges-compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+}
+
+.badge-status svg {
+  width: 10px;
+  height: 10px;
+  fill: currentColor;
+}
+
+.badge-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  background: none;
+  padding: 0;
+}
+
+.badge-time svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  opacity: 0.7;
+}
+
+/* Legacy classes - keep for backwards compatibility but hide */
+.patient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* Meta row - all inline */
 .patient-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.9);
+  gap: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  flex-wrap: nowrap;
 }
 
-/* FIXED: Diagnosis tag — High contrast */
+/* Smaller, more compact tag */
 .meta-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 3px 10px;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
   font-weight: 600;
   color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 10px;
+  white-space: nowrap;
 }
 
 /* Trauma tag variant - slightly different tint */
 .meta-tag-trauma {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.4) 0%, rgba(139, 92, 246, 0.4) 100%);
-  color: #ffffff !important;
-  border: 1px solid rgba(168, 85, 247, 0.5);
+  background: rgba(139, 92, 246, 0.35);
+  color: #e9d5ff !important;
 }
 
 /* FIXED: Session number — More visible */
 .meta-separator {
-  opacity: 0.6;
-  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.meta-session {
-  color: rgba(255, 255, 255, 0.95) !important;
-  font-weight: 500;
-}
-
+/* Compact badges - horizontal, no wrap */
 .patient-badges {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .badge {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
+  gap: 4px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: 1px solid transparent;
+  padding: 4px 10px;
+  border-radius: 16px;
+  white-space: nowrap;
 }
 
 .badge svg {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 .badge-improving {
@@ -1484,33 +1559,59 @@ nav a:focus {
 
 /* FIXED: Stabilizing badge — High contrast */
 .badge-stabilizing {
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.3) 0%, rgba(59, 130, 246, 0.3) 100%);
+  background: rgba(96, 165, 250, 0.25);
   color: #ffffff !important;
-  border: 1px solid rgba(147, 197, 253, 0.5);
+  border: 1px solid rgba(147, 197, 253, 0.4);
 }
 
 .badge-stabilizing svg {
   fill: #93c5fd;
 }
 
-/* FIXED: Countdown — More visible */
+/* Compact countdown - ensure no wrap */
 .session-countdown {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.95) !important;
+  gap: 4px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 600;
   background: rgba(255, 255, 255, 0.1);
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 16px;
+  white-space: nowrap;
 }
 
 .session-countdown svg {
-  width: 14px;
-  height: 14px;
-  fill: rgba(255, 255, 255, 0.9);
+  width: 12px;
+  height: 12px;
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+/* === Responsive - Stack only on very small screens === */
+@media (max-width: 400px) {
+  .mockup-patient-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+  
+  .patient-details-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  
+  .patient-badges-compact {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .patient-badges {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 
 /* === Today's Brief Card === */
@@ -1793,6 +1894,17 @@ nav a:focus {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+
+  .patient-details-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  
+  .patient-badges-compact {
+    width: 100%;
+    justify-content: flex-start;
   }
   
   .patient-badges {
@@ -2443,9 +2555,20 @@ nav a:focus {
   transition: all 0.3s ease;
 }
 
+.partner-logo svg {
+  width: auto;
+  height: 32px;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
 .partner-logo:hover {
   background: rgba(0, 64, 140, 0.04);
   border-color: rgba(0, 64, 140, 0.08);
+  color: var(--dark-navy);
+}
+
+.partner-logo:hover svg {
   color: var(--dark-navy);
 }
 

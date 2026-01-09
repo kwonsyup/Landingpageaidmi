@@ -1,7 +1,7 @@
 import '../styles/aidmi.css';
 import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
-import aidmiLogo from 'figma:asset/914aef0a7ba2e5e4040bf62e5cf27aa2b5b35101.png';
+import aidmiLogo from '../aidmi-logo.svg';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
@@ -205,30 +205,30 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Patient Header - SARAH CHEN (Different from bento) */}
+                  {/* Patient Header - COMPACT VERSION */}
                   <div className="mockup-patient-header">
                     <div className="patient-info">
                       <div className="patient-avatar patient-avatar-teal">
                         <span>SC</span>
                       </div>
-                      <div className="patient-details">
-                        <h4 className="patient-name">Sarah Chen</h4>
-                        <div className="patient-meta">
-                          <span className="meta-tag meta-tag-trauma">PTSD + Adjustment</span>
-                          <span className="meta-separator">·</span>
-                          <span className="meta-session">Session #8</span>
-                        </div>
+                      <div className="patient-details-inline">
+                        <span className="patient-name">Sarah Chen</span>
+                        <span className="patient-meta-inline">
+                          <span className="meta-diagnosis">PTSD + Adjustment</span>
+                          <span className="meta-dot">·</span>
+                          <span className="meta-session">#8</span>
+                        </span>
                       </div>
                     </div>
-                    <div className="patient-badges">
-                      <div className="badge badge-stabilizing">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <div className="patient-badges-compact">
+                      <span className="badge-status badge-stabilizing">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                         Stabilizing
-                      </div>
-                      <div className="session-countdown">
+                      </span>
+                      <span className="badge-time">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                        In 15 min
-                      </div>
+                        15 min
+                      </span>
                     </div>
                   </div>
 
@@ -331,22 +331,134 @@ export default function App() {
         <div className="trust-label">Co-designed with clinicians from:</div>
         <div className="marquee">
           <div className="marquee-content">
-            <div className="partner-logo">Stanford Medicine</div>
-            <div className="partner-logo">Kaiser Permanente</div>
-            <div className="partner-logo">UCSF Health</div>
-            <div className="partner-logo">Sutter Health</div>
-            <div className="partner-logo">The Wright Institute</div>
-            <div className="partner-logo">One Medical</div>
-            <div className="partner-logo">Mindful Health Solutions</div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <rect x="0" y="10" width="2" height="12" rx="1"/>
+                  <rect x="4" y="10" width="2" height="12" rx="1"/>
+                  <path d="M10 15.5C10 13.567 11.567 12 13.5 12H14.5C16.433 12 18 13.567 18 15.5C18 17.433 16.433 19 14.5 19H13.5C11.567 19 10 17.433 10 15.5Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <text x="22" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Stanford Medicine</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <circle cx="8" cy="16" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <path d="M5 16L7 18L11 14" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Kaiser Permanente</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <path d="M6 16L10 12L14 16L10 20L6 16Z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
+                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">UCSF Health</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <path d="M4 20C4 18 6 12 10 12C14 12 16 18 16 20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                  <circle cx="10" cy="14" r="2" fill="currentColor"/>
+                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Sutter Health</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <rect x="4" y="11" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                  <path d="M7 11V9C7 8.44772 7.44772 8 8 8H12C12.5523 8 13 8.44772 13 9V11" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">The Wright Institute</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <path d="M10 12C12.2091 12 14 13.7909 14 16C14 18.2091 12.2091 20 10 20C7.79086 20 6 18.2091 6 16C6 13.7909 7.79086 12 10 12Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">One Medical</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <circle cx="10" cy="16" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                  <path d="M10 13V16M10 16V19M10 16H13M10 16H7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Mindful Health Solutions</text>
+                </g>
+              </svg>
+            </div>
           </div>
           <div className="marquee-content" aria-hidden="true">
-            <div className="partner-logo">Stanford Medicine</div>
-            <div className="partner-logo">Kaiser Permanente</div>
-            <div className="partner-logo">UCSF Health</div>
-            <div className="partner-logo">Sutter Health</div>
-            <div className="partner-logo">The Wright Institute</div>
-            <div className="partner-logo">One Medical</div>
-            <div className="partner-logo">Mindful Health Solutions</div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <rect x="0" y="10" width="2" height="12" rx="1"/>
+                  <rect x="4" y="10" width="2" height="12" rx="1"/>
+                  <path d="M10 15.5C10 13.567 11.567 12 13.5 12H14.5C16.433 12 18 13.567 18 15.5C18 17.433 16.433 19 14.5 19H13.5C11.567 19 10 17.433 10 15.5Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <text x="22" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Stanford Medicine</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <circle cx="8" cy="16" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <path d="M5 16L7 18L11 14" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Kaiser Permanente</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <path d="M6 16L10 12L14 16L10 20L6 16Z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
+                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">UCSF Health</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <path d="M4 20C4 18 6 12 10 12C14 12 16 18 16 20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                  <circle cx="10" cy="14" r="2" fill="currentColor"/>
+                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Sutter Health</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <rect x="4" y="11" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                  <path d="M7 11V9C7 8.44772 7.44772 8 8 8H12C12.5523 8 13 8.44772 13 9V11" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">The Wright Institute</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <path d="M10 12C12.2091 12 14 13.7909 14 16C14 18.2091 12.2091 20 10 20C7.79086 20 6 18.2091 6 16C6 13.7909 7.79086 12 10 12Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">One Medical</text>
+                </g>
+              </svg>
+            </div>
+            <div className="partner-logo">
+              <svg viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                  <circle cx="10" cy="16" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                  <path d="M10 13V16M10 16V19M10 16H13M10 16H7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Mindful Health Solutions</text>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
