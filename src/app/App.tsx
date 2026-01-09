@@ -764,7 +764,7 @@ export default function App() {
                           </div>
                         </div>
                         <div className="mockup-query">
-                          <span>How has their PHQ-9 changed?</span>
+                          <span>Was the insomnia before or after the job loss?</span>
                         </div>
                         <div className="mockup-trend">
                           <div className="trend-header">PHQ-9 Trend (5 sessions)</div>
@@ -879,90 +879,6 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof Section */}
-      <section className="testimonials fade-in-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>2 hours back. Every single day.</h2>
-            <p className="section-subhead">Hear from licensed professionals who transformed their practice.</p>
-          </div>
-
-          <div className="testimonials-grid">
-            {/* Testimonial 1 - Psychologist */}
-            <div className="testimonial-card">
-              <blockquote className="testimonial-quote">
-                &quot;I used to spend 10 minutes before each session digging through old notes. Now I glance at Today&apos;s Brief and I&apos;m ready.&quot;
-              </blockquote>
-              <div className="testimonial-footer">
-                <div className="license-badge license-badge-psyd">
-                  <span className="license-abbrev">PsyD</span>
-                </div>
-                <cite className="testimonial-attribution">
-                  <span className="testimonial-role">Licensed Clinical Psychologist</span>
-                  <span className="testimonial-meta">
-                    <span className="testimonial-location">Palo Alto, CA</span>
-                    <span className="verified-badge">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                      </svg>
-                      Verified
-                    </span>
-                  </span>
-                </cite>
-              </div>
-            </div>
-
-            {/* Testimonial 2 - Psychiatrist */}
-            <div className="testimonial-card">
-              <blockquote className="testimonial-quote">
-                &quot;Aimé is the feature I didn&apos;t know I needed. I asked &apos;when did we start the Lexapro?&apos; and got the answer with the exact session cited. Took 2 seconds.&quot;
-              </blockquote>
-              <div className="testimonial-footer">
-                <div className="license-badge license-badge-md">
-                  <span className="license-abbrev">MD</span>
-                </div>
-                <cite className="testimonial-attribution">
-                  <span className="testimonial-role">Board-Certified Psychiatrist</span>
-                  <span className="testimonial-meta">
-                    <span className="testimonial-location">San Francisco, CA</span>
-                    <span className="verified-badge">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                      </svg>
-                      Verified
-                    </span>
-                  </span>
-                </cite>
-              </div>
-            </div>
-
-            {/* Testimonial 3 - Therapist */}
-            <div className="testimonial-card">
-              <blockquote className="testimonial-quote">
-                &quot;I finally trust my AI notes. One click shows the supporting source. That&apos;s the difference.&quot;
-              </blockquote>
-              <div className="testimonial-footer">
-                <div className="license-badge license-badge-lmft">
-                  <span className="license-abbrev">LMFT</span>
-                </div>
-                <cite className="testimonial-attribution">
-                  <span className="testimonial-role">Licensed Marriage & Family Therapist</span>
-                  <span className="testimonial-meta">
-                    <span className="testimonial-location">Mountain View, CA</span>
-                    <span className="verified-badge">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                      </svg>
-                      Verified
-                    </span>
-                  </span>
-                </cite>
               </div>
             </div>
           </div>
