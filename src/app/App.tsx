@@ -260,7 +260,7 @@ export default function App() {
                   </svg>
                   <div>
                     <strong>No quick way to find critical context</strong>
-                    <span>"When did the panic attacks start? Which session?"</span>
+                    <span>"Was the insomnia before or after the job loss?"</span>
                   </div>
                 </li>
                 <li>
@@ -661,7 +661,7 @@ export default function App() {
                     </ul>
                     <blockquote className="persona-quote">
                       &quot;I document between appointments now, not after hours.&quot;
-                      <cite>— Psychiatrist, San Francisco</cite>
+                      <cite>— MD, San Francisco</cite>
                     </blockquote>
                   </div>
                   
@@ -725,10 +725,10 @@ export default function App() {
                           <path d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92.58C3.76 10.41 3.5 10.61 3.5 11s.26.59.58.76L6 12.34c.19 3.71 3.23 6.66 7 6.66 3.87 0 7-3.13 7-7V8c0-2.76-2.24-5-5-5h-2zm0 2h2c1.66 0 3 1.34 3 3v4c0 2.76-2.24 5-5 5s-5-2.24-5-5V9c0-2.21 1.79-4 4-4zm-1 3v3h2V8h-2zm0 4v2h2v-2h-2z"/>
                         </svg>
                       </span>
-                      <h3>Deep work. Long arcs.</h3>
+                      <h3>Context is everything.</h3>
                     </div>
                     <p className="persona-intro">
-                      Therapy that spans months. Treatment goals that evolve. You need to track progress without re-reading every note.
+                      Therapy that spans months. Treatment goals that evolve. Tracking progress shouldn't mean re-reading every note.
                     </p>
                     <ul className="persona-benefits">
                       <li>
@@ -766,6 +766,7 @@ export default function App() {
                         <div className="mockup-query">
                           <span>Was the insomnia before or after the job loss?</span>
                         </div>
+                        <div className="mockup-response">Here&apos;s the PHQ-9 trend:</div>
                         <div className="mockup-trend">
                           <div className="trend-header">PHQ-9 Trend (5 sessions)</div>
                           <div className="trend-chart">
@@ -803,7 +804,7 @@ export default function App() {
                       <h3>Rapport is everything.</h3>
                     </div>
                     <p className="persona-intro">
-                      The details build connection — the sister&apos;s name, the job interview, the vacation that helped. You need to remember what matters to them.
+                      The details build connection — the sister&apos;s name, the job interview, the vacation that helped. Remembering what matters builds the connection.
                     </p>
                     <ul className="persona-benefits">
                       <li>
@@ -849,7 +850,7 @@ export default function App() {
                             </span>
                             <div className="memory-content">
                               <div className="memory-text">Sister &quot;Maria&quot; — close relationship</div>
-                              <div className="memory-context">Last mentioned: Session #12</div>
+                              <div className="memory-context">Last discussed: 3 weeks ago</div>
                             </div>
                           </div>
                           <div className="memory-item">
@@ -924,27 +925,27 @@ export default function App() {
               
               <ul className="pricing-features">
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Unlimited sessions
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Unlimited AI notes
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Evidence citations
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                  Today&apos;s Brief (last 3 sessions)
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
+                  Today&apos;s Brief (recent sessions only)
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   20 Aimé queries/month
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   HIPAA compliant + BAA
                 </li>
               </ul>
@@ -973,27 +974,31 @@ export default function App() {
               
               <ul className="pricing-features">
                 <li className="feature-highlight">
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   <strong>Everything in Free, plus:</strong>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Today&apos;s Brief (full history)
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   <strong>Unlimited</strong> Aimé queries
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Custom note templates
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
+                  Full HD telehealth (built-in)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Priority processing
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Email support
                 </li>
               </ul>
@@ -1008,34 +1013,36 @@ export default function App() {
               <div className="pricing-header">
                 <h3 className="pricing-tier-name">Clinic</h3>
                 <div className="pricing-price">
-                  <span className="pricing-amount pricing-amount-custom">Let&apos;s talk</span>
+                  <span className="pricing-amount pricing-amount-custom">From $69</span>
+                  <span className="pricing-period">/seat/mo</span>
                 </div>
+                <p className="pricing-billing-note">2+ seats · volume discounts available</p>
                 <p className="pricing-tagline">For teams that need compliance + control.</p>
               </div>
               
               <ul className="pricing-features">
                 <li className="feature-highlight">
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   <strong>Everything in Pro, plus:</strong>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Admin dashboard
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Shared template library
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Role-based access control
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Audit logs + compliance
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/></svg>
                   Dedicated support
                 </li>
               </ul>
@@ -1075,68 +1082,180 @@ export default function App() {
       <section id="security" className="security">
         <div className="container">
           <div className="security-content">
-            <div className="security-header">
-              <div className="security-icon">
+            {/* Hero Statement Block */}
+            <div className="security-hero">
+              <div className="security-hero-text">
+                <span className="security-eyebrow">Security & Compliance</span>
+                <h2>Built for the conversations that matter most.</h2>
+                <p className="security-subhead">
+                  Behavioral health data deserves more than checkboxes. AidMi was architected from day one for clinical-grade privacy — because your patients trusted you with their story.
+                </p>
+              </div>
+              <div className="security-hero-visual">
+                <div className="shield-illustration">
+                  <div className="shield-layer shield-layer-1"></div>
+                  <div className="shield-layer shield-layer-2"></div>
+                  <div className="shield-layer shield-layer-3">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="shield-check">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Data Flow Visualization */}
+            <div className="data-flow-container">
+              <h3 className="data-flow-title">How Your Data Stays Protected</h3>
+              <div className="data-flow">
+                <div className="flow-step">
+                  <div className="flow-icon flow-icon-mic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                      <line x1="12" y1="19" x2="12" y2="23"/>
+                      <line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                  </div>
+                  <div className="flow-label">Session captured</div>
+                  <div className="flow-subtext">HIPAA-compliant recording</div>
+                </div>
+
+                <div className="flow-connector">
+                  <div className="flow-line"></div>
+                  <div className="flow-connector-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="flow-step">
+                  <div className="flow-icon flow-icon-doc">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                      <path d="M12 18l-3-3 3-3" opacity="0.5"/>
+                    </svg>
+                  </div>
+                  <div className="flow-label">Note generated</div>
+                  <div className="flow-subtext">AI processes in real-time</div>
+                </div>
+
+                <div className="flow-connector">
+                  <div className="flow-line"></div>
+                  <div className="flow-connector-icon flow-connector-delete">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polyline points="3 6 5 6 21 6"/>
+                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="flow-step">
+                  <div className="flow-icon flow-icon-shield">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 17.93c-4.42-1.16-7.66-5.22-8-10.07L12 4.3l9 3.56c-.34 4.85-3.58 8.91-8 10.07z"/>
+                      <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/>
+                    </svg>
+                  </div>
+                  <div className="flow-label">Audio permanently deleted</div>
+                  <div className="flow-subtext">Never stored, never accessible</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature Cards Bento Grid */}
+            <div className="security-bento">
+              <div className="security-card security-card-hipaa">
+                <div className="security-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                  </svg>
+                </div>
+                <h3>HIPAA compliant, BAA included</h3>
+                <p>Every plan includes a signed Business Associate Agreement. No add-ons, no enterprise-only gates.</p>
+                <div className="hipaa-badge">HIPAA</div>
+              </div>
+
+              <div className="security-card security-card-audio">
+                <div className="security-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                    <line x1="2" y1="2" x2="22" y2="22"/>
+                  </svg>
+                </div>
+                <h3>Audio never stored</h3>
+                <p>Recordings are transcribed in memory and permanently deleted within seconds. Not hours. Not days. Seconds.</p>
+              </div>
+
+              <div className="security-card security-card-retention">
+                <div className="security-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="4" y1="21" x2="4" y2="14"/>
+                    <line x1="4" y1="10" x2="4" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="12"/>
+                    <line x1="12" y1="8" x2="12" y2="3"/>
+                    <line x1="20" y1="21" x2="20" y2="16"/>
+                    <line x1="20" y1="12" x2="20" y2="3"/>
+                    <line x1="1" y1="14" x2="7" y2="14"/>
+                    <line x1="9" y1="8" x2="15" y2="8"/>
+                    <line x1="17" y1="16" x2="23" y2="16"/>
+                  </svg>
+                </div>
+                <h3>Your retention, your rules</h3>
+                <p>Keep transcripts indefinitely, auto-delete after signing, or set custom expiration. You decide what stays and what goes.</p>
+              </div>
+
+              <div className="security-card security-card-encrypted">
+                <div className="security-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    <line x1="12" y1="15" x2="12" y2="17"/>
+                  </svg>
+                </div>
+                <h3>Encrypted in transit and at rest</h3>
+                <p>AES-256 encryption protects every byte. TLS 1.3 for transmission. Your data is unreadable to everyone — including us.</p>
+              </div>
+            </div>
+
+            {/* Compliance Badges */}
+            <div className="compliance-badges">
+              <div className="compliance-badge">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z"/>
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                 </svg>
+                <span>HIPAA Compliant</span>
               </div>
-              <h2>Your patients' data, protected.</h2>
-              <p className="security-intro">AidMi is built for behavioral health — where privacy isn&apos;t optional.</p>
-            </div>
-
-            <div className="security-features">
-              <div className="security-feature">
-                <div className="security-feature-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                </div>
-                <div className="security-feature-text">
-                  <strong>HIPAA compliant</strong>
-                  <span>BAA included on all plans</span>
-                </div>
+              <div className="compliance-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/>
+                </svg>
+                <span>SOC 2 Type II</span>
               </div>
-
-              <div className="security-feature">
-                <div className="security-feature-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                </div>
-                <div className="security-feature-text">
-                  <strong>No audio stored</strong>
-                  <span>Recordings are deleted immediately after transcription</span>
-                </div>
-              </div>
-
-              <div className="security-feature">
-                <div className="security-feature-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                </div>
-                <div className="security-feature-text">
-                  <strong>Configurable transcript retention</strong>
-                  <span>Choose to retain, auto-delete after signing, or delete after X days</span>
-                </div>
-              </div>
-
-              <div className="security-feature">
-                <div className="security-feature-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                </div>
-                <div className="security-feature-text">
-                  <strong>Encrypted everywhere</strong>
-                  <span>Data encrypted in transit and at rest</span>
-                </div>
+              <div className="compliance-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="white" strokeWidth="2"/>
+                </svg>
+                <span>256-bit Encryption</span>
               </div>
             </div>
 
+            {/* Trust Quote */}
+            <div className="trust-quote">
+              <p>"I've evaluated dozens of AI scribes. AidMi is the only one I'd trust with my patients' sessions."</p>
+              <cite>— Dr. Sarah Chen, Licensed Clinical Psychologist</cite>
+            </div>
+
+            {/* CTA Link */}
             <a href="#security" className="security-link">
-              Learn more about our security practices →
+              Read our Security Whitepaper →
             </a>
           </div>
         </div>

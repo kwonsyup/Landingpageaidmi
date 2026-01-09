@@ -473,6 +473,18 @@
   max-width: 85%;
 }
 
+.mockup-response {
+  background: #f1f5f9;
+  color: var(--text-dark);
+  padding: 10px 14px;
+  border-radius: 16px 16px 16px 4px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  align-self: flex-start;
+  max-width: 85%;
+}
+
 .trend-header {
   font-size: 14px;
   font-weight: 600;
