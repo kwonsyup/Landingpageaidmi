@@ -2644,33 +2644,6 @@ nav a:focus {
   border-radius: 3px 3px 0 0;
 }
 
-/* Content Panels */
-.persona-panels {
-  position: relative;
-  min-height: 500px;
-}
-
-.persona-panel {
-  display: none;
-  opacity: 0;
-  animation: fadeIn 0.4s ease forwards;
-}
-
-.persona-panel.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Panel Layout - Split 50/50 */
 .persona-content {
   display: grid;
@@ -4112,9 +4085,10 @@ nav a:focus {
   line-height: 1.5;
   color: var(--text-dark);
   margin: 0;
-  background: #fffbeb;
+  background: #f0f9ff; /* Changed from #fffbeb (yellow) to pale blue for medical UI consistency */
   padding: 10px;
   border-radius: 6px;
+  border: 1px solid #bae6fd; /* Added blue border for "verified data" feel */
 }
 
 .citation-popup-link {

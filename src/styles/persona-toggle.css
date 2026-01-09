@@ -99,6 +99,7 @@
 
 .persona-panel.active {
   display: block;
+  opacity: 1; /* Explicitly set opacity to override any inherited styles */
   animation: fadeIn 0.3s ease;
 }
 

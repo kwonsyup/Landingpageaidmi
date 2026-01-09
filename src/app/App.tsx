@@ -248,7 +248,7 @@ export default function App() {
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                   </svg>
                   <div>
-                    <strong>Skimming old notes 5 minutes before the patient walks in</strong>
+                    <strong>Skimming old notes 10 minutes before the session</strong>
                     <span>Trying to remember: "What did we adjust last time?"</span>
                   </div>
                 </li>
@@ -270,8 +270,8 @@ export default function App() {
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
                   </svg>
                   <div>
-                    <strong>Starting sessions unprepared, relying on memory</strong>
-                    <span>Patients notice when you forget what mattered to them</span>
+                    <strong>Walking in cold, relying on memory</strong>
+                    <span>Patients notice when you've forgotten what matters to them</span>
                   </div>
                 </li>
               </ul>
@@ -296,7 +296,7 @@ export default function App() {
                     <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                   </svg>
                   <div>
-                    <strong>Today's Brief auto-generated before each session</strong>
+                    <strong>Today's Brief auto-generated before each visit</strong>
                     <span>What changed, what to follow up on. Scan in 30 seconds.</span>
                   </div>
                 </li>
@@ -310,8 +310,8 @@ export default function App() {
                     <circle cx="16" cy="10" r="1.5"/>
                   </svg>
                   <div>
-                    <strong>Aimé answers questions across months of sessions</strong>
-                    <span>"When did we start Lexapro?" → Instant answer with citation.</span>
+                    <strong>Ask anything about a patient's history</strong>
+                    <span>"How was their sleep in September?" → Cited answer, instantly</span>
                   </div>
                 </li>
                 <li>
@@ -321,8 +321,8 @@ export default function App() {
                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                   </svg>
                   <div>
-                    <strong>Start every session confident with longitudinal context</strong>
-                    <span>Every patient gets the attention they deserve, every time.</span>
+                    <strong>Know the story before they sit down</strong>
+                    <span>No more "remind me" moments — you remember what matters</span>
                   </div>
                 </li>
               </ul>
