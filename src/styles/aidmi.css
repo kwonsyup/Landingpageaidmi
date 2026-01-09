@@ -163,6 +163,19 @@ header.scrolled {
   width: auto;
 }
 
+/* Text-based logo styling */
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  letter-spacing: -0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-text:hover {
+  opacity: 0.8;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -668,6 +681,14 @@ nav a:focus {
   width: auto;
 }
 
+/* Text-based logo for modal */
+.getstarted-logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  letter-spacing: -0.5px;
+}
+
 /* Title */
 .getstarted-title {
   font-family: 'Merriweather', serif;
@@ -1024,6 +1045,10 @@ nav a:focus {
   
   .getstarted-logo img {
     height: 30px;
+  }
+  
+  .getstarted-logo-text {
+    font-size: 28px;
   }
   
   .getstarted-title {

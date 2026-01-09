@@ -1,7 +1,6 @@
 import '../styles/aidmi.css';
 import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
-import aidmiLogo from '@/aidmi-logo.svg';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
@@ -34,8 +33,8 @@ export default function App() {
       {/* Header */}
       <header id="main-header">
         <div className="header-container">
-          <a href="/" className="logo">
-            <img src={aidmiLogo} alt="AidMi" />
+          <a href="/" className="logo logo-text">
+            AidMi
           </a>
           <nav>
             <ul>
@@ -1732,8 +1731,8 @@ export default function App() {
           {modalView === 'onboarding' ? (
             <>
               {/* Logo */}
-              <div className="getstarted-logo">
-                <img src={aidmiLogo} alt="AidMi" />
+              <div className="getstarted-logo getstarted-logo-text">
+                AidMi
               </div>
               
               <h2 id="getStartedModalTitle" className="getstarted-title">Let&apos;s get you started</h2>
@@ -1789,8 +1788,8 @@ export default function App() {
           ) : (
             <>
               {/* Logo */}
-              <div className="getstarted-logo">
-                <img src={aidmiLogo} alt="AidMi" />
+              <div className="getstarted-logo getstarted-logo-text">
+                AidMi
               </div>
               
               <h3 className="getstarted-title">Welcome back</h3>
