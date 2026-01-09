@@ -1249,61 +1249,447 @@ nav a:focus {
   }
 }
 
+/* ==================== HERO MOCKUP — CODED UI ==================== */
+
 .hero-visual {
   position: relative;
+  perspective: 2000px;
 }
 
-/* Hero Mockup - Product Screenshot */
 .hero-mockup-wrapper {
   position: relative;
-  max-width: 540px;
+  max-width: 480px;
   width: 100%;
 }
 
-.hero-mockup-image {
-  width: 100%;
-  height: auto;
+.hero-mockup-frame {
+  background: #ffffff;
   border-radius: 16px;
   box-shadow: 
-    0px 50px 100px -20px rgba(50, 60, 93, 0.25),
-    0px 30px 60px -30px rgba(0, 40, 85, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
-  transform: translateY(0);
-  animation: float-hero 6s ease-in-out infinite;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    0 25px 50px -12px rgba(0, 40, 100, 0.25),
+    0 0 0 1px rgba(0, 40, 100, 0.08),
+    0 0 0 4px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  transform: perspective(2000px) rotateY(-6deg) rotateX(2deg);
+  animation: heroFloat 6s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.hero-mockup-image:hover {
+.hero-mockup-frame:hover {
   animation-play-state: paused;
-  transform: scale(1.02) translateY(-8px);
+  transform: perspective(2000px) rotateY(0deg) rotateX(0deg) translateY(-8px) scale(1.02);
   box-shadow: 
-    0px 60px 120px -20px rgba(50, 60, 93, 0.3),
-    0px 40px 80px -30px rgba(0, 40, 85, 0.35),
-    0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+    0 35px 60px -15px rgba(0, 40, 100, 0.3),
+    0 0 0 1px rgba(0, 40, 100, 0.1),
+    0 0 0 4px rgba(255, 255, 255, 0.6);
 }
 
-/* Responsive adjustments */
+@keyframes heroFloat {
+  0%, 100% { transform: perspective(2000px) rotateY(-6deg) rotateX(2deg) translateY(0); }
+  50% { transform: perspective(2000px) rotateY(-6deg) rotateX(2deg) translateY(-12px); }
+}
+
+/* === Chrome / Window Bar === */
+.mockup-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.chrome-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.chrome-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.chrome-dot-red { background: #ff5f57; }
+.chrome-dot-yellow { background: #ffbd2e; }
+.chrome-dot-green { background: #28c840; }
+
+.chrome-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark-navy);
+}
+
+.chrome-logo {
+  width: 14px;
+  height: 14px;
+  fill: var(--salmon);
+}
+
+.chrome-actions {
+  font-size: 11px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* === Patient Header === */
+.mockup-patient-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--dark-navy);
+  color: white;
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--salmon) 0%, #e08a7a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Teal variant for Sarah Chen (different from bento's implied salmon) */
+.patient-avatar-teal {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+}
+
+.patient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.patient-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.patient-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-tag {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Trauma tag variant - slightly different tint */
+.meta-tag-trauma {
+  background: rgba(168, 85, 247, 0.25);
+  color: #e9d5ff;
+}
+
+.meta-separator {
+  opacity: 0.5;
+}
+
+.patient-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge svg {
+  width: 12px;
+  height: 12px;
+}
+
+.badge-improving {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.badge-improving svg {
+  fill: #34d399;
+}
+
+/* Stabilizing variant (different from "Improving") */
+.badge-stabilizing {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.badge-stabilizing svg {
+  fill: #93c5fd;
+}
+
+.session-countdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.session-countdown svg {
+  width: 14px;
+  height: 14px;
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+/* === Today's Brief Card === */
+.mockup-brief-card {
+  padding: 16px;
+  background: #ffffff;
+}
+
+.brief-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.brief-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brief-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--dark-navy);
+}
+
+.brief-card-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin: 0;
+  font-family: 'Merriweather', serif;
+}
+
+.brief-updated {
+  font-size: 10px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* === Clinical Sections === */
+.brief-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.brief-section-row {
+  display: flex;
+  gap: 10px;
+}
+
+.section-indicator {
+  width: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.indicator-blue { background: #3b82f6; }
+.indicator-orange { background: #f59e0b; }
+.indicator-purple { background: #8b5cf6; }
+.indicator-green { background: #10b981; }
+
+.section-content h5 {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin: 0 0 3px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-content p {
+  font-size: 12px;
+  color: var(--text-gray);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.metric {
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.metric-positive {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.metric-sep {
+  color: #cbd5e1;
+  margin: 0 2px;
+}
+
+.metric-text {
+  color: var(--text-dark);
+}
+
+/* === Rapport Anchors Compact === */
+.brief-rapport-compact {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.rapport-compact-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.rapport-compact-header svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--salmon);
+}
+
+.rapport-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rapport-tag {
+  font-size: 11px;
+  color: var(--text-gray);
+  background: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+/* === Floating Aimé Bubble === */
+.mockup-aime-bubble {
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: white;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 40, 100, 0.15),
+    0 0 0 1px rgba(0, 40, 100, 0.08);
+  max-width: 240px;
+  transform: translateY(0);
+  animation: aimeFloat 4s ease-in-out infinite 1s;
+}
+
+@keyframes aimeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.aime-bubble-icon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aime-bubble-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: #f59e0b;
+}
+
+.aime-bubble-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.aime-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.aime-bubble-content p {
+  font-size: 12px;
+  color: var(--text-gray);
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* === Responsive === */
 @media (max-width: 1024px) {
-  @keyframes float-hero {
-    0%, 100% { 
-      transform: translateY(0); 
-    }
-    50% { 
-      transform: translateY(-10px); 
-    }
-  }
-  
   .hero-mockup-wrapper {
-    max-width: 520px;
+    max-width: 420px;
+    margin: 0 auto;
   }
   
-  .hero-mockup-image {
-    transform: translateY(0);
+  .hero-mockup-frame {
+    transform: perspective(2000px) rotateY(-3deg) rotateX(1deg);
   }
   
-  .hero-mockup-image:hover {
-    animation-play-state: paused;
-    transform: scale(1.02) translateY(-6px);
+  @keyframes heroFloat {
+    0%, 100% { transform: perspective(2000px) rotateY(-3deg) rotateX(1deg) translateY(0); }
+    50% { transform: perspective(2000px) rotateY(-3deg) rotateX(1deg) translateY(-8px); }
+  }
+  
+  .mockup-aime-bubble {
+    right: -10px;
+    bottom: -15px;
+    max-width: 200px;
   }
   
   .integration-strip {
@@ -1318,28 +1704,83 @@ nav a:focus {
 }
 
 @media (max-width: 768px) {
-  @keyframes float-hero {
-    0%, 100% { 
-      transform: translateY(0); 
-    }
-    50% { 
-      transform: translateY(-8px); 
-    }
-  }
-  
   .hero-mockup-wrapper {
     max-width: 100%;
-    margin: 0 auto;
   }
   
-  .hero-mockup-image {
-    transform: translateY(0);
+  .hero-mockup-frame {
+    transform: perspective(2000px) rotateY(0deg) rotateX(1deg);
     border-radius: 12px;
   }
   
-  .hero-mockup-image:hover {
-    animation-play-state: paused;
-    transform: scale(1.01) translateY(-4px);
+  @keyframes heroFloat {
+    0%, 100% { transform: perspective(2000px) rotateY(0deg) rotateX(1deg) translateY(0); }
+    50% { transform: perspective(2000px) rotateY(0deg) rotateX(1deg) translateY(-6px); }
+  }
+  
+  .mockup-patient-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .patient-badges {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .mockup-aime-bubble {
+    display: none;
+  }
+  
+  .rapport-tags {
+    gap: 4px;
+  }
+  
+  .rapport-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mockup-chrome {
+    padding: 8px 12px;
+  }
+  
+  .chrome-dots {
+    gap: 5px;
+  }
+  
+  .chrome-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .patient-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+  
+  .patient-name {
+    font-size: 14px;
+  }
+  
+  .mockup-brief-card {
+    padding: 12px;
+  }
+  
+  .brief-sections {
+    gap: 10px;
+  }
+  
+  .section-content h5 {
+    font-size: 10px;
+  }
+  
+  .section-content p {
+    font-size: 11px;
   }
   
   .hero-glow {

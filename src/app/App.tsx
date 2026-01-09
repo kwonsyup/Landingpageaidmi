@@ -1,7 +1,6 @@
 import '../styles/aidmi.css';
 import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
-import heroMockup from 'figma:asset/8d2ce938c8c8186bbbd2352154c59387624b41f5.png';
 import aidmiLogo from 'figma:asset/914aef0a7ba2e5e4040bf62e5cf27aa2b5b35101.png';
 
 export default function App() {
@@ -180,13 +179,143 @@ export default function App() {
               </div>
             </div>
 
+{/* Hero Visual - Coded Today's Brief Mockup */}
             <div className="hero-visual">
               <div className="hero-mockup-wrapper">
-                <img 
-                  src={heroMockup} 
-                  alt="AidMi Today's Brief showing patient status with PHQ-9, GAD-7 scores, recent stressors, symptom patterns, and rapport anchors"
-                  className="hero-mockup-image"
-                />
+                <div className="hero-mockup-frame">
+                  {/* App Chrome / Window Frame */}
+                  <div className="mockup-chrome">
+                    <div className="chrome-dots">
+                      <span className="chrome-dot chrome-dot-red"></span>
+                      <span className="chrome-dot chrome-dot-yellow"></span>
+                      <span className="chrome-dot chrome-dot-green"></span>
+                    </div>
+                    <div className="chrome-title">
+                      <svg className="chrome-logo" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/>
+                      </svg>
+                      <span>AidMi</span>
+                    </div>
+                    <div className="chrome-actions">
+                      <span className="chrome-time">2:15 PM</span>
+                    </div>
+                  </div>
+
+                  {/* Patient Header - SARAH CHEN (Different from bento) */}
+                  <div className="mockup-patient-header">
+                    <div className="patient-info">
+                      <div className="patient-avatar patient-avatar-teal">
+                        <span>SC</span>
+                      </div>
+                      <div className="patient-details">
+                        <h4 className="patient-name">Sarah Chen</h4>
+                        <div className="patient-meta">
+                          <span className="meta-tag meta-tag-trauma">PTSD + Adjustment</span>
+                          <span className="meta-separator">·</span>
+                          <span className="meta-session">Session #8</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="patient-badges">
+                      <div className="badge badge-stabilizing">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        Stabilizing
+                      </div>
+                      <div className="session-countdown">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        In 10 min
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Today's Brief Card - UNIQUE DATA */}
+                  <div className="mockup-brief-card">
+                    <div className="brief-card-header">
+                      <div className="brief-title-row">
+                        <svg className="brief-icon" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                        <h3>Today&apos;s Brief</h3>
+                      </div>
+                      <span className="brief-updated">Updated 4 min ago</span>
+                    </div>
+
+                    {/* Clinical Sections - ALL DIFFERENT FROM BENTO */}
+                    <div className="brief-sections">
+                      {/* Current Status - PCL-5 for trauma (not GAD-7) */}
+                      <div className="brief-section-row">
+                        <div className="section-indicator indicator-blue"></div>
+                        <div className="section-content">
+                          <h5>Current Status</h5>
+                          <p>
+                            <span className="metric metric-positive">PCL-5: 48 → 32</span>
+                            <span className="metric-sep">·</span>
+                            <span className="metric metric-positive">PHQ-9: 14 → 9</span>
+                            <span className="metric-sep">·</span>
+                            <span className="metric-text">First full week without nightmares</span>
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Recent Stressors - Healthcare worker (not tech) */}
+                      <div className="brief-section-row">
+                        <div className="section-indicator indicator-orange"></div>
+                        <div className="section-content">
+                          <h5>Recent Stressors</h5>
+                          <p>Pediatric code last month · Understaffed ER unit · 12-hour night shifts</p>
+                        </div>
+                      </div>
+
+                      {/* Symptom Patterns - Trauma symptoms (not sleep/stress) */}
+                      <div className="brief-section-row">
+                        <div className="section-indicator indicator-purple"></div>
+                        <div className="section-content">
+                          <h5>Symptom Patterns</h5>
+                          <p>
+                            <span className="metric metric-positive">Hypervigilance: 7/10 → 4/10</span>
+                            <span className="metric-sep">·</span>
+                            <span className="metric metric-positive">Intrusions: daily → 2x/week</span>
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* What's Helping - EMDR (not PMR/yoga) */}
+                      <div className="brief-section-row">
+                        <div className="section-indicator indicator-green"></div>
+                        <div className="section-content">
+                          <h5>What&apos;s Helping</h5>
+                          <p>EMDR processing · 5-4-3-2-1 grounding · Bedtime journaling · Dog walks</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Rapport Anchors - COMPLETELY DIFFERENT interests */}
+                    <div className="brief-rapport-compact">
+                      <div className="rapport-compact-header">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        <span>Rapport Anchors</span>
+                      </div>
+                      <div className="rapport-tags">
+                        <span className="rapport-tag">🐕 Golden retriever Max</span>
+                        <span className="rapport-tag">📚 True crime podcasts</span>
+                        <span className="rapport-tag">🎨 Watercolor painting</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Floating Aimé Bubble - DIFFERENT QUERY */}
+                  <div className="mockup-aime-bubble">
+                    <div className="aime-bubble-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/>
+                      </svg>
+                    </div>
+                    <div className="aime-bubble-content">
+                      <span className="aime-label">Aimé</span>
+                      <p>&quot;Nightmares improved after session #5 when EMDR began...&quot;</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
