@@ -234,9 +234,9 @@
   border-radius: 12px;
   padding: 20px;
   box-shadow: 
-    0 1px 3px rgba(0, 64, 140, 0.04),
-    0 8px 24px rgba(0, 64, 140, 0.08);
-  border: 1px solid rgba(0, 64, 140, 0.06);
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .mockup-badge {
@@ -426,23 +426,23 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #fef3c7;
+  background: #FEFCE8;
   padding: 10px 12px;
   border-radius: 8px;
-  border-left: 3px solid #f59e0b;
+  border-left: 3px solid #EAB308;
   margin-top: 12px;
 }
 
 .mockup-alert svg {
   width: 16px;
   height: 16px;
-  fill: #f59e0b;
+  fill: #A16207;
   flex-shrink: 0;
 }
 
 .mockup-alert span {
   font-size: 12px;
-  color: #92400e;
+  color: #A16207;
   font-weight: 500;
 }
 
