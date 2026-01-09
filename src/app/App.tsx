@@ -1,7 +1,7 @@
 import '../styles/aidmi.css';
 import { useState, useEffect } from 'react';
 import useLandingInteractions from './hooks/useLandingInteractions';
-import aidmiLogo from '../aidmi-logo.svg';
+import aidmiLogo from '@/aidmi-logo.svg';
 
 export default function App() {
   const [modalView, setModalView] = useState<'onboarding' | 'login'>('onboarding');
@@ -328,132 +328,104 @@ export default function App() {
         <div className="marquee">
           <div className="marquee-content">
             <div className="partner-logo">
-              <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <rect x="0" y="10" width="2" height="12" rx="1"/>
-                  <rect x="4" y="10" width="2" height="12" rx="1"/>
-                  <path d="M10 15.5C10 13.567 11.567 12 13.5 12H14.5C16.433 12 18 13.567 18 15.5C18 17.433 16.433 19 14.5 19H13.5C11.567 19 10 17.433 10 15.5Z" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <text x="22" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Stanford Medicine</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="8" width="3" height="8" rx="1" fill="currentColor"/>
+                <rect x="7" y="8" width="3" height="8" rx="1" fill="currentColor"/>
+                <circle cx="17" cy="12" r="5" stroke="currentColor" strokeWidth="2" fill="none"/>
               </svg>
+              <span>Stanford Medicine</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <circle cx="8" cy="16" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <path d="M5 16L7 18L11 14" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Kaiser Permanente</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M8 12L10.5 14.5L16 9" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
+              <span>Kaiser Permanente</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <path d="M6 16L10 12L14 16L10 20L6 16Z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
-                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">UCSF Health</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4L4 12L12 20L20 12L12 4Z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
               </svg>
+              <span>UCSF Health</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <path d="M4 20C4 18 6 12 10 12C14 12 16 18 16 20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                  <circle cx="10" cy="14" r="2" fill="currentColor"/>
-                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Sutter Health</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M4 18C4 14 8 8 12 8C16 8 20 14 20 18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                <circle cx="12" cy="10" r="2.5" fill="currentColor"/>
               </svg>
+              <span>Sutter Health</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <rect x="4" y="11" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <path d="M7 11V9C7 8.44772 7.44772 8 8 8H12C12.5523 8 13 8.44772 13 9V11" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">The Wright Institute</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="8" width="14" height="12" rx="1" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M9 8V6C9 4.89543 9.89543 4 11 4H13C14.1046 4 15 4.89543 15 6V8" stroke="currentColor" strokeWidth="2" fill="none"/>
               </svg>
+              <span>The Wright Institute</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <path d="M10 12C12.2091 12 14 13.7909 14 16C14 18.2091 12.2091 20 10 20C7.79086 20 6 18.2091 6 16C6 13.7909 7.79086 12 10 12Z" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
-                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">One Medical</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="12" cy="12" r="2" fill="currentColor"/>
               </svg>
+              <span>One Medical</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <circle cx="10" cy="16" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <path d="M10 13V16M10 16V19M10 16H13M10 16H7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Mindful Health Solutions</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M12 8V12M12 12V16M12 12H16M12 12H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
+              <span>Mindful Health Solutions</span>
             </div>
           </div>
           <div className="marquee-content" aria-hidden="true">
             <div className="partner-logo">
-              <svg viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <rect x="0" y="10" width="2" height="12" rx="1"/>
-                  <rect x="4" y="10" width="2" height="12" rx="1"/>
-                  <path d="M10 15.5C10 13.567 11.567 12 13.5 12H14.5C16.433 12 18 13.567 18 15.5C18 17.433 16.433 19 14.5 19H13.5C11.567 19 10 17.433 10 15.5Z" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <text x="22" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Stanford Medicine</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="8" width="3" height="8" rx="1" fill="currentColor"/>
+                <rect x="7" y="8" width="3" height="8" rx="1" fill="currentColor"/>
+                <circle cx="17" cy="12" r="5" stroke="currentColor" strokeWidth="2" fill="none"/>
               </svg>
+              <span>Stanford Medicine</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <circle cx="8" cy="16" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <path d="M5 16L7 18L11 14" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Kaiser Permanente</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M8 12L10.5 14.5L16 9" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
+              <span>Kaiser Permanente</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <path d="M6 16L10 12L14 16L10 20L6 16Z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
-                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">UCSF Health</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4L4 12L12 20L20 12L12 4Z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
               </svg>
+              <span>UCSF Health</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <path d="M4 20C4 18 6 12 10 12C14 12 16 18 16 20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                  <circle cx="10" cy="14" r="2" fill="currentColor"/>
-                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Sutter Health</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M4 18C4 14 8 8 12 8C16 8 20 14 20 18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                <circle cx="12" cy="10" r="2.5" fill="currentColor"/>
               </svg>
+              <span>Sutter Health</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <rect x="4" y="11" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <path d="M7 11V9C7 8.44772 7.44772 8 8 8H12C12.5523 8 13 8.44772 13 9V11" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">The Wright Institute</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="8" width="14" height="12" rx="1" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M9 8V6C9 4.89543 9.89543 4 11 4H13C14.1046 4 15 4.89543 15 6V8" stroke="currentColor" strokeWidth="2" fill="none"/>
               </svg>
+              <span>The Wright Institute</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <path d="M10 12C12.2091 12 14 13.7909 14 16C14 18.2091 12.2091 20 10 20C7.79086 20 6 18.2091 6 16C6 13.7909 7.79086 12 10 12Z" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
-                  <text x="18" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">One Medical</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="12" cy="12" r="2" fill="currentColor"/>
               </svg>
+              <span>One Medical</span>
             </div>
             <div className="partner-logo">
-              <svg viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor">
-                  <circle cx="10" cy="16" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <path d="M10 13V16M10 16V19M10 16H13M10 16H7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                  <text x="20" y="20" fontSize="13" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif" fill="currentColor">Mindful Health Solutions</text>
-                </g>
+              <svg className="partner-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M12 8V12M12 12V16M12 12H16M12 12H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
+              <span>Mindful Health Solutions</span>
             </div>
           </div>
         </div>
@@ -1348,53 +1320,158 @@ export default function App() {
             </div>
 
             <div className="dynamic-visual">
+              {/* STEP 1: Capture - Live Recording Interface */}
               <div className="visual-content active" data-visual="capture">
-                <div className="mockup-frame">
-                  <div className="mockup-header">
-                    <div className="mockup-dots">
+                <div className="hiw-mockup-frame">
+                  <div className="hiw-mockup-header">
+                    <div className="hiw-mockup-dots">
                       <span></span><span></span><span></span>
                     </div>
-                    <span className="mockup-title">Recording Session</span>
+                    <div className="hiw-recording-indicator">
+                      <span className="recording-dot"></span>
+                      Recording
+                    </div>
                   </div>
-                  <div className="mockup-body">
-                    <div className="mockup-skeleton mockup-skeleton-title"></div>
-                    <div className="mockup-skeleton mockup-skeleton-text"></div>
-                    <div className="mockup-skeleton mockup-skeleton-text short"></div>
-                    <div className="mockup-skeleton mockup-skeleton-card"></div>
+                  <div className="hiw-mockup-body">
+                    {/* Live Waveform */}
+                    <div className="hiw-waveform">
+                      <div className="waveform-bar"></div>
+                      <div className="waveform-bar"></div>
+                      <div className="waveform-bar"></div>
+                      <div className="waveform-bar"></div>
+                      <div className="waveform-bar"></div>
+                      <div className="waveform-bar"></div>
+                      <div className="waveform-bar"></div>
+                      <div className="waveform-bar"></div>
+                    </div>
+                    
+                    {/* Live Transcript */}
+                    <div className="hiw-transcript">
+                      <div className="transcript-line">
+                        <span className="speaker speaker-clinician">You</span>
+                        <p>How have you been sleeping since we started the grounding exercises?</p>
+                      </div>
+                      <div className="transcript-line">
+                        <span className="speaker speaker-patient">Sarah</span>
+                        <p>Much better actually. I&apos;m getting about 6 hours now instead of 4.</p>
+                      </div>
+                      <div className="transcript-line transcript-live">
+                        <span className="speaker speaker-patient">Sarah</span>
+                        <p>The nightmares have really decreased since...<span className="typing-cursor"></span></p>
+                      </div>
+                    </div>
+                    
+                    <div className="hiw-timer">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                      <span>24:32</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
+              {/* STEP 2: Sign - Evidence-Backed Note */}
               <div className="visual-content" data-visual="sign">
-                <div className="mockup-frame">
-                  <div className="mockup-header">
-                    <div className="mockup-dots">
+                <div className="hiw-mockup-frame">
+                  <div className="hiw-mockup-header">
+                    <div className="hiw-mockup-dots">
                       <span></span><span></span><span></span>
                     </div>
-                    <span className="mockup-title">Review & Sign</span>
+                    <span className="hiw-mockup-title">Session Note — Ready for Review</span>
                   </div>
-                  <div className="mockup-body">
-                    <div className="mockup-skeleton mockup-skeleton-title"></div>
-                    <div className="mockup-skeleton mockup-skeleton-text"></div>
-                    <div className="mockup-skeleton mockup-skeleton-text"></div>
-                    <div className="mockup-skeleton mockup-skeleton-card"></div>
+                  <div className="hiw-mockup-body hiw-note-body">
+                    {/* Note Preview */}
+                    <div className="hiw-note-section">
+                      <h5>Assessment</h5>
+                      <p>
+                        Client demonstrates continued progress in managing PTSD symptoms. 
+                        Reports <span className="hiw-citation" data-citation="1">significant improvement in sleep quality</span> 
+                        and <span className="hiw-citation" data-citation="2">reduction in nightmare frequency</span>.
+                      </p>
+                    </div>
+                    
+                    <div className="hiw-note-section">
+                      <h5>Plan</h5>
+                      <ul>
+                        <li>Continue EMDR processing (session 4 of 8)</li>
+                        <li>Maintain daily grounding practice</li>
+                        <li>Follow up on sleep patterns next session</li>
+                      </ul>
+                    </div>
+                    
+                    {/* Citation Popup */}
+                    <div className="hiw-citation-popup">
+                      <div className="citation-header">
+                        <span className="citation-badge">Citation [1]</span>
+                        <span className="citation-time">18:42</span>
+                      </div>
+                      <p>&quot;I&apos;m getting about 6 hours now instead of 4.&quot;</p>
+                      <span className="citation-speaker">— Sarah Chen</span>
+                    </div>
+                    
+                    {/* Action Buttons */}
+                    <div className="hiw-note-actions">
+                      <button className="btn-edit">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                        Edit
+                      </button>
+                      <button className="btn-sign">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Sign &amp; Save
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
 
+              {/* STEP 3: Context Builds - Today's Brief Evolution */}
               <div className="visual-content" data-visual="context">
-                <div className="mockup-frame">
-                  <div className="mockup-header">
-                    <div className="mockup-dots">
+                <div className="hiw-mockup-frame">
+                  <div className="hiw-mockup-header">
+                    <div className="hiw-mockup-dots">
                       <span></span><span></span><span></span>
                     </div>
-                    <span className="mockup-title">Patient Profile</span>
+                    <span className="hiw-mockup-title">Patient Intelligence — Building</span>
                   </div>
-                  <div className="mockup-body">
-                    <div className="mockup-skeleton mockup-skeleton-text short"></div>
-                    <div className="mockup-skeleton mockup-skeleton-card"></div>
-                    <div className="mockup-skeleton mockup-skeleton-text"></div>
-                    <div className="mockup-skeleton mockup-skeleton-text short"></div>
+                  <div className="hiw-mockup-body hiw-context-body">
+                    {/* PHQ-9 Progress Chart */}
+                    <div className="hiw-chart-card">
+                      <div className="chart-header">
+                        <h5>PHQ-9 Score</h5>
+                        <span className="chart-trend trend-positive">↓ 35% improvement</span>
+                      </div>
+                      <div className="hiw-mini-chart">
+                        <div className="chart-bar" style={{height: '90%'}}><span>14</span></div>
+                        <div className="chart-bar" style={{height: '75%'}}><span>12</span></div>
+                        <div className="chart-bar" style={{height: '60%'}}><span>10</span></div>
+                        <div className="chart-bar chart-bar-current" style={{height: '45%'}}><span>9</span></div>
+                      </div>
+                      <div className="chart-labels">
+                        <span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span>
+                      </div>
+                    </div>
+                    
+                    {/* Brief Update Notification */}
+                    <div className="hiw-update-notification">
+                      <div className="update-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                      </div>
+                      <div className="update-content">
+                        <strong>Today&apos;s Brief Updated</strong>
+                        <p>Sleep improvement added to &quot;What&apos;s Helping&quot;</p>
+                      </div>
+                      <span className="update-time">Just now</span>
+                    </div>
+                    
+                    {/* Aimé Learning */}
+                    <div className="hiw-aime-learning">
+                      <div className="aime-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+                      </div>
+                      <div className="aime-text">
+                        <strong>Aimé</strong>
+                        <p>Learned: &quot;Grounding exercises are effective for Sarah&apos;s sleep&quot;</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
