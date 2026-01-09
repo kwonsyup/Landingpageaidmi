@@ -77,9 +77,6 @@ export default function App() {
               <li className="nav-item">
                 <a href="#faq">Resources</a>
               </li>
-              <li className="nav-item">
-                <a href="#security">Security</a>
-              </li>
             </ul>
           </nav>
           <div className="header-cta">
@@ -115,7 +112,6 @@ export default function App() {
         </div>
         <div className="mobile-menu-section">
           <a href="#faq">Resources</a>
-          <a href="#security">Security & HIPAA</a>
         </div>
         <div className="mobile-menu-cta">
           <a href="https://app.aidmi.com/login" className="btn btn-secondary btn-large">Sign In</a>
@@ -1318,85 +1314,6 @@ export default function App() {
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
               </svg>
               <span>Cancel anytime</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Security Section — Compact */}
-      <section id="security" className="security">
-        <div className="container">
-          <div className="security-compact">
-            {/* Header Row */}
-            <div className="security-header">
-              <span className="security-eyebrow">Security & Compliance</span>
-              <div className="security-headline-row">
-                <div className="security-text">
-                  <h2>Built for the conversations that matter most.</h2>
-                  <p className="security-subhead">
-                    Your patients trusted you with their story. We built AidMi to protect it.
-                  </p>
-                </div>
-                <div className="security-shield">
-                  <svg viewBox="0 0 120 140" className="shield-icon">
-                    {/* Simplified hexagonal shield */}
-                    <path d="M60 5L10 30v50c0 35 25 55 50 60 25-5 50-25 50-60V30L60 5z" fill="rgba(0,64,140,0.08)" stroke="rgba(0,64,140,0.15)" strokeWidth="2"/>
-                    <path d="M60 20L25 38v40c0 28 18 42 35 47 17-5 35-19 35-47V38L60 20z" fill="rgba(0,64,140,0.06)"/>
-                    <path d="M54 75l-15-15 5-5 10 10 20-20 5 5-25 25z" fill="#10b981"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Data Flow Row */}
-            <div className="security-flow">
-              <span className="flow-label">How Your Data Stays Protected</span>
-              <div className="flow-steps">
-                <div className="flow-step">
-                  <div className="flow-icon flow-icon--purple">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-                    </svg>
-                  </div>
-                  <span className="flow-title">Session captured</span>
-                  <span className="flow-subtitle">HIPAA compliant</span>
-                </div>
-                
-                <div className="flow-connector">→</div>
-                
-                <div className="flow-step">
-                  <div className="flow-icon flow-icon--blue">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                    </svg>
-                  </div>
-                  <span className="flow-title">Note generated</span>
-                  <span className="flow-subtitle">AI processes instantly</span>
-                </div>
-                
-                <div className="flow-connector">
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="trash-icon">
-                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-                  </svg>
-                </div>
-                
-                <div className="flow-step">
-                  <div className="flow-icon flow-icon--green">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-                    </svg>
-                  </div>
-                  <span className="flow-title">Audio deleted</span>
-                  <span className="flow-subtitle">Never stored</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="security-badges">
-              <span className="badge"><span className="badge-icon">🛡</span> HIPAA</span>
-              <span className="badge"><span className="badge-icon">✓</span> SOC 2</span>
-              <span className="badge"><span className="badge-icon">🔒</span> 256-bit SSL</span>
             </div>
           </div>
         </div>
